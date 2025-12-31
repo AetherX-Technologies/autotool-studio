@@ -2,6 +2,14 @@
 
 Local desktop automation system with recording, visual matching, and fast replay.
 
+
+
+![image-20251231162208753](README.assets/image-20251231162208753.png)
+
+![image-20251231162809473](README.assets/image-20251231162809473.png)
+
+
+
 ## Highlights
 
 - Record and replay mouse/keyboard workflows locally

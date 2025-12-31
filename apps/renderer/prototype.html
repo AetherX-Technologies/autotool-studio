@@ -310,6 +310,29 @@
       border-color: var(--accent-primary);
     }
 
+    .file-input {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .file-input input[type="file"] {
+      position: absolute;
+      opacity: 0;
+      width: 1px;
+      height: 1px;
+      pointer-events: none;
+    }
+
+    .file-name {
+      font-size: 12px;
+      color: var(--text-muted);
+      max-width: 100%;
+      word-break: break-all;
+    }
+
     .btn-group {
       display: flex;
       gap: 12px;
@@ -785,7 +808,11 @@
           <div class="schedule-grid">
             <div>
               <label>Template Image</label>
-              <input type="file" id="vision-template" accept="image/*">
+              <div class="file-input">
+                <input type="file" id="vision-template" accept="image/*">
+                <button class="secondary" type="button" id="vision-template-btn">Choose File</button>
+                <span class="file-name" id="vision-template-name">No file chosen</span>
+              </div>
             </div>
             <div>
               <label>Display</label>
@@ -1028,6 +1055,8 @@
       visionResult: document.getElementById('vision-result'),
       visionCenter: document.getElementById('vision-center'),
       visionTemplate: document.getElementById('vision-template'),
+      btnVisionTemplate: document.getElementById('vision-template-btn'),
+      visionTemplateName: document.getElementById('vision-template-name'),
       visionDisplay: document.getElementById('vision-display'),
       visionZoom: document.getElementById('vision-zoom'),
       visionZoomLabel: document.getElementById('vision-zoom-label'),
@@ -1139,6 +1168,7 @@
       el.btnReplayStop.onclick = stopReplay;
       el.btnExportScript.onclick = exportPyAutoGuiScript;
 
+      el.btnVisionTemplate.onclick = () => el.visionTemplate.click();
       el.visionTemplate.onchange = handleVisionTemplateChange;
       el.btnVisionLocate.onclick = () => locateTemplate(false);
       el.btnVisionClick.onclick = () => locateTemplate(true);
@@ -1552,6 +1582,7 @@
         if (!blob) return log("Failed to create template", false);
         state.visionTemplateBlob = blob;
         el.visionTemplate.value = "";
+        el.visionTemplateName.textContent = "No file chosen";
         el.visionTemplatePreview.src = dataUrl;
         el.visionTemplatePreview.style.display = "block";
         log("Template created from selection", true);
@@ -1562,8 +1593,12 @@
 
     function handleVisionTemplateChange() {
       const file = el.visionTemplate.files && el.visionTemplate.files[0];
-      if (!file) return;
+      if (!file) {
+        el.visionTemplateName.textContent = "No file chosen";
+        return;
+      }
       state.visionTemplateBlob = null;
+      el.visionTemplateName.textContent = file.name;
       const reader = new FileReader();
       reader.onload = () => {
         el.visionTemplatePreview.src = reader.result;
