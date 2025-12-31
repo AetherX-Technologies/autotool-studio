@@ -1,0 +1,7 @@
+INFO:     127.0.0.1:61812 - "GET /api/v1/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55301 - "GET /api/v1/flowgram/nodes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53147 - "GET /api/v1/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53147 - "GET /api/v1/flowgram/workflows HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53149 - "GET /api/v1/flowgram/nodes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63896 - "GET /api/v1/flowgram/nodes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63908 - "POST /api/v1/flowgram/run HTTP/1.1" 404 Not Found

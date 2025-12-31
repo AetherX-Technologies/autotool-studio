@@ -1,0 +1,933 @@
+2025-12-30 15:19:38,490 INFO autotool.recorder Recorder started
+2025-12-30 15:19:38,512 INFO autotool.api.recording Recording started
+2025-12-30 15:19:40,482 INFO autotool.replayer Replay started (2 items)
+2025-12-30 15:19:40,482 INFO autotool.api.replay Replay started
+2025-12-30 15:19:40,483 INFO autotool.audit action_start id=3e511ee0-5f46-4355-930e-c664b2a9eb85 type=wait
+2025-12-30 15:19:40,784 INFO autotool.audit action_end id=3e511ee0-5f46-4355-930e-c664b2a9eb85 success=True
+2025-12-30 15:19:40,785 INFO autotool.audit action_start id=833cfbe7-73e2-4f5f-92b7-59c81bfd2c44 type=wait
+2025-12-30 15:19:41,085 INFO autotool.audit action_end id=833cfbe7-73e2-4f5f-92b7-59c81bfd2c44 success=True
+2025-12-30 15:19:41,085 INFO autotool.replayer Replay finished (2 results)
+2025-12-30 15:19:41,085 INFO autotool.api.replay Replay finished (2 results)
+2025-12-30 15:51:02,958 INFO autotool.replayer Replay started (1 items)
+2025-12-30 15:51:02,958 INFO autotool.audit action_start id=c3b5919b-2f1c-4ac7-9d8e-0096c6c196cd type=click
+2025-12-30 15:51:02,958 INFO autotool.api.replay Replay started
+2025-12-30 15:51:03,081 INFO autotool.audit action_end id=c3b5919b-2f1c-4ac7-9d8e-0096c6c196cd success=True
+2025-12-30 15:51:03,081 INFO autotool.replayer Replay finished (1 results)
+2025-12-30 15:51:03,081 INFO autotool.api.replay Replay finished (1 results)
+2025-12-30 15:51:18,677 INFO autotool.replayer Replay started (1 items)
+2025-12-30 15:51:18,677 INFO autotool.api.replay Replay started
+2025-12-30 15:51:18,677 INFO autotool.audit action_start id=741d6a63-ccab-4f60-b54d-fc4f519a27a0 type=hotkey
+2025-12-30 15:51:18,797 INFO autotool.audit action_end id=741d6a63-ccab-4f60-b54d-fc4f519a27a0 success=True
+2025-12-30 15:51:18,797 INFO autotool.replayer Replay finished (1 results)
+2025-12-30 15:51:18,797 INFO autotool.api.replay Replay finished (1 results)
+2025-12-30 15:54:11,817 INFO autotool.recorder Recorder stopped (12239 events)
+2025-12-30 15:54:11,817 INFO autotool.api.recording Recording stopped (12239 events)
+2025-12-30 16:06:27,440 INFO autotool.recorder Recorder started
+2025-12-30 16:06:27,447 INFO autotool.api.recording Recording started
+2025-12-30 16:06:39,469 INFO autotool.recorder Recorder stopped (102 events)
+2025-12-30 16:06:39,470 INFO autotool.api.recording Recording stopped (102 events)
+2025-12-30 16:06:48,394 INFO autotool.replayer Replay started (102 items)
+2025-12-30 16:06:48,394 INFO autotool.audit action_start id=78a81691-c76b-4d42-920a-9adce787b96a type=move
+2025-12-30 16:06:48,394 INFO autotool.api.replay Replay started
+2025-12-30 16:06:48,495 INFO autotool.audit action_end id=78a81691-c76b-4d42-920a-9adce787b96a success=True
+2025-12-30 16:06:48,961 INFO autotool.audit action_start id=81b2228b-73bd-44b4-aec5-92ce844160fd type=move
+2025-12-30 16:06:49,062 INFO autotool.audit action_end id=81b2228b-73bd-44b4-aec5-92ce844160fd success=True
+2025-12-30 16:06:49,168 INFO autotool.audit action_start id=e977247c-d287-4bba-af0a-4e23a2731920 type=move
+2025-12-30 16:06:49,269 INFO autotool.audit action_end id=e977247c-d287-4bba-af0a-4e23a2731920 success=True
+2025-12-30 16:06:49,376 INFO autotool.audit action_start id=84056f8e-8a74-4e12-bee9-96c9ca2e0d16 type=move
+2025-12-30 16:06:49,476 INFO autotool.audit action_end id=84056f8e-8a74-4e12-bee9-96c9ca2e0d16 success=True
+2025-12-30 16:06:49,580 INFO autotool.audit action_start id=7d9bdef0-70a6-4a5f-856e-f94a637a8a5f type=move
+2025-12-30 16:06:49,681 INFO autotool.audit action_end id=7d9bdef0-70a6-4a5f-856e-f94a637a8a5f success=True
+2025-12-30 16:06:49,787 INFO autotool.audit action_start id=052b99e5-7b21-496f-b10a-cec82e1070e5 type=move
+2025-12-30 16:06:49,887 INFO autotool.audit action_end id=052b99e5-7b21-496f-b10a-cec82e1070e5 success=True
+2025-12-30 16:06:50,188 INFO autotool.audit action_start id=92167769-fe50-47ca-9a21-b0f9fb8ffec5 type=move
+2025-12-30 16:06:50,289 INFO autotool.audit action_end id=92167769-fe50-47ca-9a21-b0f9fb8ffec5 success=True
+2025-12-30 16:06:50,394 INFO autotool.audit action_start id=f3e43754-22b0-4f57-94d1-8f8609c21196 type=move
+2025-12-30 16:06:50,495 INFO autotool.audit action_end id=f3e43754-22b0-4f57-94d1-8f8609c21196 success=True
+2025-12-30 16:06:50,601 INFO autotool.audit action_start id=c4687e12-0fd6-4f0d-8e55-0c98a9bc11c1 type=move
+2025-12-30 16:06:50,701 INFO autotool.audit action_end id=c4687e12-0fd6-4f0d-8e55-0c98a9bc11c1 success=True
+2025-12-30 16:06:50,890 INFO autotool.audit action_start id=46ec8c9b-6017-46d0-835c-0d476871b1f8 type=move
+2025-12-30 16:06:50,990 INFO autotool.audit action_end id=46ec8c9b-6017-46d0-835c-0d476871b1f8 success=True
+2025-12-30 16:06:51,411 INFO autotool.audit action_start id=a8c9f0fe-e310-48cc-8fa6-6151f7eb1eeb type=move
+2025-12-30 16:06:51,512 INFO autotool.audit action_end id=a8c9f0fe-e310-48cc-8fa6-6151f7eb1eeb success=True
+2025-12-30 16:06:51,624 INFO autotool.audit action_start id=70670073-c7d5-4997-9345-4a4079f4b8db type=move
+2025-12-30 16:06:51,725 INFO autotool.audit action_end id=70670073-c7d5-4997-9345-4a4079f4b8db success=True
+2025-12-30 16:06:51,832 INFO autotool.audit action_start id=3da9a378-3212-40fa-a437-ff74cff38d6f type=move
+2025-12-30 16:06:51,933 INFO autotool.audit action_end id=3da9a378-3212-40fa-a437-ff74cff38d6f success=True
+2025-12-30 16:06:52,039 INFO autotool.audit action_start id=6e2f45c3-373e-4835-b992-f4c549763d28 type=move
+2025-12-30 16:06:52,140 INFO autotool.audit action_end id=6e2f45c3-373e-4835-b992-f4c549763d28 success=True
+2025-12-30 16:06:52,245 INFO autotool.audit action_start id=311a56ac-6ae0-4f80-b43b-dc671794a7a2 type=move
+2025-12-30 16:06:52,345 INFO autotool.audit action_end id=311a56ac-6ae0-4f80-b43b-dc671794a7a2 success=True
+2025-12-30 16:06:52,451 INFO autotool.audit action_start id=a86871ef-570e-4c64-8a2d-44803df9f386 type=move
+2025-12-30 16:06:52,552 INFO autotool.audit action_end id=a86871ef-570e-4c64-8a2d-44803df9f386 success=True
+2025-12-30 16:06:52,658 INFO autotool.audit action_start id=83880c23-ca19-42af-a41c-e956ea827cb9 type=move
+2025-12-30 16:06:52,759 INFO autotool.audit action_end id=83880c23-ca19-42af-a41c-e956ea827cb9 success=True
+2025-12-30 16:06:52,865 INFO autotool.audit action_start id=36d763cd-dbdd-4259-96f2-8fcb34a8e596 type=move
+2025-12-30 16:06:52,965 INFO autotool.audit action_end id=36d763cd-dbdd-4259-96f2-8fcb34a8e596 success=True
+2025-12-30 16:06:53,134 INFO autotool.audit action_start id=b347640f-2cd2-42b9-946e-0abe6a378470 type=move
+2025-12-30 16:06:53,234 INFO autotool.audit action_end id=b347640f-2cd2-42b9-946e-0abe6a378470 success=True
+2025-12-30 16:06:53,743 INFO autotool.audit action_start id=1c363515-7c89-4b5b-b20c-ef95c81b01ac type=move
+2025-12-30 16:06:53,843 INFO autotool.audit action_end id=1c363515-7c89-4b5b-b20c-ef95c81b01ac success=True
+2025-12-30 16:06:53,948 INFO autotool.audit action_start id=61a67064-7eb0-4c66-a219-355acc0249b5 type=move
+2025-12-30 16:06:54,049 INFO autotool.audit action_end id=61a67064-7eb0-4c66-a219-355acc0249b5 success=True
+2025-12-30 16:06:54,155 INFO autotool.audit action_start id=7905c21f-a02b-43aa-8084-da1c1e001287 type=move
+2025-12-30 16:06:54,259 INFO autotool.audit action_end id=7905c21f-a02b-43aa-8084-da1c1e001287 success=True
+2025-12-30 16:06:54,365 INFO autotool.audit action_start id=db62f47b-224b-4880-8a99-03414f092172 type=move
+2025-12-30 16:06:54,466 INFO autotool.audit action_end id=db62f47b-224b-4880-8a99-03414f092172 success=True
+2025-12-30 16:06:54,570 INFO autotool.audit action_start id=75a8645c-7356-4cd4-b6ff-d0d11550705f type=move
+2025-12-30 16:06:54,671 INFO autotool.audit action_end id=75a8645c-7356-4cd4-b6ff-d0d11550705f success=True
+2025-12-30 16:06:54,777 INFO autotool.audit action_start id=e0d0f729-f7fd-49ff-ae96-cf0273d09e9d type=move
+2025-12-30 16:06:54,878 INFO autotool.audit action_end id=e0d0f729-f7fd-49ff-ae96-cf0273d09e9d success=True
+2025-12-30 16:06:54,983 INFO autotool.audit action_start id=dc7778b0-f8e3-4a77-bc31-b82dc2797a1b type=move
+2025-12-30 16:06:55,084 INFO autotool.audit action_end id=dc7778b0-f8e3-4a77-bc31-b82dc2797a1b success=True
+2025-12-30 16:06:55,189 INFO autotool.audit action_start id=9d1bf30d-759a-4f9b-b59b-e0ae5743d36a type=move
+2025-12-30 16:06:55,290 INFO autotool.audit action_end id=9d1bf30d-759a-4f9b-b59b-e0ae5743d36a success=True
+2025-12-30 16:06:55,395 INFO autotool.audit action_start id=8447cfd5-d38d-4f47-8582-594a9b6aaf9f type=move
+2025-12-30 16:06:55,496 INFO autotool.audit action_end id=8447cfd5-d38d-4f47-8582-594a9b6aaf9f success=True
+2025-12-30 16:06:55,586 INFO autotool.audit action_start id=5f0b93a8-b6c2-4320-a68d-343ab387a5ce type=mouse_down
+2025-12-30 16:06:55,692 INFO autotool.audit action_end id=5f0b93a8-b6c2-4320-a68d-343ab387a5ce success=True
+2025-12-30 16:06:55,715 INFO autotool.audit action_start id=770c50d8-1c18-40be-bdf3-395f00200164 type=move
+2025-12-30 16:06:55,816 INFO autotool.audit action_end id=770c50d8-1c18-40be-bdf3-395f00200164 success=True
+2025-12-30 16:06:55,870 INFO autotool.audit action_start id=249bcda5-d8ad-46ee-9a38-6a8971aad9fb type=mouse_up
+2025-12-30 16:06:55,973 INFO autotool.audit action_end id=249bcda5-d8ad-46ee-9a38-6a8971aad9fb success=True
+2025-12-30 16:06:56,109 INFO autotool.audit action_start id=69818b22-dc4c-41a9-bfe8-cf120d4bae20 type=move
+2025-12-30 16:06:56,210 INFO autotool.audit action_end id=69818b22-dc4c-41a9-bfe8-cf120d4bae20 success=True
+2025-12-30 16:06:56,323 INFO autotool.audit action_start id=03af787e-7d51-41e9-8434-54e87a1e72d1 type=move
+2025-12-30 16:06:56,424 INFO autotool.audit action_end id=03af787e-7d51-41e9-8434-54e87a1e72d1 success=True
+2025-12-30 16:06:56,530 INFO autotool.audit action_start id=a927cb8a-37bb-4500-882a-74e06f85166b type=move
+2025-12-30 16:06:56,630 INFO autotool.audit action_end id=a927cb8a-37bb-4500-882a-74e06f85166b success=True
+2025-12-30 16:06:56,744 INFO autotool.audit action_start id=f5bc2868-b9ab-441c-85e2-7ac3b9968daa type=move
+2025-12-30 16:06:56,845 INFO autotool.audit action_end id=f5bc2868-b9ab-441c-85e2-7ac3b9968daa success=True
+2025-12-30 16:06:56,950 INFO autotool.audit action_start id=8f028ece-c761-435d-8cf6-c8c8e444e035 type=move
+2025-12-30 16:06:57,051 INFO autotool.audit action_end id=8f028ece-c761-435d-8cf6-c8c8e444e035 success=True
+2025-12-30 16:06:57,156 INFO autotool.audit action_start id=1551fb35-ca38-4fc5-9276-97cb112fbe49 type=move
+2025-12-30 16:06:57,257 INFO autotool.audit action_end id=1551fb35-ca38-4fc5-9276-97cb112fbe49 success=True
+2025-12-30 16:06:57,370 INFO autotool.audit action_start id=f34201dc-54aa-43b5-8991-83b1ac80d370 type=move
+2025-12-30 16:06:57,473 INFO autotool.audit action_end id=f34201dc-54aa-43b5-8991-83b1ac80d370 success=True
+2025-12-30 16:06:57,737 INFO autotool.audit action_start id=e11ec8ab-471e-4a3f-9f86-bcf598816717 type=move
+2025-12-30 16:06:57,838 INFO autotool.audit action_end id=e11ec8ab-471e-4a3f-9f86-bcf598816717 success=True
+2025-12-30 16:06:57,840 INFO autotool.audit action_start id=e88d03d2-de8c-40f7-9004-7df9cdfde32a type=mouse_down
+2025-12-30 16:06:57,947 INFO autotool.audit action_end id=e88d03d2-de8c-40f7-9004-7df9cdfde32a success=True
+2025-12-30 16:06:58,052 INFO autotool.audit action_start id=56e15781-c14d-4410-b96a-84c5cf18a4ec type=mouse_up
+2025-12-30 16:06:58,153 INFO autotool.audit action_end id=56e15781-c14d-4410-b96a-84c5cf18a4ec success=True
+2025-12-30 16:06:58,273 INFO autotool.audit action_start id=6f950f70-f639-41c9-8724-069ab2eef333 type=move
+2025-12-30 16:06:58,374 INFO autotool.audit action_end id=6f950f70-f639-41c9-8724-069ab2eef333 success=True
+2025-12-30 16:06:58,479 INFO autotool.audit action_start id=de7f5386-2800-4f57-9c5a-fad2d893da0a type=move
+2025-12-30 16:06:58,580 INFO autotool.audit action_end id=de7f5386-2800-4f57-9c5a-fad2d893da0a success=True
+2025-12-30 16:06:58,686 INFO autotool.audit action_start id=d6a86d1a-7651-4cd8-89a3-fa7ffda81161 type=move
+2025-12-30 16:06:58,787 INFO autotool.audit action_end id=d6a86d1a-7651-4cd8-89a3-fa7ffda81161 success=True
+2025-12-30 16:06:58,893 INFO autotool.audit action_start id=aa245341-a056-4ce5-950f-16ffa99373ff type=move
+2025-12-30 16:06:58,993 INFO autotool.audit action_end id=aa245341-a056-4ce5-950f-16ffa99373ff success=True
+2025-12-30 16:06:59,032 INFO autotool.audit action_start id=6b79f7fd-3263-4f87-a632-e36168a60ef8 type=mouse_down
+2025-12-30 16:06:59,138 INFO autotool.audit action_end id=6b79f7fd-3263-4f87-a632-e36168a60ef8 success=True
+2025-12-30 16:06:59,228 INFO autotool.audit action_start id=7896b89f-98b5-4e67-917c-305d6106ccd8 type=mouse_up
+2025-12-30 16:06:59,329 INFO autotool.audit action_end id=7896b89f-98b5-4e67-917c-305d6106ccd8 success=True
+2025-12-30 16:06:59,714 INFO autotool.audit action_start id=194f2c46-a1d3-46f9-99c6-538d6e8179b7 type=move
+2025-12-30 16:06:59,815 INFO autotool.audit action_end id=194f2c46-a1d3-46f9-99c6-538d6e8179b7 success=True
+2025-12-30 16:06:59,920 INFO autotool.audit action_start id=94dde0d8-a42a-48cb-9914-8835e1a327a3 type=move
+2025-12-30 16:07:00,021 INFO autotool.audit action_end id=94dde0d8-a42a-48cb-9914-8835e1a327a3 success=True
+2025-12-30 16:07:00,127 INFO autotool.audit action_start id=044b9873-4b48-4bf1-90a1-f085a8af7da8 type=move
+2025-12-30 16:07:00,228 INFO autotool.audit action_end id=044b9873-4b48-4bf1-90a1-f085a8af7da8 success=True
+2025-12-30 16:07:00,454 INFO autotool.audit action_start id=8de6833f-df68-41d2-8bba-eaa3d5115456 type=mouse_down
+2025-12-30 16:07:00,560 INFO autotool.audit action_end id=8de6833f-df68-41d2-8bba-eaa3d5115456 success=True
+2025-12-30 16:07:00,568 INFO autotool.audit action_start id=ab200d4a-1fd4-404f-850a-8a12026c0f4e type=move
+2025-12-30 16:07:00,669 INFO autotool.audit action_end id=ab200d4a-1fd4-404f-850a-8a12026c0f4e success=True
+2025-12-30 16:07:00,762 INFO autotool.audit action_start id=37c7101e-cf02-4e87-a075-0797c4199b00 type=mouse_up
+2025-12-30 16:07:00,864 INFO autotool.audit action_end id=37c7101e-cf02-4e87-a075-0797c4199b00 success=True
+2025-12-30 16:07:00,929 INFO autotool.audit action_start id=272c622f-ebdb-4e89-be40-007555ec2415 type=move
+2025-12-30 16:07:01,029 INFO autotool.audit action_end id=272c622f-ebdb-4e89-be40-007555ec2415 success=True
+2025-12-30 16:07:01,135 INFO autotool.audit action_start id=938e79f6-8328-410e-9e70-1c5980ddfc44 type=move
+2025-12-30 16:07:01,236 INFO autotool.audit action_end id=938e79f6-8328-410e-9e70-1c5980ddfc44 success=True
+2025-12-30 16:07:01,341 INFO autotool.audit action_start id=e630c575-11cd-4006-ac77-0f2b9dc2e83a type=move
+2025-12-30 16:07:01,442 INFO autotool.audit action_end id=e630c575-11cd-4006-ac77-0f2b9dc2e83a success=True
+2025-12-30 16:07:01,525 INFO autotool.audit action_start id=719552ff-4396-47af-adc7-9a20406579b1 type=mouse_down
+2025-12-30 16:07:01,629 INFO autotool.audit action_end id=719552ff-4396-47af-adc7-9a20406579b1 success=True
+2025-12-30 16:07:01,652 INFO autotool.audit action_start id=87f54fe9-025f-4085-9619-5e541d954b71 type=move
+2025-12-30 16:07:01,753 INFO autotool.audit action_end id=87f54fe9-025f-4085-9619-5e541d954b71 success=True
+2025-12-30 16:07:01,813 INFO autotool.audit action_start id=c1a43051-6c67-493d-8aa9-3dc6f126403e type=mouse_up
+2025-12-30 16:07:01,921 INFO autotool.audit action_end id=c1a43051-6c67-493d-8aa9-3dc6f126403e success=True
+2025-12-30 16:07:02,065 INFO autotool.audit action_start id=73117f5f-22fd-4d6c-b050-3c20b124f453 type=move
+2025-12-30 16:07:02,166 INFO autotool.audit action_end id=73117f5f-22fd-4d6c-b050-3c20b124f453 success=True
+2025-12-30 16:07:02,272 INFO autotool.audit action_start id=e95b313d-f70b-48f3-83ac-51e2f1afa0c5 type=move
+2025-12-30 16:07:02,373 INFO autotool.audit action_end id=e95b313d-f70b-48f3-83ac-51e2f1afa0c5 success=True
+2025-12-30 16:07:02,478 INFO autotool.audit action_start id=bfb7124e-e4dd-40ed-9541-f6b9eb1ca1e3 type=move
+2025-12-30 16:07:02,579 INFO autotool.audit action_end id=bfb7124e-e4dd-40ed-9541-f6b9eb1ca1e3 success=True
+2025-12-30 16:07:02,683 INFO autotool.audit action_start id=1f60a1be-ec94-4b58-a6f6-2d60d51a6904 type=move
+2025-12-30 16:07:02,783 INFO autotool.audit action_end id=1f60a1be-ec94-4b58-a6f6-2d60d51a6904 success=True
+2025-12-30 16:07:02,966 INFO autotool.audit action_start id=0ed90016-e84a-4e99-a148-46ec886a8889 type=mouse_down
+2025-12-30 16:07:03,074 INFO autotool.audit action_end id=0ed90016-e84a-4e99-a148-46ec886a8889 success=True
+2025-12-30 16:07:03,150 INFO autotool.audit action_start id=a6070a6a-01a6-4945-a9a3-d41dfbf29673 type=mouse_up
+2025-12-30 16:07:03,252 INFO autotool.audit action_end id=a6070a6a-01a6-4945-a9a3-d41dfbf29673 success=True
+2025-12-30 16:07:03,326 INFO autotool.audit action_start id=c8912c36-3bfc-464a-b232-72fab4248e6a type=move
+2025-12-30 16:07:03,427 INFO autotool.audit action_end id=c8912c36-3bfc-464a-b232-72fab4248e6a success=True
+2025-12-30 16:07:03,534 INFO autotool.audit action_start id=98067521-21c1-460e-8dbc-15e1df3e24af type=move
+2025-12-30 16:07:03,635 INFO autotool.audit action_end id=98067521-21c1-460e-8dbc-15e1df3e24af success=True
+2025-12-30 16:07:03,740 INFO autotool.audit action_start id=e136fd3f-c515-4aba-9a1e-2ea92c07a993 type=move
+2025-12-30 16:07:03,841 INFO autotool.audit action_end id=e136fd3f-c515-4aba-9a1e-2ea92c07a993 success=True
+2025-12-30 16:07:03,946 INFO autotool.audit action_start id=cb80c4be-65d6-4387-a915-3251a2ca1471 type=move
+2025-12-30 16:07:04,048 INFO autotool.audit action_end id=cb80c4be-65d6-4387-a915-3251a2ca1471 success=True
+2025-12-30 16:07:04,153 INFO autotool.audit action_start id=5ae62927-cb74-419e-9e97-ab0ff7158a6e type=move
+2025-12-30 16:07:04,254 INFO autotool.audit action_end id=5ae62927-cb74-419e-9e97-ab0ff7158a6e success=True
+2025-12-30 16:07:04,357 INFO autotool.audit action_start id=6b80f189-3423-43bb-a4a8-88ef715d0c39 type=move
+2025-12-30 16:07:04,458 INFO autotool.audit action_end id=6b80f189-3423-43bb-a4a8-88ef715d0c39 success=True
+2025-12-30 16:07:04,566 INFO autotool.audit action_start id=d00e9dab-45a8-4e50-8045-3e6a062f6829 type=mouse_down
+2025-12-30 16:07:04,671 INFO autotool.audit action_end id=d00e9dab-45a8-4e50-8045-3e6a062f6829 success=True
+2025-12-30 16:07:04,770 INFO autotool.audit action_start id=82cd68f4-58fe-46a5-8c88-83e60bf52306 type=mouse_up
+2025-12-30 16:07:04,873 INFO autotool.audit action_end id=82cd68f4-58fe-46a5-8c88-83e60bf52306 success=True
+2025-12-30 16:07:04,898 INFO autotool.audit action_start id=d6e82196-c9ec-424a-8708-22c91baa4827 type=move
+2025-12-30 16:07:04,998 INFO autotool.audit action_end id=d6e82196-c9ec-424a-8708-22c91baa4827 success=True
+2025-12-30 16:07:05,102 INFO autotool.audit action_start id=a76d0b91-e4d6-4f90-abb7-4add2cb42fc9 type=move
+2025-12-30 16:07:05,203 INFO autotool.audit action_end id=a76d0b91-e4d6-4f90-abb7-4add2cb42fc9 success=True
+2025-12-30 16:07:05,308 INFO autotool.audit action_start id=a19fcce2-ae30-413f-9278-de25c266158a type=move
+2025-12-30 16:07:05,408 INFO autotool.audit action_end id=a19fcce2-ae30-413f-9278-de25c266158a success=True
+2025-12-30 16:07:05,514 INFO autotool.audit action_start id=b948da18-5960-4f82-852f-8e8488c858ef type=move
+2025-12-30 16:07:05,616 INFO autotool.audit action_end id=b948da18-5960-4f82-852f-8e8488c858ef success=True
+2025-12-30 16:07:05,721 INFO autotool.audit action_start id=583229eb-c6ea-46a4-98ca-83cee77770e4 type=move
+2025-12-30 16:07:05,822 INFO autotool.audit action_end id=583229eb-c6ea-46a4-98ca-83cee77770e4 success=True
+2025-12-30 16:07:05,927 INFO autotool.audit action_start id=365ecb94-5ea4-4331-ae68-70487b4aad75 type=move
+2025-12-30 16:07:06,028 INFO autotool.audit action_end id=365ecb94-5ea4-4331-ae68-70487b4aad75 success=True
+2025-12-30 16:07:06,134 INFO autotool.audit action_start id=83da6f85-bf1f-44e5-aa2b-87bc23859802 type=move
+2025-12-30 16:07:06,234 INFO autotool.audit action_end id=83da6f85-bf1f-44e5-aa2b-87bc23859802 success=True
+2025-12-30 16:07:06,332 INFO autotool.audit action_start id=26ba52aa-a247-4f8b-a657-a5aebd4ba8e0 type=mouse_down
+2025-12-30 16:07:06,438 INFO autotool.audit action_end id=26ba52aa-a247-4f8b-a657-a5aebd4ba8e0 success=True
+2025-12-30 16:07:06,446 INFO autotool.audit action_start id=68c72074-b37e-471e-af07-f12eff2ade37 type=move
+2025-12-30 16:07:06,547 INFO autotool.audit action_end id=68c72074-b37e-471e-af07-f12eff2ade37 success=True
+2025-12-30 16:07:06,623 INFO autotool.audit action_start id=a9a9498b-b50d-4ef2-ae45-85dd15b3cf58 type=mouse_up
+2025-12-30 16:07:06,726 INFO autotool.audit action_end id=a9a9498b-b50d-4ef2-ae45-85dd15b3cf58 success=True
+2025-12-30 16:07:06,815 INFO autotool.audit action_start id=add9818a-6ed5-49de-8020-c59d1ab3b6ea type=move
+2025-12-30 16:07:06,916 INFO autotool.audit action_end id=add9818a-6ed5-49de-8020-c59d1ab3b6ea success=True
+2025-12-30 16:07:07,022 INFO autotool.audit action_start id=c9ffc444-9d34-41ff-9c57-e84ecdbe0862 type=move
+2025-12-30 16:07:07,123 INFO autotool.audit action_end id=c9ffc444-9d34-41ff-9c57-e84ecdbe0862 success=True
+2025-12-30 16:07:07,266 INFO autotool.audit action_start id=977b92b5-cbbf-4cbf-8a0d-69016e20bb2a type=mouse_down
+2025-12-30 16:07:07,371 INFO autotool.audit action_end id=977b92b5-cbbf-4cbf-8a0d-69016e20bb2a success=True
+2025-12-30 16:07:07,455 INFO autotool.audit action_start id=d1fbb34b-502c-4dfc-bcb0-870f54531c0d type=mouse_up
+2025-12-30 16:07:07,556 INFO autotool.audit action_end id=d1fbb34b-502c-4dfc-bcb0-870f54531c0d success=True
+2025-12-30 16:07:07,706 INFO autotool.audit action_start id=a8bbab61-5204-497b-8210-6eba75cf9af5 type=move
+2025-12-30 16:07:07,847 INFO autotool.audit action_end id=a8bbab61-5204-497b-8210-6eba75cf9af5 success=True
+2025-12-30 16:07:07,953 INFO autotool.audit action_start id=799d5af7-5e87-4e6a-8b94-112f7f58d6f0 type=move
+2025-12-30 16:07:08,053 INFO autotool.audit action_end id=799d5af7-5e87-4e6a-8b94-112f7f58d6f0 success=True
+2025-12-30 16:07:08,159 INFO autotool.audit action_start id=4a68cb9e-1133-4ef0-a442-1987c39da113 type=move
+2025-12-30 16:07:08,259 INFO autotool.audit action_end id=4a68cb9e-1133-4ef0-a442-1987c39da113 success=True
+2025-12-30 16:07:08,365 INFO autotool.audit action_start id=7b71eab5-0961-4951-836f-4719be0db69d type=move
+2025-12-30 16:07:08,466 INFO autotool.audit action_end id=7b71eab5-0961-4951-836f-4719be0db69d success=True
+2025-12-30 16:07:08,601 INFO autotool.audit action_start id=02b617b1-6543-45cb-b432-4a87a85faa59 type=move
+2025-12-30 16:07:08,701 INFO autotool.audit action_end id=02b617b1-6543-45cb-b432-4a87a85faa59 success=True
+2025-12-30 16:07:08,734 INFO autotool.audit action_start id=c63b6b6c-9ccb-4c07-9aa5-79823e3791de type=mouse_down
+2025-12-30 16:07:08,842 INFO autotool.audit action_end id=c63b6b6c-9ccb-4c07-9aa5-79823e3791de success=True
+2025-12-30 16:07:08,924 INFO autotool.audit action_start id=09aaaee5-d153-4f84-a448-214cd7e9ad4f type=mouse_up
+2025-12-30 16:07:09,025 INFO autotool.audit action_end id=09aaaee5-d153-4f84-a448-214cd7e9ad4f success=True
+2025-12-30 16:07:09,094 INFO autotool.audit action_start id=51397764-efe7-4ee6-b84a-e5a4f3393576 type=move
+2025-12-30 16:07:09,194 INFO autotool.audit action_end id=51397764-efe7-4ee6-b84a-e5a4f3393576 success=True
+2025-12-30 16:07:09,310 INFO autotool.audit action_start id=6b7b9389-e0b7-4dea-9924-891214785a8b type=move
+2025-12-30 16:07:09,411 INFO autotool.audit action_end id=6b7b9389-e0b7-4dea-9924-891214785a8b success=True
+2025-12-30 16:07:09,512 INFO autotool.audit action_start id=0e9449e3-723d-4158-b298-992e20dbee5d type=move
+2025-12-30 16:07:09,613 INFO autotool.audit action_end id=0e9449e3-723d-4158-b298-992e20dbee5d success=True
+2025-12-30 16:07:09,720 INFO autotool.audit action_start id=7b122593-aa97-4236-a85a-b268a9313df7 type=move
+2025-12-30 16:07:09,820 INFO autotool.audit action_end id=7b122593-aa97-4236-a85a-b268a9313df7 success=True
+2025-12-30 16:07:09,933 INFO autotool.audit action_start id=a1e1f0fb-4aec-4168-b7c4-7d48f3c03796 type=move
+2025-12-30 16:07:10,034 INFO autotool.audit action_end id=a1e1f0fb-4aec-4168-b7c4-7d48f3c03796 success=True
+2025-12-30 16:07:10,140 INFO autotool.audit action_start id=d4f82719-3ca6-4ec8-8699-bae01531bcec type=move
+2025-12-30 16:07:10,241 INFO autotool.audit action_end id=d4f82719-3ca6-4ec8-8699-bae01531bcec success=True
+2025-12-30 16:07:10,428 INFO autotool.audit action_start id=e2fb680d-cab9-4b45-a184-8279ec141b68 type=mouse_down
+2025-12-30 16:07:10,535 INFO autotool.audit action_end id=e2fb680d-cab9-4b45-a184-8279ec141b68 success=True
+2025-12-30 16:07:10,581 INFO autotool.audit action_start id=e5aa879c-6cdd-49ab-af14-3e1b5b0001e6 type=mouse_up
+2025-12-30 16:07:10,682 INFO autotool.audit action_end id=e5aa879c-6cdd-49ab-af14-3e1b5b0001e6 success=True
+2025-12-30 16:07:10,682 INFO autotool.replayer Replay finished (102 results)
+2025-12-30 16:07:10,682 INFO autotool.api.replay Replay finished (102 results)
+2025-12-30 16:35:21,721 INFO autotool.recorder Recorder started
+2025-12-30 16:35:21,735 INFO autotool.api.recording Recording started
+2025-12-30 16:35:28,132 INFO autotool.recorder Recorder stopped (69 events)
+2025-12-30 16:35:28,132 INFO autotool.api.recording Recording stopped (69 events)
+2025-12-30 16:35:46,812 INFO autotool.replayer Replay started (69 items)
+2025-12-30 16:35:46,812 INFO autotool.api.replay Replay started
+2025-12-30 16:35:46,812 INFO autotool.audit action_start id=01d08762-7a78-4b49-b573-744c0b7bb68f type=move
+2025-12-30 16:35:46,914 INFO autotool.audit action_end id=01d08762-7a78-4b49-b573-744c0b7bb68f success=True
+2025-12-30 16:35:47,020 INFO autotool.audit action_start id=eb39f529-f9ee-43d2-88d3-3e4236f6c65e type=move
+2025-12-30 16:35:47,121 INFO autotool.audit action_end id=eb39f529-f9ee-43d2-88d3-3e4236f6c65e success=True
+2025-12-30 16:35:47,235 INFO autotool.audit action_start id=71ebd561-4d8c-4095-b466-e77bea67d222 type=move
+2025-12-30 16:35:47,336 INFO autotool.audit action_end id=71ebd561-4d8c-4095-b466-e77bea67d222 success=True
+2025-12-30 16:35:47,442 INFO autotool.audit action_start id=c4487431-918e-4227-a59d-25fec2f0ea65 type=move
+2025-12-30 16:35:47,543 INFO autotool.audit action_end id=c4487431-918e-4227-a59d-25fec2f0ea65 success=True
+2025-12-30 16:35:47,648 INFO autotool.audit action_start id=6722c6c5-19cb-4e3e-a33b-2a8b028d0e6a type=move
+2025-12-30 16:35:47,748 INFO autotool.audit action_end id=6722c6c5-19cb-4e3e-a33b-2a8b028d0e6a success=True
+2025-12-30 16:35:47,854 INFO autotool.audit action_start id=9145a56c-da6e-40b5-a222-81d80a29070c type=move
+2025-12-30 16:35:47,955 INFO autotool.audit action_end id=9145a56c-da6e-40b5-a222-81d80a29070c success=True
+2025-12-30 16:35:48,061 INFO autotool.audit action_start id=dc73b90b-8390-49ec-9559-29e7617eff65 type=move
+2025-12-30 16:35:48,162 INFO autotool.audit action_end id=dc73b90b-8390-49ec-9559-29e7617eff65 success=True
+2025-12-30 16:35:48,268 INFO autotool.audit action_start id=9b2da553-daf3-48b0-9338-6bd3b262abfd type=move
+2025-12-30 16:35:48,369 INFO autotool.audit action_end id=9b2da553-daf3-48b0-9338-6bd3b262abfd success=True
+2025-12-30 16:35:48,474 INFO autotool.audit action_start id=4cd6db91-f7f3-4aec-a85f-09e5fe2c46cd type=move
+2025-12-30 16:35:48,574 INFO autotool.audit action_end id=4cd6db91-f7f3-4aec-a85f-09e5fe2c46cd success=True
+2025-12-30 16:35:48,785 INFO autotool.audit action_start id=a51b0c33-cbd8-4931-a01e-cf7ef8946f6c type=move
+2025-12-30 16:35:48,885 INFO autotool.audit action_end id=a51b0c33-cbd8-4931-a01e-cf7ef8946f6c success=True
+2025-12-30 16:35:48,991 INFO autotool.audit action_start id=50727bdd-9f28-4e5f-bffa-cd197d89be5d type=move
+2025-12-30 16:35:49,092 INFO autotool.audit action_end id=50727bdd-9f28-4e5f-bffa-cd197d89be5d success=True
+2025-12-30 16:35:49,198 INFO autotool.audit action_start id=ee681a8e-0149-438f-aead-15fc585b2d00 type=move
+2025-12-30 16:35:49,299 INFO autotool.audit action_end id=ee681a8e-0149-438f-aead-15fc585b2d00 success=True
+2025-12-30 16:35:49,404 INFO autotool.audit action_start id=adbefc72-6d6b-4c81-92a1-7715237b9751 type=move
+2025-12-30 16:35:49,505 INFO autotool.audit action_end id=adbefc72-6d6b-4c81-92a1-7715237b9751 success=True
+2025-12-30 16:35:49,656 INFO autotool.audit action_start id=2334f1cb-332a-4d65-8f04-f9432b35c4cc type=move
+2025-12-30 16:35:49,756 INFO autotool.audit action_end id=2334f1cb-332a-4d65-8f04-f9432b35c4cc success=True
+2025-12-30 16:35:49,863 INFO autotool.audit action_start id=9a26b72e-b7b0-4d8b-ae13-03c890811ee1 type=move
+2025-12-30 16:35:49,963 INFO autotool.audit action_end id=9a26b72e-b7b0-4d8b-ae13-03c890811ee1 success=True
+2025-12-30 16:35:50,069 INFO autotool.audit action_start id=b7cb6894-ee3d-4e20-878d-ba8ce4446fc0 type=mouse_down
+2025-12-30 16:35:50,177 INFO autotool.audit action_end id=b7cb6894-ee3d-4e20-878d-ba8ce4446fc0 success=True
+2025-12-30 16:35:50,213 INFO autotool.audit action_start id=0779ed48-3d45-4dd2-8c92-fa77a8187ab5 type=move
+2025-12-30 16:35:50,314 INFO autotool.audit action_end id=0779ed48-3d45-4dd2-8c92-fa77a8187ab5 success=True
+2025-12-30 16:35:50,346 INFO autotool.audit action_start id=ae8e2226-4bdf-4b1d-a5a2-a865e5600fa5 type=mouse_up
+2025-12-30 16:35:50,454 INFO autotool.audit action_end id=ae8e2226-4bdf-4b1d-a5a2-a865e5600fa5 success=True
+2025-12-30 16:35:50,603 INFO autotool.audit action_start id=0079d89d-09e9-4396-9ff1-91600e78d75e type=move
+2025-12-30 16:35:50,705 INFO autotool.audit action_end id=0079d89d-09e9-4396-9ff1-91600e78d75e success=True
+2025-12-30 16:35:50,811 INFO autotool.audit action_start id=4d561f3e-9c68-4d16-9151-7ed06e2a26dc type=move
+2025-12-30 16:35:50,912 INFO autotool.audit action_end id=4d561f3e-9c68-4d16-9151-7ed06e2a26dc success=True
+2025-12-30 16:35:51,018 INFO autotool.audit action_start id=31384732-8f9a-4636-9d28-75c0431391ce type=move
+2025-12-30 16:35:51,119 INFO autotool.audit action_end id=31384732-8f9a-4636-9d28-75c0431391ce success=True
+2025-12-30 16:35:51,232 INFO autotool.audit action_start id=38db4cea-ef52-4be7-9721-27939df332af type=move
+2025-12-30 16:35:51,334 INFO autotool.audit action_end id=38db4cea-ef52-4be7-9721-27939df332af success=True
+2025-12-30 16:35:51,351 INFO autotool.audit action_start id=6a15137c-8cf8-4ee8-8fb0-04bd8d4bff44 type=mouse_down
+2025-12-30 16:35:51,459 INFO autotool.audit action_end id=6a15137c-8cf8-4ee8-8fb0-04bd8d4bff44 success=True
+2025-12-30 16:35:51,533 INFO autotool.audit action_start id=840074b5-2df0-4a6f-bc6e-bf6688e2e5fb type=mouse_up
+2025-12-30 16:35:51,637 INFO autotool.audit action_end id=840074b5-2df0-4a6f-bc6e-bf6688e2e5fb success=True
+2025-12-30 16:35:51,720 INFO autotool.audit action_start id=fb0753b2-8a61-4d14-9c29-b385256eec0f type=move
+2025-12-30 16:35:51,822 INFO autotool.audit action_end id=fb0753b2-8a61-4d14-9c29-b385256eec0f success=True
+2025-12-30 16:35:51,927 INFO autotool.audit action_start id=83ab367c-7839-47ec-85c5-760aff299b45 type=move
+2025-12-30 16:35:52,028 INFO autotool.audit action_end id=83ab367c-7839-47ec-85c5-760aff299b45 success=True
+2025-12-30 16:35:52,134 INFO autotool.audit action_start id=ef07f5c7-5016-43ce-85c8-b9bc7cd1a5d2 type=move
+2025-12-30 16:35:52,235 INFO autotool.audit action_end id=ef07f5c7-5016-43ce-85c8-b9bc7cd1a5d2 success=True
+2025-12-30 16:35:52,348 INFO autotool.audit action_start id=7b4fda4a-b57f-4b75-ba9e-9c81593bb141 type=mouse_down
+2025-12-30 16:35:52,457 INFO autotool.audit action_end id=7b4fda4a-b57f-4b75-ba9e-9c81593bb141 success=True
+2025-12-30 16:35:52,549 INFO autotool.audit action_start id=ea6852b4-8d82-4764-8c90-6e2eb1bfa2bf type=mouse_up
+2025-12-30 16:35:52,652 INFO autotool.audit action_end id=ea6852b4-8d82-4764-8c90-6e2eb1bfa2bf success=True
+2025-12-30 16:35:52,727 INFO autotool.audit action_start id=da2758bd-514a-491e-a158-cc5e22f13edd type=move
+2025-12-30 16:35:52,833 INFO autotool.audit action_end id=da2758bd-514a-491e-a158-cc5e22f13edd success=True
+2025-12-30 16:35:52,941 INFO autotool.audit action_start id=4d0c1aef-d328-48c8-a9d8-6d99f1a30674 type=move
+2025-12-30 16:35:53,041 INFO autotool.audit action_end id=4d0c1aef-d328-48c8-a9d8-6d99f1a30674 success=True
+2025-12-30 16:35:53,144 INFO autotool.audit action_start id=3026ea31-56dc-41da-8405-09eac8b84cc7 type=move
+2025-12-30 16:35:53,245 INFO autotool.audit action_end id=3026ea31-56dc-41da-8405-09eac8b84cc7 success=True
+2025-12-30 16:35:53,352 INFO autotool.audit action_start id=3aa6a2bf-cdf7-49f7-b0f1-476dabd57976 type=move
+2025-12-30 16:35:53,452 INFO autotool.audit action_end id=3aa6a2bf-cdf7-49f7-b0f1-476dabd57976 success=True
+2025-12-30 16:35:53,579 INFO autotool.audit action_start id=2206cf04-ae29-43bb-b3d0-9e6eaf022f1e type=move
+2025-12-30 16:35:53,680 INFO autotool.audit action_end id=2206cf04-ae29-43bb-b3d0-9e6eaf022f1e success=True
+2025-12-30 16:35:53,683 INFO autotool.audit action_start id=bedc6ee1-ae91-4b0a-a0a0-06ff3d7ad11d type=mouse_down
+2025-12-30 16:35:53,792 INFO autotool.audit action_end id=bedc6ee1-ae91-4b0a-a0a0-06ff3d7ad11d success=True
+2025-12-30 16:35:53,873 INFO autotool.audit action_start id=d809f1de-0674-4ccf-b0cc-c79b60aedef2 type=mouse_up
+2025-12-30 16:35:53,977 INFO autotool.audit action_end id=d809f1de-0674-4ccf-b0cc-c79b60aedef2 success=True
+2025-12-30 16:35:54,010 INFO autotool.audit action_start id=b20e9abb-03fc-4084-89a7-0d62c687d1e6 type=move
+2025-12-30 16:35:54,110 INFO autotool.audit action_end id=b20e9abb-03fc-4084-89a7-0d62c687d1e6 success=True
+2025-12-30 16:35:54,214 INFO autotool.audit action_start id=f096ac08-7732-484f-90e5-7d068c8d7d0f type=move
+2025-12-30 16:35:54,315 INFO autotool.audit action_end id=f096ac08-7732-484f-90e5-7d068c8d7d0f success=True
+2025-12-30 16:35:54,421 INFO autotool.audit action_start id=4b654c14-9bbf-43aa-a36b-2b7cddb0a516 type=move
+2025-12-30 16:35:54,522 INFO autotool.audit action_end id=4b654c14-9bbf-43aa-a36b-2b7cddb0a516 success=True
+2025-12-30 16:35:54,643 INFO autotool.audit action_start id=90041ce9-2b68-4457-a32e-b6678e4fe54e type=mouse_down
+2025-12-30 16:35:54,753 INFO autotool.audit action_end id=90041ce9-2b68-4457-a32e-b6678e4fe54e success=True
+2025-12-30 16:35:54,829 INFO autotool.audit action_start id=a6cacbff-7e47-45e9-891f-495e9e1abff5 type=mouse_up
+2025-12-30 16:35:54,931 INFO autotool.audit action_end id=a6cacbff-7e47-45e9-891f-495e9e1abff5 success=True
+2025-12-30 16:35:54,938 INFO autotool.audit action_start id=8990543e-3b3b-4a5b-895c-a5d044d83a29 type=move
+2025-12-30 16:35:55,041 INFO autotool.audit action_end id=8990543e-3b3b-4a5b-895c-a5d044d83a29 success=True
+2025-12-30 16:35:55,184 INFO autotool.audit action_start id=548b3e73-94c5-4dd3-a745-44ea8f89dd0c type=move
+2025-12-30 16:35:55,285 INFO autotool.audit action_end id=548b3e73-94c5-4dd3-a745-44ea8f89dd0c success=True
+2025-12-30 16:35:55,390 INFO autotool.audit action_start id=7346c8c3-51b0-4e20-a82e-df05fad3e722 type=move
+2025-12-30 16:35:55,491 INFO autotool.audit action_end id=7346c8c3-51b0-4e20-a82e-df05fad3e722 success=True
+2025-12-30 16:35:55,597 INFO autotool.audit action_start id=47f9fb29-60c2-4b5a-8a76-786e0f5e1831 type=move
+2025-12-30 16:35:55,697 INFO autotool.audit action_end id=47f9fb29-60c2-4b5a-8a76-786e0f5e1831 success=True
+2025-12-30 16:35:55,779 INFO autotool.audit action_start id=764e445e-f4e6-4a78-b4c3-8a8427f352d2 type=mouse_down
+2025-12-30 16:35:55,888 INFO autotool.audit action_end id=764e445e-f4e6-4a78-b4c3-8a8427f352d2 success=True
+2025-12-30 16:35:55,957 INFO autotool.audit action_start id=58d3eec2-e8dd-4826-a4e9-1afd92dc2529 type=mouse_up
+2025-12-30 16:35:56,058 INFO autotool.audit action_end id=58d3eec2-e8dd-4826-a4e9-1afd92dc2529 success=True
+2025-12-30 16:35:56,067 INFO autotool.audit action_start id=9e14f2c9-35be-4935-a2dc-567112cff6bd type=move
+2025-12-30 16:35:56,168 INFO autotool.audit action_end id=9e14f2c9-35be-4935-a2dc-567112cff6bd success=True
+2025-12-30 16:35:56,289 INFO autotool.audit action_start id=e4e60f8a-7d26-48d0-8ffb-e43324b6d91e type=move
+2025-12-30 16:35:56,389 INFO autotool.audit action_end id=e4e60f8a-7d26-48d0-8ffb-e43324b6d91e success=True
+2025-12-30 16:35:56,493 INFO autotool.audit action_start id=1d5f9fc4-1773-4da1-9831-f5a35119eb3a type=move
+2025-12-30 16:35:56,594 INFO autotool.audit action_end id=1d5f9fc4-1773-4da1-9831-f5a35119eb3a success=True
+2025-12-30 16:35:56,699 INFO autotool.audit action_start id=a7039091-d025-4206-ba00-9e98b5d07eab type=move
+2025-12-30 16:35:56,800 INFO autotool.audit action_end id=a7039091-d025-4206-ba00-9e98b5d07eab success=True
+2025-12-30 16:35:56,906 INFO autotool.audit action_start id=c9a914fe-6da9-428d-a6cf-77f418881001 type=move
+2025-12-30 16:35:57,006 INFO autotool.audit action_end id=c9a914fe-6da9-428d-a6cf-77f418881001 success=True
+2025-12-30 16:35:57,112 INFO autotool.audit action_start id=df44fcad-8dda-4fd9-820a-f29d75598c1b type=move
+2025-12-30 16:35:57,213 INFO autotool.audit action_end id=df44fcad-8dda-4fd9-820a-f29d75598c1b success=True
+2025-12-30 16:35:57,318 INFO autotool.audit action_start id=008c1291-22d8-44ea-80c8-2bd4ac2ba553 type=move
+2025-12-30 16:35:57,419 INFO autotool.audit action_end id=008c1291-22d8-44ea-80c8-2bd4ac2ba553 success=True
+2025-12-30 16:35:57,524 INFO autotool.audit action_start id=9f45ea1d-1f9e-40af-b9e8-aa39bb4791fb type=move
+2025-12-30 16:35:57,625 INFO autotool.audit action_end id=9f45ea1d-1f9e-40af-b9e8-aa39bb4791fb success=True
+2025-12-30 16:35:57,648 INFO autotool.audit action_start id=0988eab0-e7de-46db-b492-18716706f102 type=mouse_down
+2025-12-30 16:35:57,758 INFO autotool.audit action_end id=0988eab0-e7de-46db-b492-18716706f102 success=True
+2025-12-30 16:35:57,841 INFO autotool.audit action_start id=4ac9c05d-da8d-455c-a716-0ffa2898f5b2 type=mouse_up
+2025-12-30 16:35:57,942 INFO autotool.audit action_end id=4ac9c05d-da8d-455c-a716-0ffa2898f5b2 success=True
+2025-12-30 16:35:57,951 INFO autotool.audit action_start id=04f4eb1f-0e85-407b-9a77-4e2418a96fbb type=move
+2025-12-30 16:35:58,051 INFO autotool.audit action_end id=04f4eb1f-0e85-407b-9a77-4e2418a96fbb success=True
+2025-12-30 16:35:58,157 INFO autotool.audit action_start id=f2188529-862d-48a4-95cd-fe53efd51f4f type=move
+2025-12-30 16:35:58,258 INFO autotool.audit action_end id=f2188529-862d-48a4-95cd-fe53efd51f4f success=True
+2025-12-30 16:35:58,363 INFO autotool.audit action_start id=aaa156ee-0ae2-449e-9c06-b8acb1014f11 type=move
+2025-12-30 16:35:58,464 INFO autotool.audit action_end id=aaa156ee-0ae2-449e-9c06-b8acb1014f11 success=True
+2025-12-30 16:35:58,571 INFO autotool.audit action_start id=b7440835-f96d-4319-aab4-e0663d609642 type=move
+2025-12-30 16:35:58,671 INFO autotool.audit action_end id=b7440835-f96d-4319-aab4-e0663d609642 success=True
+2025-12-30 16:35:58,777 INFO autotool.audit action_start id=71fff8a0-3330-467d-ba60-3c6f3aac6d1f type=move
+2025-12-30 16:35:58,878 INFO autotool.audit action_end id=71fff8a0-3330-467d-ba60-3c6f3aac6d1f success=True
+2025-12-30 16:35:58,984 INFO autotool.audit action_start id=934f1322-aa6e-46e4-9464-144c0d49d562 type=move
+2025-12-30 16:35:59,084 INFO autotool.audit action_end id=934f1322-aa6e-46e4-9464-144c0d49d562 success=True
+2025-12-30 16:35:59,189 INFO autotool.audit action_start id=4e50e502-30f5-4a3b-9759-e4bd0fb12110 type=move
+2025-12-30 16:35:59,290 INFO autotool.audit action_end id=4e50e502-30f5-4a3b-9759-e4bd0fb12110 success=True
+2025-12-30 16:35:59,396 INFO autotool.audit action_start id=3ec5d241-46f7-465d-8a5b-78479a0ee1a7 type=move
+2025-12-30 16:35:59,497 INFO autotool.audit action_end id=3ec5d241-46f7-465d-8a5b-78479a0ee1a7 success=True
+2025-12-30 16:35:59,603 INFO autotool.audit action_start id=bbbe5707-1f2c-4c46-b3cf-bcb944dd53e5 type=move
+2025-12-30 16:35:59,704 INFO autotool.audit action_end id=bbbe5707-1f2c-4c46-b3cf-bcb944dd53e5 success=True
+2025-12-30 16:35:59,832 INFO autotool.audit action_start id=f317b325-609b-4b33-a499-7ebe76372b36 type=move
+2025-12-30 16:35:59,932 INFO autotool.audit action_end id=f317b325-609b-4b33-a499-7ebe76372b36 success=True
+2025-12-30 16:35:59,947 INFO autotool.audit action_start id=48cf7161-18d8-45e9-8b1c-cf32d6527eed type=mouse_down
+2025-12-30 16:36:00,055 INFO autotool.audit action_end id=48cf7161-18d8-45e9-8b1c-cf32d6527eed success=True
+2025-12-30 16:36:00,125 INFO autotool.audit action_start id=0d992a73-ecd3-412d-968b-7286de3d2828 type=mouse_up
+2025-12-30 16:36:00,233 INFO autotool.audit action_end id=0d992a73-ecd3-412d-968b-7286de3d2828 success=True
+2025-12-30 16:36:00,233 INFO autotool.replayer Replay finished (69 results)
+2025-12-30 16:36:00,233 INFO autotool.api.replay Replay finished (69 results)
+2025-12-30 16:38:20,535 INFO autotool.recorder Recorder started
+2025-12-30 16:38:20,552 INFO autotool.api.recording Recording started
+2025-12-30 16:38:29,405 INFO autotool.recorder Recorder stopped (79 events)
+2025-12-30 16:38:29,405 INFO autotool.api.recording Recording stopped (79 events)
+2025-12-30 16:38:34,673 INFO autotool.replayer Replay started (79 items)
+2025-12-30 16:38:34,673 INFO autotool.api.replay Replay started
+2025-12-30 16:38:34,673 INFO autotool.audit action_start id=0bff4d16-ee02-4fb3-ab64-e470881b04e8 type=move
+2025-12-30 16:38:34,776 INFO autotool.audit action_end id=0bff4d16-ee02-4fb3-ab64-e470881b04e8 success=True
+2025-12-30 16:38:34,882 INFO autotool.audit action_start id=dc543a0a-da2f-4684-82f7-bf0812b2b4b6 type=move
+2025-12-30 16:38:34,982 INFO autotool.audit action_end id=dc543a0a-da2f-4684-82f7-bf0812b2b4b6 success=True
+2025-12-30 16:38:35,088 INFO autotool.audit action_start id=62fc10cd-4dfd-4f1e-ad8d-cb8564352dd8 type=move
+2025-12-30 16:38:35,190 INFO autotool.audit action_end id=62fc10cd-4dfd-4f1e-ad8d-cb8564352dd8 success=True
+2025-12-30 16:38:35,297 INFO autotool.audit action_start id=6a7bf6c8-8b37-4424-b760-32b0865c8d73 type=move
+2025-12-30 16:38:35,398 INFO autotool.audit action_end id=6a7bf6c8-8b37-4424-b760-32b0865c8d73 success=True
+2025-12-30 16:38:35,549 INFO autotool.audit action_start id=88470afc-954a-4276-8c0f-5b29b60c4390 type=move
+2025-12-30 16:38:35,650 INFO autotool.audit action_end id=88470afc-954a-4276-8c0f-5b29b60c4390 success=True
+2025-12-30 16:38:35,755 INFO autotool.audit action_start id=8677be07-e9f6-4372-bfac-7dbf476d341b type=move
+2025-12-30 16:38:35,855 INFO autotool.audit action_end id=8677be07-e9f6-4372-bfac-7dbf476d341b success=True
+2025-12-30 16:38:35,961 INFO autotool.audit action_start id=53be1e34-c936-490a-be1f-772f99916c63 type=move
+2025-12-30 16:38:36,062 INFO autotool.audit action_end id=53be1e34-c936-490a-be1f-772f99916c63 success=True
+2025-12-30 16:38:36,175 INFO autotool.audit action_start id=f7fbcd4c-c933-4f04-bb48-49d99c6dde37 type=move
+2025-12-30 16:38:36,276 INFO autotool.audit action_end id=f7fbcd4c-c933-4f04-bb48-49d99c6dde37 success=True
+2025-12-30 16:38:36,464 INFO autotool.audit action_start id=a92329ad-1a89-4695-afb3-0ebfb1a6962b type=move
+2025-12-30 16:38:36,565 INFO autotool.audit action_end id=a92329ad-1a89-4695-afb3-0ebfb1a6962b success=True
+2025-12-30 16:38:36,693 INFO autotool.audit action_start id=f92ce51e-e8e8-4b42-baf5-f4b71d3b99fa type=move
+2025-12-30 16:38:36,793 INFO autotool.audit action_end id=f92ce51e-e8e8-4b42-baf5-f4b71d3b99fa success=True
+2025-12-30 16:38:36,907 INFO autotool.audit action_start id=bdc55eef-685e-4519-bfd3-b6ef84249f11 type=move
+2025-12-30 16:38:37,007 INFO autotool.audit action_end id=bdc55eef-685e-4519-bfd3-b6ef84249f11 success=True
+2025-12-30 16:38:37,113 INFO autotool.audit action_start id=5139977b-6ea1-4168-bc82-e630f5355fcf type=move
+2025-12-30 16:38:37,214 INFO autotool.audit action_end id=5139977b-6ea1-4168-bc82-e630f5355fcf success=True
+2025-12-30 16:38:37,320 INFO autotool.audit action_start id=91890cf7-ce0e-4859-91fc-9f56831a7f8b type=move
+2025-12-30 16:38:37,422 INFO autotool.audit action_end id=91890cf7-ce0e-4859-91fc-9f56831a7f8b success=True
+2025-12-30 16:38:37,527 INFO autotool.audit action_start id=371927e9-e739-4d8c-8ce8-4381aff67b6a type=move
+2025-12-30 16:38:37,627 INFO autotool.audit action_end id=371927e9-e739-4d8c-8ce8-4381aff67b6a success=True
+2025-12-30 16:38:37,733 INFO autotool.audit action_start id=fe0751bc-acef-489c-b472-a4cf55f5ebc5 type=move
+2025-12-30 16:38:37,834 INFO autotool.audit action_end id=fe0751bc-acef-489c-b472-a4cf55f5ebc5 success=True
+2025-12-30 16:38:37,938 INFO autotool.audit action_start id=5635b092-f2f3-4d6a-b8d5-b68b237aeae9 type=move
+2025-12-30 16:38:38,039 INFO autotool.audit action_end id=5635b092-f2f3-4d6a-b8d5-b68b237aeae9 success=True
+2025-12-30 16:38:38,146 INFO autotool.audit action_start id=3d3ce7e0-3e25-420f-8861-c45b67ec02d9 type=move
+2025-12-30 16:38:38,247 INFO autotool.audit action_end id=3d3ce7e0-3e25-420f-8861-c45b67ec02d9 success=True
+2025-12-30 16:38:38,404 INFO autotool.audit action_start id=7f0cd4ac-6bd1-45fc-a51b-553f5f6a53e7 type=move
+2025-12-30 16:38:38,506 INFO autotool.audit action_end id=7f0cd4ac-6bd1-45fc-a51b-553f5f6a53e7 success=True
+2025-12-30 16:38:38,657 INFO autotool.audit action_start id=c795be62-85d8-43cc-b67e-87296b8c9740 type=move
+2025-12-30 16:38:38,758 INFO autotool.audit action_end id=c795be62-85d8-43cc-b67e-87296b8c9740 success=True
+2025-12-30 16:38:38,862 INFO autotool.audit action_start id=7633d39a-2f7d-4d12-929f-b5e93005bc34 type=move
+2025-12-30 16:38:38,963 INFO autotool.audit action_end id=7633d39a-2f7d-4d12-929f-b5e93005bc34 success=True
+2025-12-30 16:38:39,069 INFO autotool.audit action_start id=c47ae969-6aaa-457b-8d77-cd5affaa35dc type=move
+2025-12-30 16:38:39,169 INFO autotool.audit action_end id=c47ae969-6aaa-457b-8d77-cd5affaa35dc success=True
+2025-12-30 16:38:39,274 INFO autotool.audit action_start id=44d10b88-7989-4f80-a549-1e29fe7297c8 type=move
+2025-12-30 16:38:39,375 INFO autotool.audit action_end id=44d10b88-7989-4f80-a549-1e29fe7297c8 success=True
+2025-12-30 16:38:39,481 INFO autotool.audit action_start id=d9b667eb-edcf-4de7-9684-b83b34b62384 type=move
+2025-12-30 16:38:39,582 INFO autotool.audit action_end id=d9b667eb-edcf-4de7-9684-b83b34b62384 success=True
+2025-12-30 16:38:39,718 INFO autotool.audit action_start id=ad9ec950-a7c6-4c27-af23-f05aff84e004 type=move
+2025-12-30 16:38:39,818 INFO autotool.audit action_end id=ad9ec950-a7c6-4c27-af23-f05aff84e004 success=True
+2025-12-30 16:38:39,923 INFO autotool.audit action_start id=76d8b64c-36bb-4be0-9936-e188159b2343 type=move
+2025-12-30 16:38:40,024 INFO autotool.audit action_end id=76d8b64c-36bb-4be0-9936-e188159b2343 success=True
+2025-12-30 16:38:40,160 INFO autotool.audit action_start id=c5478d7c-0ff7-46a4-a999-70fd6179121e type=move
+2025-12-30 16:38:40,261 INFO autotool.audit action_end id=c5478d7c-0ff7-46a4-a999-70fd6179121e success=True
+2025-12-30 16:38:40,367 INFO autotool.audit action_start id=4b1bed65-eb41-4796-b906-6d70112165f4 type=move
+2025-12-30 16:38:40,468 INFO autotool.audit action_end id=4b1bed65-eb41-4796-b906-6d70112165f4 success=True
+2025-12-30 16:38:40,581 INFO autotool.audit action_start id=b57154ee-fa4c-451f-a6c2-c6e18c9143d3 type=move
+2025-12-30 16:38:40,682 INFO autotool.audit action_end id=b57154ee-fa4c-451f-a6c2-c6e18c9143d3 success=True
+2025-12-30 16:38:40,787 INFO autotool.audit action_start id=346382cb-9cab-4646-b198-3d5dd20b5357 type=move
+2025-12-30 16:38:40,888 INFO autotool.audit action_end id=346382cb-9cab-4646-b198-3d5dd20b5357 success=True
+2025-12-30 16:38:40,994 INFO autotool.audit action_start id=0672bbe1-35a1-4b1c-85a4-6cacf1376da6 type=move
+2025-12-30 16:38:41,095 INFO autotool.audit action_end id=0672bbe1-35a1-4b1c-85a4-6cacf1376da6 success=True
+2025-12-30 16:38:41,201 INFO autotool.audit action_start id=2a050097-8a33-47e2-9723-0dfd834e0379 type=move
+2025-12-30 16:38:41,301 INFO autotool.audit action_end id=2a050097-8a33-47e2-9723-0dfd834e0379 success=True
+2025-12-30 16:38:41,407 INFO autotool.audit action_start id=94ca2f50-1fd3-41a3-8a6d-0f34bc298b95 type=move
+2025-12-30 16:38:41,510 INFO autotool.audit action_end id=94ca2f50-1fd3-41a3-8a6d-0f34bc298b95 success=True
+2025-12-30 16:38:41,616 INFO autotool.audit action_start id=d0c93365-8e0c-417c-9dfd-b453999397fe type=move
+2025-12-30 16:38:41,717 INFO autotool.audit action_end id=d0c93365-8e0c-417c-9dfd-b453999397fe success=True
+2025-12-30 16:38:41,822 INFO autotool.audit action_start id=eac0f0dc-0808-4a69-89bd-9067cd0fa95a type=move
+2025-12-30 16:38:41,923 INFO autotool.audit action_end id=eac0f0dc-0808-4a69-89bd-9067cd0fa95a success=True
+2025-12-30 16:38:42,028 INFO autotool.audit action_start id=fb15d3fc-0226-467e-9acb-6c79fc3a615d type=move
+2025-12-30 16:38:42,128 INFO autotool.audit action_end id=fb15d3fc-0226-467e-9acb-6c79fc3a615d success=True
+2025-12-30 16:38:42,233 INFO autotool.audit action_start id=8a1a833e-d516-4247-8d72-a366584b8734 type=move
+2025-12-30 16:38:42,333 INFO autotool.audit action_end id=8a1a833e-d516-4247-8d72-a366584b8734 success=True
+2025-12-30 16:38:42,439 INFO autotool.audit action_start id=4ef8ae04-ca87-4755-8f50-cbe539af3f6b type=move
+2025-12-30 16:38:42,539 INFO autotool.audit action_end id=4ef8ae04-ca87-4755-8f50-cbe539af3f6b success=True
+2025-12-30 16:38:42,646 INFO autotool.audit action_start id=65243ca3-fd90-45e9-bf3a-fd0cf8dd4bce type=move
+2025-12-30 16:38:42,747 INFO autotool.audit action_end id=65243ca3-fd90-45e9-bf3a-fd0cf8dd4bce success=True
+2025-12-30 16:38:42,867 INFO autotool.audit action_start id=1fa50b22-3fc3-4184-ac9e-92042f6a2d17 type=mouse_down
+2025-12-30 16:38:42,977 INFO autotool.audit action_end id=1fa50b22-3fc3-4184-ac9e-92042f6a2d17 success=True
+2025-12-30 16:38:43,068 INFO autotool.audit action_start id=ede21fef-dc8d-41a4-8eb5-096c63ffe062 type=mouse_up
+2025-12-30 16:38:43,170 INFO autotool.audit action_end id=ede21fef-dc8d-41a4-8eb5-096c63ffe062 success=True
+2025-12-30 16:38:43,199 INFO autotool.audit action_start id=b1e8cc53-f2b0-47fb-a5eb-e157818181c0 type=move
+2025-12-30 16:38:43,300 INFO autotool.audit action_end id=b1e8cc53-f2b0-47fb-a5eb-e157818181c0 success=True
+2025-12-30 16:38:43,407 INFO autotool.audit action_start id=a6d5af96-1ebc-4b1f-95e9-704325fd9863 type=move
+2025-12-30 16:38:43,509 INFO autotool.audit action_end id=a6d5af96-1ebc-4b1f-95e9-704325fd9863 success=True
+2025-12-30 16:38:43,613 INFO autotool.audit action_start id=504847e3-11df-4307-820b-939ed761f16a type=move
+2025-12-30 16:38:43,713 INFO autotool.audit action_end id=504847e3-11df-4307-820b-939ed761f16a success=True
+2025-12-30 16:38:43,826 INFO autotool.audit action_start id=1bc19b5f-bbde-4531-9830-7a0d3b89b1b6 type=move
+2025-12-30 16:38:43,927 INFO autotool.audit action_end id=1bc19b5f-bbde-4531-9830-7a0d3b89b1b6 success=True
+2025-12-30 16:38:44,063 INFO autotool.audit action_start id=fe3bc16e-868d-4ccf-bf3f-31bdf768b2d3 type=mouse_down
+2025-12-30 16:38:44,169 INFO autotool.audit action_end id=fe3bc16e-868d-4ccf-bf3f-31bdf768b2d3 success=True
+2025-12-30 16:38:44,251 INFO autotool.audit action_start id=3dcaccd8-00fa-4f75-a6dc-fa87ad9689de type=mouse_up
+2025-12-30 16:38:44,353 INFO autotool.audit action_end id=3dcaccd8-00fa-4f75-a6dc-fa87ad9689de success=True
+2025-12-30 16:38:44,430 INFO autotool.audit action_start id=de87d5ef-c63d-46c6-b884-0dece046bdf7 type=move
+2025-12-30 16:38:44,531 INFO autotool.audit action_end id=de87d5ef-c63d-46c6-b884-0dece046bdf7 success=True
+2025-12-30 16:38:44,636 INFO autotool.audit action_start id=3628945a-f283-4b7a-81dc-533c59510579 type=move
+2025-12-30 16:38:44,736 INFO autotool.audit action_end id=3628945a-f283-4b7a-81dc-533c59510579 success=True
+2025-12-30 16:38:44,843 INFO autotool.audit action_start id=505eb2cb-c769-41df-9a9d-9122923b275c type=move
+2025-12-30 16:38:44,944 INFO autotool.audit action_end id=505eb2cb-c769-41df-9a9d-9122923b275c success=True
+2025-12-30 16:38:45,049 INFO autotool.audit action_start id=5ccb555d-dd9e-4e4b-85dd-3bdbf5d30130 type=move
+2025-12-30 16:38:45,150 INFO autotool.audit action_end id=5ccb555d-dd9e-4e4b-85dd-3bdbf5d30130 success=True
+2025-12-30 16:38:45,262 INFO autotool.audit action_start id=cf514cee-f6fb-473c-9de6-e7d1cad7d904 type=mouse_down
+2025-12-30 16:38:45,369 INFO autotool.audit action_end id=cf514cee-f6fb-473c-9de6-e7d1cad7d904 success=True
+2025-12-30 16:38:45,454 INFO autotool.audit action_start id=e9e87839-4680-448c-8426-9d9c6a000b55 type=mouse_up
+2025-12-30 16:38:45,555 INFO autotool.audit action_end id=e9e87839-4680-448c-8426-9d9c6a000b55 success=True
+2025-12-30 16:38:45,599 INFO autotool.audit action_start id=02d61e6b-a5cb-48f3-a9e9-9f284b27f639 type=move
+2025-12-30 16:38:45,700 INFO autotool.audit action_end id=02d61e6b-a5cb-48f3-a9e9-9f284b27f639 success=True
+2025-12-30 16:38:45,804 INFO autotool.audit action_start id=4e071be4-d0a7-4b16-9aac-5692d2423b26 type=move
+2025-12-30 16:38:45,906 INFO autotool.audit action_end id=4e071be4-d0a7-4b16-9aac-5692d2423b26 success=True
+2025-12-30 16:38:46,012 INFO autotool.audit action_start id=371bc799-a793-4203-a5da-d42faf6ed427 type=move
+2025-12-30 16:38:46,113 INFO autotool.audit action_end id=371bc799-a793-4203-a5da-d42faf6ed427 success=True
+2025-12-30 16:38:46,219 INFO autotool.audit action_start id=1bc06491-f869-44d1-8c2e-a43e668c59a2 type=move
+2025-12-30 16:38:46,319 INFO autotool.audit action_end id=1bc06491-f869-44d1-8c2e-a43e668c59a2 success=True
+2025-12-30 16:38:46,470 INFO autotool.audit action_start id=881d5841-6ab5-4597-8db5-26813ad83e14 type=mouse_down
+2025-12-30 16:38:46,578 INFO autotool.audit action_end id=881d5841-6ab5-4597-8db5-26813ad83e14 success=True
+2025-12-30 16:38:46,585 INFO autotool.audit action_start id=1cc30876-919b-4d0e-b77b-00ce3397f6f4 type=move
+2025-12-30 16:38:46,686 INFO autotool.audit action_end id=1cc30876-919b-4d0e-b77b-00ce3397f6f4 success=True
+2025-12-30 16:38:46,762 INFO autotool.audit action_start id=b8633993-413a-4185-9d56-4b2f52602389 type=mouse_up
+2025-12-30 16:38:46,865 INFO autotool.audit action_end id=b8633993-413a-4185-9d56-4b2f52602389 success=True
+2025-12-30 16:38:47,120 INFO autotool.audit action_start id=615f6df5-05c3-4694-b34d-790d7d6a1e8b type=move
+2025-12-30 16:38:47,221 INFO autotool.audit action_end id=615f6df5-05c3-4694-b34d-790d7d6a1e8b success=True
+2025-12-30 16:38:47,326 INFO autotool.audit action_start id=e60e556f-ee93-4e10-a3db-6fece08d8b93 type=move
+2025-12-30 16:38:47,427 INFO autotool.audit action_end id=e60e556f-ee93-4e10-a3db-6fece08d8b93 success=True
+2025-12-30 16:38:47,540 INFO autotool.audit action_start id=f00c904e-fda1-45d5-ba18-7e3736b1609c type=move
+2025-12-30 16:38:47,641 INFO autotool.audit action_end id=f00c904e-fda1-45d5-ba18-7e3736b1609c success=True
+2025-12-30 16:38:47,776 INFO autotool.audit action_start id=5cb0e106-07a1-48e1-a5c7-974f523d5194 type=move
+2025-12-30 16:38:47,876 INFO autotool.audit action_end id=5cb0e106-07a1-48e1-a5c7-974f523d5194 success=True
+2025-12-30 16:38:47,983 INFO autotool.audit action_start id=6e25d2c6-420c-4e83-b07a-a0a92e5cccfe type=move
+2025-12-30 16:38:48,083 INFO autotool.audit action_end id=6e25d2c6-420c-4e83-b07a-a0a92e5cccfe success=True
+2025-12-30 16:38:48,190 INFO autotool.audit action_start id=c43d052c-b8c8-4589-a655-1c9ccc3a9b50 type=move
+2025-12-30 16:38:48,290 INFO autotool.audit action_end id=c43d052c-b8c8-4589-a655-1c9ccc3a9b50 success=True
+2025-12-30 16:38:48,396 INFO autotool.audit action_start id=98ea08af-3211-45d6-8eae-562798649730 type=move
+2025-12-30 16:38:48,497 INFO autotool.audit action_end id=98ea08af-3211-45d6-8eae-562798649730 success=True
+2025-12-30 16:38:48,617 INFO autotool.audit action_start id=797dc115-6c60-4b9b-bf4b-4b4e678dac89 type=move
+2025-12-30 16:38:48,718 INFO autotool.audit action_end id=797dc115-6c60-4b9b-bf4b-4b4e678dac89 success=True
+2025-12-30 16:38:48,846 INFO autotool.audit action_start id=eb0ce4bc-53b5-4380-881d-9a88d95ff94c type=move
+2025-12-30 16:38:48,946 INFO autotool.audit action_end id=eb0ce4bc-53b5-4380-881d-9a88d95ff94c success=True
+2025-12-30 16:38:49,052 INFO autotool.audit action_start id=d46d8e76-3bc1-4442-ab67-be51365d987c type=move
+2025-12-30 16:38:49,152 INFO autotool.audit action_end id=d46d8e76-3bc1-4442-ab67-be51365d987c success=True
+2025-12-30 16:38:49,299 INFO autotool.audit action_start id=de9cb99c-3f5c-4253-944a-08a01d70fab6 type=move
+2025-12-30 16:38:49,400 INFO autotool.audit action_end id=de9cb99c-3f5c-4253-944a-08a01d70fab6 success=True
+2025-12-30 16:38:49,518 INFO autotool.audit action_start id=5d152700-4c88-4766-8013-8a92c5b13404 type=move
+2025-12-30 16:38:49,619 INFO autotool.audit action_end id=5d152700-4c88-4766-8013-8a92c5b13404 success=True
+2025-12-30 16:38:49,731 INFO autotool.audit action_start id=ac7df517-a789-404c-9a36-a7a2c9a3eee9 type=move
+2025-12-30 16:38:49,831 INFO autotool.audit action_end id=ac7df517-a789-404c-9a36-a7a2c9a3eee9 success=True
+2025-12-30 16:38:49,938 INFO autotool.audit action_start id=49677fbd-9227-4a4f-b476-bdbad30575bf type=move
+2025-12-30 16:38:50,038 INFO autotool.audit action_end id=49677fbd-9227-4a4f-b476-bdbad30575bf success=True
+2025-12-30 16:38:50,144 INFO autotool.audit action_start id=25717619-fc26-4365-ba69-1986339c45ba type=move
+2025-12-30 16:38:50,245 INFO autotool.audit action_end id=25717619-fc26-4365-ba69-1986339c45ba success=True
+2025-12-30 16:38:50,351 INFO autotool.audit action_start id=9a0d0293-5196-4bac-a123-78cf749051f9 type=move
+2025-12-30 16:38:50,452 INFO autotool.audit action_end id=9a0d0293-5196-4bac-a123-78cf749051f9 success=True
+2025-12-30 16:38:50,557 INFO autotool.audit action_start id=701f56a2-ea53-48ee-aa63-82e7fa0dedbb type=move
+2025-12-30 16:38:50,657 INFO autotool.audit action_end id=701f56a2-ea53-48ee-aa63-82e7fa0dedbb success=True
+2025-12-30 16:38:50,838 INFO autotool.audit action_start id=b6432781-fde6-4d11-8cb6-f7574163ba3b type=move
+2025-12-30 16:38:50,939 INFO autotool.audit action_end id=b6432781-fde6-4d11-8cb6-f7574163ba3b success=True
+2025-12-30 16:38:50,939 INFO autotool.audit action_start id=837c6f44-c945-4a6f-b1d5-77c8d1807ed8 type=mouse_down
+2025-12-30 16:38:51,045 INFO autotool.audit action_end id=837c6f44-c945-4a6f-b1d5-77c8d1807ed8 success=True
+2025-12-30 16:38:51,136 INFO autotool.audit action_start id=43dd754b-0235-4dcb-9e2f-29a0b04f26d7 type=mouse_up
+2025-12-30 16:38:51,238 INFO autotool.audit action_end id=43dd754b-0235-4dcb-9e2f-29a0b04f26d7 success=True
+2025-12-30 16:38:51,238 INFO autotool.replayer Replay finished (79 results)
+2025-12-30 16:38:51,238 INFO autotool.api.replay Replay finished (79 results)
+2025-12-30 16:39:05,038 INFO autotool.replayer Replay started (69 items)
+2025-12-30 16:39:05,038 INFO autotool.api.replay Replay started
+2025-12-30 16:39:05,039 INFO autotool.audit action_start id=01d08762-7a78-4b49-b573-744c0b7bb68f type=move
+2025-12-30 16:39:05,143 INFO autotool.audit action_end id=01d08762-7a78-4b49-b573-744c0b7bb68f success=True
+2025-12-30 16:39:05,249 INFO autotool.audit action_start id=eb39f529-f9ee-43d2-88d3-3e4236f6c65e type=move
+2025-12-30 16:39:05,351 INFO autotool.audit action_end id=eb39f529-f9ee-43d2-88d3-3e4236f6c65e success=True
+2025-12-30 16:39:05,464 INFO autotool.audit action_start id=71ebd561-4d8c-4095-b466-e77bea67d222 type=move
+2025-12-30 16:39:05,566 INFO autotool.audit action_end id=71ebd561-4d8c-4095-b466-e77bea67d222 success=True
+2025-12-30 16:39:05,672 INFO autotool.audit action_start id=c4487431-918e-4227-a59d-25fec2f0ea65 type=move
+2025-12-30 16:39:05,773 INFO autotool.audit action_end id=c4487431-918e-4227-a59d-25fec2f0ea65 success=True
+2025-12-30 16:39:05,877 INFO autotool.audit action_start id=6722c6c5-19cb-4e3e-a33b-2a8b028d0e6a type=move
+2025-12-30 16:39:05,978 INFO autotool.audit action_end id=6722c6c5-19cb-4e3e-a33b-2a8b028d0e6a success=True
+2025-12-30 16:39:06,085 INFO autotool.audit action_start id=9145a56c-da6e-40b5-a222-81d80a29070c type=move
+2025-12-30 16:39:06,186 INFO autotool.audit action_end id=9145a56c-da6e-40b5-a222-81d80a29070c success=True
+2025-12-30 16:39:06,291 INFO autotool.audit action_start id=dc73b90b-8390-49ec-9559-29e7617eff65 type=move
+2025-12-30 16:39:06,392 INFO autotool.audit action_end id=dc73b90b-8390-49ec-9559-29e7617eff65 success=True
+2025-12-30 16:39:06,498 INFO autotool.audit action_start id=9b2da553-daf3-48b0-9338-6bd3b262abfd type=move
+2025-12-30 16:39:06,599 INFO autotool.audit action_end id=9b2da553-daf3-48b0-9338-6bd3b262abfd success=True
+2025-12-30 16:39:06,704 INFO autotool.audit action_start id=4cd6db91-f7f3-4aec-a85f-09e5fe2c46cd type=move
+2025-12-30 16:39:06,805 INFO autotool.audit action_end id=4cd6db91-f7f3-4aec-a85f-09e5fe2c46cd success=True
+2025-12-30 16:39:07,015 INFO autotool.audit action_start id=a51b0c33-cbd8-4931-a01e-cf7ef8946f6c type=move
+2025-12-30 16:39:07,116 INFO autotool.audit action_end id=a51b0c33-cbd8-4931-a01e-cf7ef8946f6c success=True
+2025-12-30 16:39:07,222 INFO autotool.audit action_start id=50727bdd-9f28-4e5f-bffa-cd197d89be5d type=move
+2025-12-30 16:39:07,322 INFO autotool.audit action_end id=50727bdd-9f28-4e5f-bffa-cd197d89be5d success=True
+2025-12-30 16:39:07,428 INFO autotool.audit action_start id=ee681a8e-0149-438f-aead-15fc585b2d00 type=move
+2025-12-30 16:39:07,529 INFO autotool.audit action_end id=ee681a8e-0149-438f-aead-15fc585b2d00 success=True
+2025-12-30 16:39:07,634 INFO autotool.audit action_start id=adbefc72-6d6b-4c81-92a1-7715237b9751 type=move
+2025-12-30 16:39:07,735 INFO autotool.audit action_end id=adbefc72-6d6b-4c81-92a1-7715237b9751 success=True
+2025-12-30 16:39:07,885 INFO autotool.audit action_start id=2334f1cb-332a-4d65-8f04-f9432b35c4cc type=move
+2025-12-30 16:39:07,986 INFO autotool.audit action_end id=2334f1cb-332a-4d65-8f04-f9432b35c4cc success=True
+2025-12-30 16:39:08,093 INFO autotool.audit action_start id=9a26b72e-b7b0-4d8b-ae13-03c890811ee1 type=move
+2025-12-30 16:39:08,194 INFO autotool.audit action_end id=9a26b72e-b7b0-4d8b-ae13-03c890811ee1 success=True
+2025-12-30 16:39:08,299 INFO autotool.audit action_start id=b7cb6894-ee3d-4e20-878d-ba8ce4446fc0 type=mouse_down
+2025-12-30 16:39:08,408 INFO autotool.audit action_end id=b7cb6894-ee3d-4e20-878d-ba8ce4446fc0 success=True
+2025-12-30 16:39:08,445 INFO autotool.audit action_start id=0779ed48-3d45-4dd2-8c92-fa77a8187ab5 type=move
+2025-12-30 16:39:08,546 INFO autotool.audit action_end id=0779ed48-3d45-4dd2-8c92-fa77a8187ab5 success=True
+2025-12-30 16:39:08,577 INFO autotool.audit action_start id=ae8e2226-4bdf-4b1d-a5a2-a865e5600fa5 type=mouse_up
+2025-12-30 16:39:08,680 INFO autotool.audit action_end id=ae8e2226-4bdf-4b1d-a5a2-a865e5600fa5 success=True
+2025-12-30 16:39:08,829 INFO autotool.audit action_start id=0079d89d-09e9-4396-9ff1-91600e78d75e type=move
+2025-12-30 16:39:08,930 INFO autotool.audit action_end id=0079d89d-09e9-4396-9ff1-91600e78d75e success=True
+2025-12-30 16:39:09,036 INFO autotool.audit action_start id=4d561f3e-9c68-4d16-9151-7ed06e2a26dc type=move
+2025-12-30 16:39:09,136 INFO autotool.audit action_end id=4d561f3e-9c68-4d16-9151-7ed06e2a26dc success=True
+2025-12-30 16:39:09,243 INFO autotool.audit action_start id=31384732-8f9a-4636-9d28-75c0431391ce type=move
+2025-12-30 16:39:09,343 INFO autotool.audit action_end id=31384732-8f9a-4636-9d28-75c0431391ce success=True
+2025-12-30 16:39:09,456 INFO autotool.audit action_start id=38db4cea-ef52-4be7-9721-27939df332af type=move
+2025-12-30 16:39:09,556 INFO autotool.audit action_end id=38db4cea-ef52-4be7-9721-27939df332af success=True
+2025-12-30 16:39:09,573 INFO autotool.audit action_start id=6a15137c-8cf8-4ee8-8fb0-04bd8d4bff44 type=mouse_down
+2025-12-30 16:39:09,679 INFO autotool.audit action_end id=6a15137c-8cf8-4ee8-8fb0-04bd8d4bff44 success=True
+2025-12-30 16:39:09,753 INFO autotool.audit action_start id=840074b5-2df0-4a6f-bc6e-bf6688e2e5fb type=mouse_up
+2025-12-30 16:39:09,857 INFO autotool.audit action_end id=840074b5-2df0-4a6f-bc6e-bf6688e2e5fb success=True
+2025-12-30 16:39:09,939 INFO autotool.audit action_start id=fb0753b2-8a61-4d14-9c29-b385256eec0f type=move
+2025-12-30 16:39:10,040 INFO autotool.audit action_end id=fb0753b2-8a61-4d14-9c29-b385256eec0f success=True
+2025-12-30 16:39:10,145 INFO autotool.audit action_start id=83ab367c-7839-47ec-85c5-760aff299b45 type=move
+2025-12-30 16:39:10,246 INFO autotool.audit action_end id=83ab367c-7839-47ec-85c5-760aff299b45 success=True
+2025-12-30 16:39:10,353 INFO autotool.audit action_start id=ef07f5c7-5016-43ce-85c8-b9bc7cd1a5d2 type=move
+2025-12-30 16:39:10,454 INFO autotool.audit action_end id=ef07f5c7-5016-43ce-85c8-b9bc7cd1a5d2 success=True
+2025-12-30 16:39:10,567 INFO autotool.audit action_start id=7b4fda4a-b57f-4b75-ba9e-9c81593bb141 type=mouse_down
+2025-12-30 16:39:10,675 INFO autotool.audit action_end id=7b4fda4a-b57f-4b75-ba9e-9c81593bb141 success=True
+2025-12-30 16:39:10,766 INFO autotool.audit action_start id=ea6852b4-8d82-4764-8c90-6e2eb1bfa2bf type=mouse_up
+2025-12-30 16:39:10,869 INFO autotool.audit action_end id=ea6852b4-8d82-4764-8c90-6e2eb1bfa2bf success=True
+2025-12-30 16:39:10,943 INFO autotool.audit action_start id=da2758bd-514a-491e-a158-cc5e22f13edd type=move
+2025-12-30 16:39:11,044 INFO autotool.audit action_end id=da2758bd-514a-491e-a158-cc5e22f13edd success=True
+2025-12-30 16:39:11,152 INFO autotool.audit action_start id=4d0c1aef-d328-48c8-a9d8-6d99f1a30674 type=move
+2025-12-30 16:39:11,252 INFO autotool.audit action_end id=4d0c1aef-d328-48c8-a9d8-6d99f1a30674 success=True
+2025-12-30 16:39:11,355 INFO autotool.audit action_start id=3026ea31-56dc-41da-8405-09eac8b84cc7 type=move
+2025-12-30 16:39:11,456 INFO autotool.audit action_end id=3026ea31-56dc-41da-8405-09eac8b84cc7 success=True
+2025-12-30 16:39:11,562 INFO autotool.audit action_start id=3aa6a2bf-cdf7-49f7-b0f1-476dabd57976 type=move
+2025-12-30 16:39:11,663 INFO autotool.audit action_end id=3aa6a2bf-cdf7-49f7-b0f1-476dabd57976 success=True
+2025-12-30 16:39:11,789 INFO autotool.audit action_start id=2206cf04-ae29-43bb-b3d0-9e6eaf022f1e type=move
+2025-12-30 16:39:11,890 INFO autotool.audit action_end id=2206cf04-ae29-43bb-b3d0-9e6eaf022f1e success=True
+2025-12-30 16:39:11,894 INFO autotool.audit action_start id=bedc6ee1-ae91-4b0a-a0a0-06ff3d7ad11d type=mouse_down
+2025-12-30 16:39:11,999 INFO autotool.audit action_end id=bedc6ee1-ae91-4b0a-a0a0-06ff3d7ad11d success=True
+2025-12-30 16:39:12,080 INFO autotool.audit action_start id=d809f1de-0674-4ccf-b0cc-c79b60aedef2 type=mouse_up
+2025-12-30 16:39:12,182 INFO autotool.audit action_end id=d809f1de-0674-4ccf-b0cc-c79b60aedef2 success=True
+2025-12-30 16:39:12,216 INFO autotool.audit action_start id=b20e9abb-03fc-4084-89a7-0d62c687d1e6 type=move
+2025-12-30 16:39:12,317 INFO autotool.audit action_end id=b20e9abb-03fc-4084-89a7-0d62c687d1e6 success=True
+2025-12-30 16:39:12,421 INFO autotool.audit action_start id=f096ac08-7732-484f-90e5-7d068c8d7d0f type=move
+2025-12-30 16:39:12,523 INFO autotool.audit action_end id=f096ac08-7732-484f-90e5-7d068c8d7d0f success=True
+2025-12-30 16:39:12,629 INFO autotool.audit action_start id=4b654c14-9bbf-43aa-a36b-2b7cddb0a516 type=move
+2025-12-30 16:39:12,730 INFO autotool.audit action_end id=4b654c14-9bbf-43aa-a36b-2b7cddb0a516 success=True
+2025-12-30 16:39:12,850 INFO autotool.audit action_start id=90041ce9-2b68-4457-a32e-b6678e4fe54e type=mouse_down
+2025-12-30 16:39:12,959 INFO autotool.audit action_end id=90041ce9-2b68-4457-a32e-b6678e4fe54e success=True
+2025-12-30 16:39:13,034 INFO autotool.audit action_start id=a6cacbff-7e47-45e9-891f-495e9e1abff5 type=mouse_up
+2025-12-30 16:39:13,176 INFO autotool.audit action_end id=a6cacbff-7e47-45e9-891f-495e9e1abff5 success=True
+2025-12-30 16:39:13,184 INFO autotool.audit action_start id=8990543e-3b3b-4a5b-895c-a5d044d83a29 type=move
+2025-12-30 16:39:13,287 INFO autotool.audit action_end id=8990543e-3b3b-4a5b-895c-a5d044d83a29 success=True
+2025-12-30 16:39:13,430 INFO autotool.audit action_start id=548b3e73-94c5-4dd3-a745-44ea8f89dd0c type=move
+2025-12-30 16:39:13,531 INFO autotool.audit action_end id=548b3e73-94c5-4dd3-a745-44ea8f89dd0c success=True
+2025-12-30 16:39:13,636 INFO autotool.audit action_start id=7346c8c3-51b0-4e20-a82e-df05fad3e722 type=move
+2025-12-30 16:39:13,737 INFO autotool.audit action_end id=7346c8c3-51b0-4e20-a82e-df05fad3e722 success=True
+2025-12-30 16:39:13,843 INFO autotool.audit action_start id=47f9fb29-60c2-4b5a-8a76-786e0f5e1831 type=move
+2025-12-30 16:39:13,943 INFO autotool.audit action_end id=47f9fb29-60c2-4b5a-8a76-786e0f5e1831 success=True
+2025-12-30 16:39:14,025 INFO autotool.audit action_start id=764e445e-f4e6-4a78-b4c3-8a8427f352d2 type=mouse_down
+2025-12-30 16:39:14,133 INFO autotool.audit action_end id=764e445e-f4e6-4a78-b4c3-8a8427f352d2 success=True
+2025-12-30 16:39:14,202 INFO autotool.audit action_start id=58d3eec2-e8dd-4826-a4e9-1afd92dc2529 type=mouse_up
+2025-12-30 16:39:14,304 INFO autotool.audit action_end id=58d3eec2-e8dd-4826-a4e9-1afd92dc2529 success=True
+2025-12-30 16:39:14,312 INFO autotool.audit action_start id=9e14f2c9-35be-4935-a2dc-567112cff6bd type=move
+2025-12-30 16:39:14,414 INFO autotool.audit action_end id=9e14f2c9-35be-4935-a2dc-567112cff6bd success=True
+2025-12-30 16:39:14,535 INFO autotool.audit action_start id=e4e60f8a-7d26-48d0-8ffb-e43324b6d91e type=move
+2025-12-30 16:39:14,636 INFO autotool.audit action_end id=e4e60f8a-7d26-48d0-8ffb-e43324b6d91e success=True
+2025-12-30 16:39:14,740 INFO autotool.audit action_start id=1d5f9fc4-1773-4da1-9831-f5a35119eb3a type=move
+2025-12-30 16:39:14,840 INFO autotool.audit action_end id=1d5f9fc4-1773-4da1-9831-f5a35119eb3a success=True
+2025-12-30 16:39:14,946 INFO autotool.audit action_start id=a7039091-d025-4206-ba00-9e98b5d07eab type=move
+2025-12-30 16:39:15,046 INFO autotool.audit action_end id=a7039091-d025-4206-ba00-9e98b5d07eab success=True
+2025-12-30 16:39:15,151 INFO autotool.audit action_start id=c9a914fe-6da9-428d-a6cf-77f418881001 type=move
+2025-12-30 16:39:15,251 INFO autotool.audit action_end id=c9a914fe-6da9-428d-a6cf-77f418881001 success=True
+2025-12-30 16:39:15,358 INFO autotool.audit action_start id=df44fcad-8dda-4fd9-820a-f29d75598c1b type=move
+2025-12-30 16:39:15,459 INFO autotool.audit action_end id=df44fcad-8dda-4fd9-820a-f29d75598c1b success=True
+2025-12-30 16:39:15,564 INFO autotool.audit action_start id=008c1291-22d8-44ea-80c8-2bd4ac2ba553 type=move
+2025-12-30 16:39:15,665 INFO autotool.audit action_end id=008c1291-22d8-44ea-80c8-2bd4ac2ba553 success=True
+2025-12-30 16:39:15,771 INFO autotool.audit action_start id=9f45ea1d-1f9e-40af-b9e8-aa39bb4791fb type=move
+2025-12-30 16:39:15,872 INFO autotool.audit action_end id=9f45ea1d-1f9e-40af-b9e8-aa39bb4791fb success=True
+2025-12-30 16:39:15,896 INFO autotool.audit action_start id=0988eab0-e7de-46db-b492-18716706f102 type=mouse_down
+2025-12-30 16:39:16,003 INFO autotool.audit action_end id=0988eab0-e7de-46db-b492-18716706f102 success=True
+2025-12-30 16:39:16,086 INFO autotool.audit action_start id=4ac9c05d-da8d-455c-a716-0ffa2898f5b2 type=mouse_up
+2025-12-30 16:39:16,189 INFO autotool.audit action_end id=4ac9c05d-da8d-455c-a716-0ffa2898f5b2 success=True
+2025-12-30 16:39:16,197 INFO autotool.audit action_start id=04f4eb1f-0e85-407b-9a77-4e2418a96fbb type=move
+2025-12-30 16:39:16,298 INFO autotool.audit action_end id=04f4eb1f-0e85-407b-9a77-4e2418a96fbb success=True
+2025-12-30 16:39:16,403 INFO autotool.audit action_start id=f2188529-862d-48a4-95cd-fe53efd51f4f type=move
+2025-12-30 16:39:16,503 INFO autotool.audit action_end id=f2188529-862d-48a4-95cd-fe53efd51f4f success=True
+2025-12-30 16:39:16,609 INFO autotool.audit action_start id=aaa156ee-0ae2-449e-9c06-b8acb1014f11 type=move
+2025-12-30 16:39:16,709 INFO autotool.audit action_end id=aaa156ee-0ae2-449e-9c06-b8acb1014f11 success=True
+2025-12-30 16:39:16,815 INFO autotool.audit action_start id=b7440835-f96d-4319-aab4-e0663d609642 type=move
+2025-12-30 16:39:16,916 INFO autotool.audit action_end id=b7440835-f96d-4319-aab4-e0663d609642 success=True
+2025-12-30 16:39:17,021 INFO autotool.audit action_start id=71fff8a0-3330-467d-ba60-3c6f3aac6d1f type=move
+2025-12-30 16:39:17,122 INFO autotool.audit action_end id=71fff8a0-3330-467d-ba60-3c6f3aac6d1f success=True
+2025-12-30 16:39:17,228 INFO autotool.audit action_start id=934f1322-aa6e-46e4-9464-144c0d49d562 type=move
+2025-12-30 16:39:17,329 INFO autotool.audit action_end id=934f1322-aa6e-46e4-9464-144c0d49d562 success=True
+2025-12-30 16:39:17,434 INFO autotool.audit action_start id=4e50e502-30f5-4a3b-9759-e4bd0fb12110 type=move
+2025-12-30 16:39:17,534 INFO autotool.audit action_end id=4e50e502-30f5-4a3b-9759-e4bd0fb12110 success=True
+2025-12-30 16:39:17,640 INFO autotool.audit action_start id=3ec5d241-46f7-465d-8a5b-78479a0ee1a7 type=move
+2025-12-30 16:39:17,741 INFO autotool.audit action_end id=3ec5d241-46f7-465d-8a5b-78479a0ee1a7 success=True
+2025-12-30 16:39:17,847 INFO autotool.audit action_start id=bbbe5707-1f2c-4c46-b3cf-bcb944dd53e5 type=move
+2025-12-30 16:39:17,947 INFO autotool.audit action_end id=bbbe5707-1f2c-4c46-b3cf-bcb944dd53e5 success=True
+2025-12-30 16:39:18,075 INFO autotool.audit action_start id=f317b325-609b-4b33-a499-7ebe76372b36 type=move
+2025-12-30 16:39:18,176 INFO autotool.audit action_end id=f317b325-609b-4b33-a499-7ebe76372b36 success=True
+2025-12-30 16:39:18,191 INFO autotool.audit action_start id=48cf7161-18d8-45e9-8b1c-cf32d6527eed type=mouse_down
+2025-12-30 16:39:18,300 INFO autotool.audit action_end id=48cf7161-18d8-45e9-8b1c-cf32d6527eed success=True
+2025-12-30 16:39:18,369 INFO autotool.audit action_start id=0d992a73-ecd3-412d-968b-7286de3d2828 type=mouse_up
+2025-12-30 16:39:18,470 INFO autotool.audit action_end id=0d992a73-ecd3-412d-968b-7286de3d2828 success=True
+2025-12-30 16:39:18,470 INFO autotool.replayer Replay finished (69 results)
+2025-12-30 16:39:18,470 INFO autotool.api.replay Replay finished (69 results)
+2025-12-31 08:51:50,680 INFO autotool.recorder Recorder started
+2025-12-31 08:51:50,698 INFO autotool.api.recording Recording started
+2025-12-31 09:06:42,924 INFO autotool.recorder Recorder stopped (2152 events)
+2025-12-31 09:06:42,924 INFO autotool.api.recording Recording stopped (2152 events)
+2025-12-31 09:19:51,189 INFO autotool.recorder Recorder started
+2025-12-31 09:19:51,195 INFO autotool.api.recording Recording started
+2025-12-31 09:19:56,614 INFO autotool.recorder Recorder stopped (46 events)
+2025-12-31 09:19:56,614 INFO autotool.api.recording Recording stopped (46 events)
+2025-12-31 09:22:00,019 INFO autotool.replayer Replay started (46 items)
+2025-12-31 09:22:00,019 INFO autotool.audit action_start id=ee81402a-4edd-4c5c-8220-da6b145cc2cb type=move
+2025-12-31 09:22:00,019 INFO autotool.api.replay Replay started
+2025-12-31 09:22:00,121 INFO autotool.audit action_end id=ee81402a-4edd-4c5c-8220-da6b145cc2cb success=True
+2025-12-31 09:22:00,226 INFO autotool.audit action_start id=adcb842f-a23d-4180-b8bc-2188ce3434dd type=move
+2025-12-31 09:22:00,328 INFO autotool.audit action_end id=adcb842f-a23d-4180-b8bc-2188ce3434dd success=True
+2025-12-31 09:22:00,434 INFO autotool.audit action_start id=63bd2e7e-f026-4d73-9742-1e918e63359b type=move
+2025-12-31 09:22:00,535 INFO autotool.audit action_end id=63bd2e7e-f026-4d73-9742-1e918e63359b success=True
+2025-12-31 09:22:00,641 INFO autotool.audit action_start id=b1ddfb9d-8f26-455f-825f-e32522e0bfd8 type=move
+2025-12-31 09:22:00,743 INFO autotool.audit action_end id=b1ddfb9d-8f26-455f-825f-e32522e0bfd8 success=True
+2025-12-31 09:22:00,849 INFO autotool.audit action_start id=8018a764-37a8-4e63-850d-7a1af8a14126 type=move
+2025-12-31 09:22:00,950 INFO autotool.audit action_end id=8018a764-37a8-4e63-850d-7a1af8a14126 success=True
+2025-12-31 09:22:01,056 INFO autotool.audit action_start id=44aabd92-eda0-4fb3-843d-d58a86fcfe89 type=move
+2025-12-31 09:22:01,157 INFO autotool.audit action_end id=44aabd92-eda0-4fb3-843d-d58a86fcfe89 success=True
+2025-12-31 09:22:01,262 INFO autotool.audit action_start id=6c65d4a3-02a6-4eeb-8eca-90b84091d5a8 type=move
+2025-12-31 09:22:01,363 INFO autotool.audit action_end id=6c65d4a3-02a6-4eeb-8eca-90b84091d5a8 success=True
+2025-12-31 09:22:01,477 INFO autotool.audit action_start id=7484aa2d-6aee-427c-be26-63662aeb190d type=move
+2025-12-31 09:22:01,578 INFO autotool.audit action_end id=7484aa2d-6aee-427c-be26-63662aeb190d success=True
+2025-12-31 09:22:01,729 INFO autotool.audit action_start id=b71c392a-b4a3-407e-8c41-c79a07f2d78a type=mouse_down
+2025-12-31 09:22:01,834 INFO autotool.audit action_end id=b71c392a-b4a3-407e-8c41-c79a07f2d78a success=True
+2025-12-31 09:22:01,970 INFO autotool.audit action_start id=e6f0480a-6bd5-4f38-9bae-c5b26f44aef5 type=mouse_up
+2025-12-31 09:22:02,071 INFO autotool.audit action_end id=e6f0480a-6bd5-4f38-9bae-c5b26f44aef5 success=True
+2025-12-31 09:22:02,312 INFO autotool.audit action_start id=4b765438-45d9-40d7-b866-f49844dd26eb type=move
+2025-12-31 09:22:02,413 INFO autotool.audit action_end id=4b765438-45d9-40d7-b866-f49844dd26eb success=True
+2025-12-31 09:22:02,519 INFO autotool.audit action_start id=b9455b9a-67a5-4938-afe1-d90c1a202d5c type=move
+2025-12-31 09:22:02,620 INFO autotool.audit action_end id=b9455b9a-67a5-4938-afe1-d90c1a202d5c success=True
+2025-12-31 09:22:02,725 INFO autotool.audit action_start id=95bad184-216e-4cf4-b156-dc4caea5a4f8 type=move
+2025-12-31 09:22:02,827 INFO autotool.audit action_end id=95bad184-216e-4cf4-b156-dc4caea5a4f8 success=True
+2025-12-31 09:22:02,934 INFO autotool.audit action_start id=6c4ec3f4-7998-4e6e-920e-60c980d769d6 type=move
+2025-12-31 09:22:03,035 INFO autotool.audit action_end id=6c4ec3f4-7998-4e6e-920e-60c980d769d6 success=True
+2025-12-31 09:22:03,080 INFO autotool.audit action_start id=f0e9e73e-b806-44d9-8530-9f6221c90755 type=mouse_down
+2025-12-31 09:22:03,189 INFO autotool.audit action_end id=f0e9e73e-b806-44d9-8530-9f6221c90755 success=True
+2025-12-31 09:22:03,294 INFO autotool.audit action_start id=2e438712-d3a0-42d5-915c-b8b925c14d0a type=move
+2025-12-31 09:22:03,395 INFO autotool.audit action_end id=2e438712-d3a0-42d5-915c-b8b925c14d0a success=True
+2025-12-31 09:22:03,434 INFO autotool.audit action_start id=4b7980c8-15c6-4c06-9b0a-0b0b4d646930 type=mouse_up
+2025-12-31 09:22:03,537 INFO autotool.audit action_end id=4b7980c8-15c6-4c06-9b0a-0b0b4d646930 success=True
+2025-12-31 09:22:03,793 INFO autotool.audit action_start id=f0a1b7c6-3a99-44ed-808b-9e6adaf6c46a type=move
+2025-12-31 09:22:03,894 INFO autotool.audit action_end id=f0a1b7c6-3a99-44ed-808b-9e6adaf6c46a success=True
+2025-12-31 09:22:04,000 INFO autotool.audit action_start id=b01b6052-488a-4add-bec5-28df7ce1d9f3 type=move
+2025-12-31 09:22:04,101 INFO autotool.audit action_end id=b01b6052-488a-4add-bec5-28df7ce1d9f3 success=True
+2025-12-31 09:22:04,207 INFO autotool.audit action_start id=fe6d2f00-6dad-486b-8d23-fa66f18f9264 type=move
+2025-12-31 09:22:04,309 INFO autotool.audit action_end id=fe6d2f00-6dad-486b-8d23-fa66f18f9264 success=True
+2025-12-31 09:22:04,415 INFO autotool.audit action_start id=58ac3576-51a3-43c9-be80-f1e979b99584 type=move
+2025-12-31 09:22:04,516 INFO autotool.audit action_end id=58ac3576-51a3-43c9-be80-f1e979b99584 success=True
+2025-12-31 09:22:04,585 INFO autotool.audit action_start id=76a01e7d-0480-4ef4-893b-49137e6249e8 type=mouse_down
+2025-12-31 09:22:04,692 INFO autotool.audit action_end id=76a01e7d-0480-4ef4-893b-49137e6249e8 success=True
+2025-12-31 09:22:04,768 INFO autotool.audit action_start id=35b5c769-8591-4ee5-a44c-538117ac9393 type=mouse_up
+2025-12-31 09:22:04,872 INFO autotool.audit action_end id=35b5c769-8591-4ee5-a44c-538117ac9393 success=True
+2025-12-31 09:22:04,970 INFO autotool.audit action_start id=2e27cb7d-51a4-47c4-beeb-eb741b209b19 type=move
+2025-12-31 09:22:05,071 INFO autotool.audit action_end id=2e27cb7d-51a4-47c4-beeb-eb741b209b19 success=True
+2025-12-31 09:22:05,193 INFO autotool.audit action_start id=81f647a9-787b-4f94-ac03-182f4d4314e3 type=move
+2025-12-31 09:22:05,294 INFO autotool.audit action_end id=81f647a9-787b-4f94-ac03-182f4d4314e3 success=True
+2025-12-31 09:22:05,437 INFO autotool.audit action_start id=58e45447-1d15-4648-931c-3b3a3801a3fb type=move
+2025-12-31 09:22:05,539 INFO autotool.audit action_end id=58e45447-1d15-4648-931c-3b3a3801a3fb success=True
+2025-12-31 09:22:05,644 INFO autotool.audit action_start id=48216277-5ee3-4652-bc4a-b185e3dd8a62 type=move
+2025-12-31 09:22:05,745 INFO autotool.audit action_end id=48216277-5ee3-4652-bc4a-b185e3dd8a62 success=True
+2025-12-31 09:22:05,829 INFO autotool.audit action_start id=e939536d-e96d-4595-812c-ae40a73ee860 type=mouse_down
+2025-12-31 09:22:05,942 INFO autotool.audit action_end id=e939536d-e96d-4595-812c-ae40a73ee860 success=True
+2025-12-31 09:22:06,034 INFO autotool.audit action_start id=e8882672-ac80-4cc9-9625-46210416a17b type=mouse_up
+2025-12-31 09:22:06,137 INFO autotool.audit action_end id=e8882672-ac80-4cc9-9625-46210416a17b success=True
+2025-12-31 09:22:06,197 INFO autotool.audit action_start id=495f625c-21f6-4c76-9760-6d6c4c0513d7 type=move
+2025-12-31 09:22:06,298 INFO autotool.audit action_end id=495f625c-21f6-4c76-9760-6d6c4c0513d7 success=True
+2025-12-31 09:22:06,404 INFO autotool.audit action_start id=247f36a8-3f17-447d-bff8-e60386a28861 type=move
+2025-12-31 09:22:06,507 INFO autotool.audit action_end id=247f36a8-3f17-447d-bff8-e60386a28861 success=True
+2025-12-31 09:22:06,613 INFO autotool.audit action_start id=aa7c34a2-7cce-4fab-93b7-0e0598c03ab0 type=move
+2025-12-31 09:22:06,714 INFO autotool.audit action_end id=aa7c34a2-7cce-4fab-93b7-0e0598c03ab0 success=True
+2025-12-31 09:22:06,819 INFO autotool.audit action_start id=d6f6b601-a638-49f3-a723-f210c0dff2bd type=move
+2025-12-31 09:22:06,920 INFO autotool.audit action_end id=d6f6b601-a638-49f3-a723-f210c0dff2bd success=True
+2025-12-31 09:22:06,981 INFO autotool.audit action_start id=50539ca0-2e69-427b-8749-3b9568f0334f type=mouse_down
+2025-12-31 09:22:07,091 INFO autotool.audit action_end id=50539ca0-2e69-427b-8749-3b9568f0334f success=True
+2025-12-31 09:22:07,173 INFO autotool.audit action_start id=f0c60f75-2691-4bb7-be7c-ceba35706491 type=mouse_up
+2025-12-31 09:22:07,275 INFO autotool.audit action_end id=f0c60f75-2691-4bb7-be7c-ceba35706491 success=True
+2025-12-31 09:22:07,470 INFO autotool.audit action_start id=89b35ca4-d654-4dc2-9293-e2747a4fbc12 type=move
+2025-12-31 09:22:07,571 INFO autotool.audit action_end id=89b35ca4-d654-4dc2-9293-e2747a4fbc12 success=True
+2025-12-31 09:22:07,676 INFO autotool.audit action_start id=528729f7-f951-4f51-a18b-37282f9e4f0b type=move
+2025-12-31 09:22:07,777 INFO autotool.audit action_end id=528729f7-f951-4f51-a18b-37282f9e4f0b success=True
+2025-12-31 09:22:07,883 INFO autotool.audit action_start id=2d70c390-788b-4aa6-bb08-d2fb11f221c5 type=move
+2025-12-31 09:22:07,984 INFO autotool.audit action_end id=2d70c390-788b-4aa6-bb08-d2fb11f221c5 success=True
+2025-12-31 09:22:08,091 INFO autotool.audit action_start id=0d1a1675-698f-4f5a-89ff-62bcd3419263 type=move
+2025-12-31 09:22:08,193 INFO autotool.audit action_end id=0d1a1675-698f-4f5a-89ff-62bcd3419263 success=True
+2025-12-31 09:22:08,298 INFO autotool.audit action_start id=e427aacd-ae33-454a-81cb-0b1aa0f7b743 type=move
+2025-12-31 09:22:08,399 INFO autotool.audit action_end id=e427aacd-ae33-454a-81cb-0b1aa0f7b743 success=True
+2025-12-31 09:22:08,505 INFO autotool.audit action_start id=1e821915-f34c-492d-a55e-1ff7245e2bd9 type=move
+2025-12-31 09:22:08,606 INFO autotool.audit action_end id=1e821915-f34c-492d-a55e-1ff7245e2bd9 success=True
+2025-12-31 09:22:08,712 INFO autotool.audit action_start id=29b2d6f9-e391-428d-8169-7bea9d0d289f type=move
+2025-12-31 09:22:08,813 INFO autotool.audit action_end id=29b2d6f9-e391-428d-8169-7bea9d0d289f success=True
+2025-12-31 09:22:08,918 INFO autotool.audit action_start id=2f0e0b8b-2a65-411d-b21b-1ad8703cba26 type=move
+2025-12-31 09:22:09,019 INFO autotool.audit action_end id=2f0e0b8b-2a65-411d-b21b-1ad8703cba26 success=True
+2025-12-31 09:22:09,124 INFO autotool.audit action_start id=90e6c4be-bfce-47bd-9071-b68865fa6457 type=move
+2025-12-31 09:22:09,225 INFO autotool.audit action_end id=90e6c4be-bfce-47bd-9071-b68865fa6457 success=True
+2025-12-31 09:22:09,437 INFO autotool.audit action_start id=c542af9f-5401-4190-b15a-999eb3a66cff type=mouse_down
+2025-12-31 09:22:09,544 INFO autotool.audit action_end id=c542af9f-5401-4190-b15a-999eb3a66cff success=True
+2025-12-31 09:22:09,628 INFO autotool.audit action_start id=91d76ec0-ba79-4a84-8619-4e6b2c824a72 type=mouse_up
+2025-12-31 09:22:09,730 INFO autotool.audit action_end id=91d76ec0-ba79-4a84-8619-4e6b2c824a72 success=True
+2025-12-31 09:22:09,730 INFO autotool.replayer Replay finished (46 results)
+2025-12-31 09:22:09,730 INFO autotool.api.replay Replay finished (46 results)
+2025-12-31 09:48:54,130 INFO autotool.api.autoclicker Autoclicker started (cps=2.0 button=right)
+2025-12-31 09:59:49,107 INFO autotool.api.autoclicker Autoclicker started (cps=2.0 button=right)
+2025-12-31 09:59:49,951 ERROR asyncio Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-12-31 11:32:28,684 ERROR fastapi Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-12-31 14:24:55,111 ERROR asyncio Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-12-31 14:57:14,972 ERROR asyncio Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-12-31 15:30:36,099 ERROR asyncio Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+2025-12-31 15:59:28,227 INFO autotool.recorder Recorder started
+2025-12-31 15:59:28,264 INFO autotool.api.recording Recording started
+2025-12-31 15:59:31,923 INFO autotool.recorder Recorder stopped (42 events)
+2025-12-31 15:59:31,925 INFO autotool.api.recording Recording stopped (42 events)
+2025-12-31 15:59:35,110 INFO autotool.replayer Replay started (42 items)
+2025-12-31 15:59:35,110 INFO autotool.api.replay Replay started
+2025-12-31 15:59:35,110 INFO autotool.audit action_start id=45aac609-69f5-4aa2-be07-2f8eabbb0f4a type=move
+2025-12-31 15:59:35,227 INFO autotool.audit action_end id=45aac609-69f5-4aa2-be07-2f8eabbb0f4a success=True
+2025-12-31 15:59:35,340 INFO autotool.audit action_start id=9f9755d5-83c3-4682-bb4e-0e65343ea6ca type=move
+2025-12-31 15:59:35,441 INFO autotool.audit action_end id=9f9755d5-83c3-4682-bb4e-0e65343ea6ca success=True
+2025-12-31 15:59:35,544 INFO autotool.audit action_start id=1e6564c7-9ebf-43ba-8497-e90c9ea23a8d type=move
+2025-12-31 15:59:35,645 INFO autotool.audit action_end id=1e6564c7-9ebf-43ba-8497-e90c9ea23a8d success=True
+2025-12-31 15:59:35,749 INFO autotool.audit action_start id=d145e34c-d944-4c93-8909-c509c948faef type=move
+2025-12-31 15:59:35,850 INFO autotool.audit action_end id=d145e34c-d944-4c93-8909-c509c948faef success=True
+2025-12-31 15:59:35,954 INFO autotool.audit action_start id=77d3432a-4f5b-44d3-97cd-2de7c0413339 type=move
+2025-12-31 15:59:36,055 INFO autotool.audit action_end id=77d3432a-4f5b-44d3-97cd-2de7c0413339 success=True
+2025-12-31 15:59:36,160 INFO autotool.audit action_start id=afe851bc-a783-49c0-81b7-77904710f4c6 type=move
+2025-12-31 15:59:36,262 INFO autotool.audit action_end id=afe851bc-a783-49c0-81b7-77904710f4c6 success=True
+2025-12-31 15:59:36,368 INFO autotool.audit action_start id=396a86ab-104d-4941-a079-e1f594e6b3f3 type=move
+2025-12-31 15:59:36,469 INFO autotool.audit action_end id=396a86ab-104d-4941-a079-e1f594e6b3f3 success=True
+2025-12-31 15:59:36,583 INFO autotool.audit action_start id=7abe514f-7ef0-4898-bee1-160a185b74da type=move
+2025-12-31 15:59:36,684 INFO autotool.audit action_end id=7abe514f-7ef0-4898-bee1-160a185b74da success=True
+2025-12-31 15:59:36,792 INFO autotool.audit action_start id=8ca71c7c-8af3-4997-858b-41d8889d1204 type=move
+2025-12-31 15:59:36,893 INFO autotool.audit action_end id=8ca71c7c-8af3-4997-858b-41d8889d1204 success=True
+2025-12-31 15:59:37,006 INFO autotool.audit action_start id=7715456c-02ef-46b4-9c94-86a7171bbfa1 type=move
+2025-12-31 15:59:37,106 INFO autotool.audit action_end id=7715456c-02ef-46b4-9c94-86a7171bbfa1 success=True
+2025-12-31 15:59:37,182 INFO autotool.audit action_start id=d1eececb-dbd8-4bf5-8a42-aa0f90ba0e86 type=mouse_down
+2025-12-31 15:59:37,291 INFO autotool.audit action_end id=d1eececb-dbd8-4bf5-8a42-aa0f90ba0e86 success=True
+2025-12-31 15:59:37,351 INFO autotool.audit action_start id=adc4ff6f-061b-4978-9cf8-e06936fcf9c7 type=move
+2025-12-31 15:59:37,452 INFO autotool.audit action_end id=adc4ff6f-061b-4978-9cf8-e06936fcf9c7 success=True
+2025-12-31 15:59:37,468 INFO autotool.audit action_start id=9341815a-9ec7-4bc4-adf5-0ef6e8010d2b type=mouse_up
+2025-12-31 15:59:37,570 INFO autotool.audit action_end id=9341815a-9ec7-4bc4-adf5-0ef6e8010d2b success=True
+2025-12-31 15:59:37,663 INFO autotool.audit action_start id=ee803cea-783f-4c05-b7a5-7dfe09e149cc type=move
+2025-12-31 15:59:37,764 INFO autotool.audit action_end id=ee803cea-783f-4c05-b7a5-7dfe09e149cc success=True
+2025-12-31 15:59:37,871 INFO autotool.audit action_start id=efb30432-e901-44bf-90ab-61b200973e7a type=move
+2025-12-31 15:59:37,973 INFO autotool.audit action_end id=efb30432-e901-44bf-90ab-61b200973e7a success=True
+2025-12-31 15:59:38,091 INFO autotool.audit action_start id=28f0cfbf-f023-4d27-8139-e42fb2340814 type=mouse_down
+2025-12-31 15:59:38,201 INFO autotool.audit action_end id=28f0cfbf-f023-4d27-8139-e42fb2340814 success=True
+2025-12-31 15:59:38,254 INFO autotool.audit action_start id=78de874d-33b0-4cbc-a3e6-60925f7fd7ba type=mouse_up
+2025-12-31 15:59:38,361 INFO autotool.audit action_end id=78de874d-33b0-4cbc-a3e6-60925f7fd7ba success=True
+2025-12-31 15:59:38,372 INFO autotool.audit action_start id=8ddce2d0-df2c-422b-af94-93cddd0a2796 type=move
+2025-12-31 15:59:38,473 INFO autotool.audit action_end id=8ddce2d0-df2c-422b-af94-93cddd0a2796 success=True
+2025-12-31 15:59:38,578 INFO autotool.audit action_start id=2bdc3ec8-b10a-464f-84ba-3b8084311401 type=move
+2025-12-31 15:59:38,679 INFO autotool.audit action_end id=2bdc3ec8-b10a-464f-84ba-3b8084311401 success=True
+2025-12-31 15:59:38,798 INFO autotool.audit action_start id=cb00fa76-f6b4-4b03-81fe-ca8b5b8564a7 type=move
+2025-12-31 15:59:38,900 INFO autotool.audit action_end id=cb00fa76-f6b4-4b03-81fe-ca8b5b8564a7 success=True
+2025-12-31 15:59:39,021 INFO autotool.audit action_start id=0c6bb5bd-b462-4f9d-a734-9f690a1e0f00 type=move
+2025-12-31 15:59:39,122 INFO autotool.audit action_end id=0c6bb5bd-b462-4f9d-a734-9f690a1e0f00 success=True
+2025-12-31 15:59:39,236 INFO autotool.audit action_start id=d3f6adec-9595-4037-8c08-d3f2a84200e6 type=move
+2025-12-31 15:59:39,337 INFO autotool.audit action_end id=d3f6adec-9595-4037-8c08-d3f2a84200e6 success=True
+2025-12-31 15:59:39,337 INFO autotool.audit action_start id=9fdeaa03-c47f-418a-a181-ced35af57c85 type=mouse_down
+2025-12-31 15:59:39,443 INFO autotool.audit action_end id=9fdeaa03-c47f-418a-a181-ced35af57c85 success=True
+2025-12-31 15:59:39,528 INFO autotool.audit action_start id=43650a29-668b-479d-9b46-2ea54db48238 type=mouse_up
+2025-12-31 15:59:39,630 INFO autotool.audit action_end id=43650a29-668b-479d-9b46-2ea54db48238 success=True
+2025-12-31 15:59:39,654 INFO autotool.audit action_start id=139a4888-71a2-4dc8-8089-d57f85adfb1a type=move
+2025-12-31 15:59:39,756 INFO autotool.audit action_end id=139a4888-71a2-4dc8-8089-d57f85adfb1a success=True
+2025-12-31 15:59:39,857 INFO autotool.audit action_start id=a8be83da-dc58-4d4f-9f4e-b08c44bbf7d5 type=move
+2025-12-31 15:59:39,958 INFO autotool.audit action_end id=a8be83da-dc58-4d4f-9f4e-b08c44bbf7d5 success=True
+2025-12-31 15:59:40,059 INFO autotool.audit action_start id=900f06d2-f425-484c-8e4d-5da0d5acd6b2 type=move
+2025-12-31 15:59:40,161 INFO autotool.audit action_end id=900f06d2-f425-484c-8e4d-5da0d5acd6b2 success=True
+2025-12-31 15:59:40,267 INFO autotool.audit action_start id=b0fad766-85ac-440e-afb4-c9a9b0ee3119 type=move
+2025-12-31 15:59:40,368 INFO autotool.audit action_end id=b0fad766-85ac-440e-afb4-c9a9b0ee3119 success=True
+2025-12-31 15:59:40,481 INFO autotool.audit action_start id=0078b89d-2ac6-431c-92e6-66b3d7dfe1ec type=move
+2025-12-31 15:59:40,581 INFO autotool.audit action_end id=0078b89d-2ac6-431c-92e6-66b3d7dfe1ec success=True
+2025-12-31 15:59:40,687 INFO autotool.audit action_start id=88b99525-dbc7-4e5c-b8c0-d9fcbff7e620 type=move
+2025-12-31 15:59:40,789 INFO autotool.audit action_end id=88b99525-dbc7-4e5c-b8c0-d9fcbff7e620 success=True
+2025-12-31 15:59:40,895 INFO autotool.audit action_start id=c9ca03d5-6d7e-4daa-96be-d62500519571 type=move
+2025-12-31 15:59:40,996 INFO autotool.audit action_end id=c9ca03d5-6d7e-4daa-96be-d62500519571 success=True
+2025-12-31 15:59:41,021 INFO autotool.audit action_start id=ec2a46f7-8521-4f9c-aba2-8de15e0c4187 type=mouse_down
+2025-12-31 15:59:41,132 INFO autotool.audit action_end id=ec2a46f7-8521-4f9c-aba2-8de15e0c4187 success=True
+2025-12-31 15:59:41,216 INFO autotool.audit action_start id=72eec9e6-8574-4e40-9254-d953f539f91e type=mouse_up
+2025-12-31 15:59:41,320 INFO autotool.audit action_end id=72eec9e6-8574-4e40-9254-d953f539f91e success=True
+2025-12-31 15:59:41,328 INFO autotool.audit action_start id=0a6ebc50-e291-4933-999f-f7dc37a2f3ba type=move
+2025-12-31 15:59:41,428 INFO autotool.audit action_end id=0a6ebc50-e291-4933-999f-f7dc37a2f3ba success=True
+2025-12-31 15:59:41,532 INFO autotool.audit action_start id=35968457-9c36-4eb6-97e7-201e861a4f94 type=move
+2025-12-31 15:59:41,633 INFO autotool.audit action_end id=35968457-9c36-4eb6-97e7-201e861a4f94 success=True
+2025-12-31 15:59:41,741 INFO autotool.audit action_start id=7ae5de3c-2821-4d93-af08-0b5fe82c3bf6 type=move
+2025-12-31 15:59:41,842 INFO autotool.audit action_end id=7ae5de3c-2821-4d93-af08-0b5fe82c3bf6 success=True
+2025-12-31 15:59:41,948 INFO autotool.audit action_start id=f3f60d26-24b2-4368-92d0-788cd223436c type=move
+2025-12-31 15:59:42,049 INFO autotool.audit action_end id=f3f60d26-24b2-4368-92d0-788cd223436c success=True
+2025-12-31 15:59:42,170 INFO autotool.audit action_start id=8d13e01d-65ab-481e-b495-63a3c6f4511f type=move
+2025-12-31 15:59:42,271 INFO autotool.audit action_end id=8d13e01d-65ab-481e-b495-63a3c6f4511f success=True
+2025-12-31 15:59:42,382 INFO autotool.audit action_start id=4dd2109c-47ed-4340-9f81-c22acb0cc55e type=move
+2025-12-31 15:59:42,483 INFO autotool.audit action_end id=4dd2109c-47ed-4340-9f81-c22acb0cc55e success=True
+2025-12-31 15:59:42,696 INFO autotool.audit action_start id=c1bd5890-66ee-45a0-9dd9-a7cbdaa96672 type=mouse_down
+2025-12-31 15:59:42,807 INFO autotool.audit action_end id=c1bd5890-66ee-45a0-9dd9-a7cbdaa96672 success=True
+2025-12-31 15:59:42,884 INFO autotool.audit action_start id=8e71501a-af4d-4d3e-8d68-750ac98ba6a8 type=mouse_up
+2025-12-31 15:59:42,987 INFO autotool.audit action_end id=8e71501a-af4d-4d3e-8d68-750ac98ba6a8 success=True
+2025-12-31 15:59:42,997 INFO autotool.audit action_start id=4c72c757-f75b-4594-b6e1-c24536a5fdf5 type=move
+2025-12-31 15:59:43,098 INFO autotool.audit action_end id=4c72c757-f75b-4594-b6e1-c24536a5fdf5 success=True
+2025-12-31 15:59:43,098 INFO autotool.replayer Replay finished (42 results)
+2025-12-31 15:59:43,099 INFO autotool.api.replay Replay finished (42 results)
+2025-12-31 16:04:13,213 ERROR asyncio Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\conda_envs\envs\autotool-system-dev\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。

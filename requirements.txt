@@ -1,0 +1,13 @@
+pynput==1.7.6
+pyautogui==0.9.54
+pillow==10.0.0
+pyyaml==6.0.1
+schedule==1.2.1
+fastapi==0.115.6
+uvicorn==0.30.6
+
+# Optional: multi-monitor capture
+# mss
+
+# Optional: higher-accuracy image matching
+# opencv-python

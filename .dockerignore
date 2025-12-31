@@ -1,0 +1,9 @@
+node_modules
+dist
+.git
+.vscode
+.DS_Store
+apps/desktop/dist
+apps/renderer/dist
+apps/desktop/node_modules
+apps/renderer/node_modules

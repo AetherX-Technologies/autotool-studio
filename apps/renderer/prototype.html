@@ -1,0 +1,2477 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoTool Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      /* Palette - Deep Space & Neon */
+      --bg-deep: #050505;
+      --bg-surface: #121212;
+      --bg-glass: rgba(20, 20, 20, 0.7);
+      --bg-glass-hover: rgba(30, 30, 30, 0.8);
+
+      --accent-primary: #8b5cf6;
+      /* Violet */
+      --accent-glow: rgba(139, 92, 246, 0.5);
+      --accent-visit: #a78bfa;
+
+      --accent-status-ok: #10b981;
+      /* Emerald */
+      --accent-status-err: #ef4444;
+      /* Red */
+
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --text-dim: #4b5563;
+
+      --border-light: rgba(255, 255, 255, 0.08);
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --radius-sm: 8px;
+
+      --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.15);
+
+      --easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Outfit", sans-serif;
+      background: var(--bg-deep);
+      color: var(--text-main);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    /* Ambient Background effects */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -20%;
+      left: -10%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.08), transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      bottom: -20%;
+      right: -10%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.05), transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Top Navigation/Header */
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-light);
+      background: var(--bg-glass);
+      backdrop-filter: blur(12px);
+      z-index: 100;
+      position: sticky;
+      top: 0;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      background: var(--accent-primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-primary);
+    }
+
+    .health-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 999px;
+      border: 1px solid var(--border-light);
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.3s var(--easing);
+    }
+
+    .health-indicator.ok {
+      border-color: rgba(16, 185, 129, 0.3);
+      background: rgba(16, 185, 129, 0.1);
+      color: #34d399;
+    }
+
+    .health-indicator.err {
+      border-color: rgba(239, 68, 68, 0.3);
+      background: rgba(239, 68, 68, 0.1);
+      color: #f87171;
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    /* Main Layout */
+    main {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 40px;
+      max-width: 1600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px;
+      height: calc(100vh - 80px);
+      /* Adjust for header */
+      overflow: hidden;
+    }
+
+    /* Styling Scrollbars */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Panels */
+    .panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .panel-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .panel-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .panel-body {
+      padding: 24px;
+      overflow-y: auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* Sidebar - History */
+    .history-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .history-item {
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid transparent;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.2s var(--easing);
+    }
+
+    .history-item:hover {
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateX(4px);
+    }
+
+    .history-item.active {
+      background: rgba(139, 92, 246, 0.1);
+      border-color: var(--accent-primary);
+    }
+
+    .h-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .h-meta {
+      font-size: 12px;
+      color: var(--text-dim);
+      display: flex;
+      gap: 12px;
+    }
+
+    /* Main Area - Controls */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    /* Common Card Styling */
+    .card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    h2 {
+      margin: 0 0 16px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    /* Inputs & Buttons */
+    label {
+      display: block;
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="time"],
+    select {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-light);
+      color: var(--text-main);
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      width: 100%;
+      font-family: inherit;
+      transition: border 0.2s;
+    }
+
+    input[type="text"]:focus,
+    input[type="number"]:focus,
+    input[type="time"]:focus,
+    select:focus {
+      outline: none;
+      border-color: var(--accent-primary);
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    button {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-light);
+      color: var(--text-main);
+      padding: 10px 20px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 500;
+      transition: all 0.2s var(--easing);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    button:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-1px);
+    }
+
+    button:active:not(:disabled) {
+      transform: translateY(0);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    button.primary {
+      background: var(--accent-primary);
+      border-color: transparent;
+      color: white;
+      box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+    }
+
+    button.primary:hover:not(:disabled) {
+      background: #7c3aed;
+      box-shadow: 0 6px 16px rgba(139, 92, 246, 0.4);
+    }
+
+    button.danger {
+      background: rgba(239, 68, 68, 0.1);
+      border-color: rgba(239, 68, 68, 0.3);
+      color: #f87171;
+    }
+
+    button.danger:hover:not(:disabled) {
+      background: rgba(239, 68, 68, 0.2);
+    }
+
+    button.secondary {
+      background: transparent;
+      border: 1px solid var(--border-light);
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .preview-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+    }
+
+    .preview-title {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .preview-box img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 6px;
+      display: block;
+    }
+
+    .preview-canvas {
+      position: relative;
+      width: 100%;
+      max-height: 240px;
+      overflow: auto;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--border-light);
+    }
+
+    .preview-inner {
+      position: relative;
+      display: inline-block;
+    }
+
+    .select-overlay {
+      position: absolute;
+      inset: 0;
+      cursor: crosshair;
+    }
+
+    .select-rect {
+      position: absolute;
+      border: 1px dashed var(--accent-primary);
+      background: rgba(139, 92, 246, 0.2);
+      display: none;
+      pointer-events: none;
+    }
+
+    .preview-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+      flex-wrap: wrap;
+    }
+
+    .preview-modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.75);
+      z-index: 200;
+      padding: 20px;
+    }
+
+    .preview-window {
+      width: min(90vw, 1200px);
+      height: min(85vh, 900px);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .preview-window-header {
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .preview-window-title {
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .preview-window-body {
+      flex: 1;
+      padding: 12px;
+      overflow: auto;
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .preview-window-body img {
+      display: block;
+      max-width: none;
+      max-height: none;
+      transform-origin: top left;
+    }
+
+    .preview-window-footer {
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-top: 1px solid var(--border-light);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .preview-window-meta {
+      margin-left: auto;
+      color: var(--text-dim);
+    }
+
+    .muted-note {
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--text-dim);
+    }
+
+    /* Logs & Code */
+    pre,
+    code {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 12px;
+    }
+
+    .log-container {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      padding: 12px;
+      height: 200px;
+      overflow-y: auto;
+      border: 1px solid var(--border-light);
+      display: flex;
+      flex-direction: column-reverse;
+      /* New logs at bottom but scrolled */
+    }
+
+    .log-entry {
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+    }
+
+    .log-entry.ok {
+      color: #34d399;
+    }
+
+    .log-entry.fail {
+      color: #f87171;
+    }
+
+    .log-time {
+      display: inline-block;
+      width: 70px;
+      opacity: 0.5;
+      font-size: 11px;
+    }
+
+    /* Stats */
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .stat-val {
+      font-weight: 600;
+      font-family: "JetBrains Mono";
+    }
+
+    .pulse-record {
+      width: 10px;
+      height: 10px;
+      background: #ef4444;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 1.5s infinite;
+      margin-right: 6px;
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+      }
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    .delete-btn {
+      padding: 4px;
+      font-size: 16px;
+      line-height: 1;
+      height: 24px;
+      width: 24px;
+      justify-content: center;
+      border: none;
+      background: transparent;
+      color: var(--text-dim);
+    }
+
+    .delete-btn:hover {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-dot"></div>
+      AutoTool Studio
+    </div>
+    <div class="health-indicator" id="health-pill">
+      <div class="status-dot"></div>
+      <span id="health-text">Checking...</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- Left Sidebar: History -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Session History</div>
+        <div style="display: flex; gap: 8px;">
+          <button class="secondary" id="export-history" style="padding: 4px 10px; font-size: 11px;">Export</button>
+          <button class="secondary" id="import-history-btn" style="padding: 4px 10px; font-size: 11px;">Import</button>
+          <button class="secondary" id="clear-history" style="padding: 4px 10px; font-size: 11px;">Clear</button>
+        </div>
+      </div>
+      <div class="panel-body" style="padding: 0;">
+        <div id="history-container" class="history-list">
+          <!-- History Items go here -->
+        </div>
+      </div>
+      <input type="file" id="import-history" accept="application/json" style="display: none;">
+    </section>
+
+    <!-- Right Interaction Area -->
+    <section class="panel">
+      <div class="panel-header">
+        <div class="panel-title">Control Deck</div>
+      </div>
+      <div class="panel-body">
+
+        <!-- Connection Settings -->
+        <div class="card">
+          <h2>Connection</h2>
+          <label>API Endpoint</label>
+          <div style="display: flex; gap: 10px;">
+            <input type="text" id="base-url" value="http://127.0.0.1:18765">
+            <button class="secondary" id="save-base">Save</button>
+            <button class="primary" id="check-health">Check</button>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <!-- Recording -->
+          <div class="card">
+            <h2>Recording</h2>
+            <div class="stat-row">
+              <span>Status</span>
+              <span class="stat-val" id="rec-status">Idle</span>
+            </div>
+            <div class="stat-row">
+              <span>Duration</span>
+              <span class="stat-val" id="rec-time">00:00</span>
+            </div>
+            <div class="stat-row">
+              <span>Events</span>
+              <span class="stat-val" id="rec-events">0</span>
+            </div>
+            <div class="btn-group">
+              <button class="primary" id="rec-start">
+                <span>●</span> Record
+              </button>
+              <button class="danger" id="rec-stop" disabled>
+                <span>■</span> Stop
+              </button>
+            </div>
+          </div>
+
+          <!-- Replay -->
+          <div class="card">
+            <h2>Replay</h2>
+            <div class="stat-row">
+              <span>Selected</span>
+              <span class="stat-val" id="replay-selected-id">-</span>
+            </div>
+            <div class="stat-row">
+              <span>Status</span>
+              <span class="stat-val" id="replay-status">Idle</span>
+            </div>
+            <div style="margin: 10px 0;">
+              <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+                <input type="checkbox" id="replay-ack">
+                Allow Input Control
+              </label>
+            </div>
+            <div class="btn-group">
+              <button class="primary" id="replay-start">
+                <span>▶</span> Replay
+              </button>
+              <button class="danger" id="replay-stop">
+                <span>■</span> Stop
+              </button>
+            </div>
+            <div class="btn-group">
+              <button class="secondary" id="export-script">Export .py</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Auto Clicker -->
+        <div class="card">
+          <h2>Auto Clicker</h2>
+          <div class="stat-row">
+            <span>Status</span>
+            <span class="stat-val" id="auto-status">Idle</span>
+          </div>
+          <div class="stat-row">
+            <span>Clicks</span>
+            <span class="stat-val" id="auto-clicks">0</span>
+          </div>
+          <div class="schedule-grid">
+            <div>
+              <label>CPS (clicks/sec)</label>
+              <input type="number" id="auto-cps" min="1" value="5">
+            </div>
+            <div>
+              <label>Duration (sec, optional)</label>
+              <input type="number" id="auto-duration" min="1" placeholder="10">
+            </div>
+            <div>
+              <label>Max Clicks (optional)</label>
+              <input type="number" id="auto-max" min="1" placeholder="100">
+            </div>
+            <div>
+              <label>Jitter (ms, optional)</label>
+              <input type="number" id="auto-jitter" min="0" placeholder="50">
+            </div>
+            <div>
+              <label>Button</label>
+              <select id="auto-button">
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+                <option value="middle">Middle</option>
+              </select>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="primary" id="auto-start">Start</button>
+            <button class="danger" id="auto-stop" disabled>Stop</button>
+          </div>
+          <div class="muted-note">Clicks the current mouse position. Keep the cursor on a safe spot.</div>
+        </div>
+
+        <!-- Vision Locate -->
+        <div class="card">
+          <h2>Vision Locate</h2>
+          <div class="stat-row">
+            <span>Result</span>
+            <span class="stat-val" id="vision-result">-</span>
+          </div>
+          <div class="stat-row">
+            <span>Center</span>
+            <span class="stat-val" id="vision-center">-</span>
+          </div>
+          <div class="schedule-grid">
+            <div>
+              <label>Template Image</label>
+              <input type="file" id="vision-template" accept="image/*">
+            </div>
+            <div>
+              <label>Display</label>
+              <select id="vision-display"></select>
+            </div>
+            <div>
+              <label>Confidence (0.5 - 0.99)</label>
+              <input type="number" id="vision-confidence" min="0.5" max="0.99" step="0.01" value="0.85">
+            </div>
+            <div>
+              <label>Region (x,y,w,h)</label>
+              <input type="text" id="vision-region" placeholder="optional">
+            </div>
+            <div>
+              <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+                <input type="checkbox" id="vision-shot-use-region">
+                Crop Screenshot to Region
+              </label>
+            </div>
+            <div>
+              <label style="display:flex; align-items:center; gap:8px; cursor:pointer;">
+                <input type="checkbox" id="vision-grayscale">
+                Grayscale
+              </label>
+            </div>
+            <div>
+              <label>Wait (sec, optional)</label>
+              <input type="number" id="vision-wait" min="0" placeholder="3">
+            </div>
+            <div>
+              <label>Attempts</label>
+              <input type="number" id="vision-attempts" min="1" value="1">
+            </div>
+            <div>
+              <label>Interval (ms)</label>
+              <input type="number" id="vision-interval" min="0" value="200">
+            </div>
+            <div>
+              <label>Button</label>
+              <select id="vision-button">
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+                <option value="middle">Middle</option>
+              </select>
+            </div>
+            <div>
+              <label>Clicks</label>
+              <input type="number" id="vision-clicks" min="1" value="1">
+            </div>
+            <div>
+              <label>Click Interval (ms)</label>
+              <input type="number" id="vision-click-interval" min="0" value="0">
+            </div>
+            <div>
+              <label>Offset X</label>
+              <input type="number" id="vision-offset-x" value="0">
+            </div>
+            <div>
+              <label>Offset Y</label>
+              <input type="number" id="vision-offset-y" value="0">
+            </div>
+            <div>
+              <label>Offset Jitter (px)</label>
+              <input type="number" id="vision-offset-jitter" min="0" placeholder="5">
+            </div>
+            <div>
+              <label>Zoom <span id="vision-zoom-label">1.0x</span></label>
+              <input type="range" id="vision-zoom" min="1" max="4" step="0.1" value="1">
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="secondary" id="vision-locate">Locate</button>
+            <button class="primary" id="vision-click">Locate & Click</button>
+            <button class="secondary" id="vision-screenshot">Screenshot</button>
+            <button class="secondary" id="vision-use-template">Use Selection as Template</button>
+            <button class="secondary" id="vision-refresh-displays">Refresh Displays</button>
+          </div>
+          <div class="muted-note">Upload a template or capture a screenshot, select region, then use "Use Selection as Template".</div>
+          <div class="preview-grid">
+            <div class="preview-box">
+              <div class="preview-title">Template Preview</div>
+              <img id="vision-template-preview" alt="Template preview" style="display: none;">
+            </div>
+            <div class="preview-box">
+              <div class="preview-title">Screenshot Preview</div>
+              <div class="preview-canvas" id="vision-shot-wrap">
+                <div class="preview-inner" id="vision-shot-inner">
+                  <img id="vision-shot-preview" alt="Screenshot preview" style="display: none;">
+                  <div class="select-overlay" id="vision-shot-overlay" style="display: none;"></div>
+                  <div class="select-rect" id="vision-shot-rect"></div>
+                </div>
+              </div>
+              <div class="preview-actions">
+                <button class="secondary" id="vision-open-preview" disabled>Open Preview Window</button>
+              </div>
+              <div class="muted-note">Drag on the screenshot to set region.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timed Execution -->
+        <div class="card">
+          <h2>Timed Execution</h2>
+          <div class="stat-row">
+            <span>Status</span>
+            <span class="stat-val" id="sched-status">Idle</span>
+          </div>
+          <div class="stat-row">
+            <span>Scheduled</span>
+            <span class="stat-val" id="sched-selected">-</span>
+          </div>
+          <div class="stat-row">
+            <span>Next Run</span>
+            <span class="stat-val" id="sched-next">-</span>
+          </div>
+          <div class="schedule-grid">
+            <div>
+              <label>Mode</label>
+              <select id="sched-mode">
+                <option value="delay">Run once after delay</option>
+                <option value="time">Run at time (daily)</option>
+                <option value="interval">Repeat every X minutes</option>
+              </select>
+            </div>
+            <div id="sched-delay-wrap">
+              <label>Delay (minutes)</label>
+              <input type="number" id="sched-delay" min="1" value="5">
+            </div>
+            <div id="sched-time-wrap" style="display: none;">
+              <label>At Time</label>
+              <input type="time" id="sched-time" value="09:00">
+            </div>
+            <div id="sched-interval-wrap" style="display: none;">
+              <label>Every (minutes)</label>
+              <input type="number" id="sched-interval" min="1" value="30">
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="primary" id="sched-start">Start Schedule</button>
+            <button class="secondary" id="sched-cancel" disabled>Cancel</button>
+          </div>
+          <div class="muted-note">Runs locally in this browser tab. Keep this page open.</div>
+        </div>
+
+        <!-- System Logs -->
+        <div class="card" style="flex: 1; display: flex; flex-direction: column;">
+          <h2>System Logs</h2>
+          <div class="log-container" id="sys-log">
+            <!-- Logs -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="preview-modal" id="vision-preview-modal">
+    <div class="preview-window">
+      <div class="preview-window-header">
+        <div class="preview-window-title">Screenshot Preview</div>
+        <div style="display: flex; gap: 8px;">
+          <button class="secondary" id="vision-preview-close">Close</button>
+        </div>
+      </div>
+      <div class="preview-window-body">
+        <div class="preview-inner" id="vision-preview-inner">
+          <img id="vision-preview-image" alt="Screenshot large preview">
+          <div class="select-overlay" id="vision-preview-overlay" style="display: none;"></div>
+          <div class="select-rect" id="vision-preview-rect"></div>
+        </div>
+      </div>
+      <div class="preview-window-footer">
+        <span>Zoom <span id="vision-preview-zoom-label">1.0x</span></span>
+        <input type="range" id="vision-preview-zoom" min="0.5" max="3" step="0.1" value="1">
+        <span class="preview-window-meta" id="vision-preview-size"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- State & Config ---
+    const STORAGE_KEY_BASE = "autotoolApiBase";
+    const STORAGE_KEY_HIST = "autotoolHistory";
+
+    let state = {
+      isRecording: false,
+      isReplaying: false,
+      isStopping: false,
+      isAutoClicking: false,
+      recStartTime: null,
+      recTimerInterval: null,
+      recStatusInterval: null,
+      autoStatusInterval: null,
+      history: [], // { id, timestamp, duration, eventCount, events }
+      selectedHistoryId: null,
+      apiBase: "http://127.0.0.1:18765",
+      scheduledHistoryId: null,
+      scheduleTimerId: null,
+      scheduleIntervalId: null,
+      scheduleNextAt: null,
+      visionShotMeta: null,
+      visionSelectStart: null,
+      visionPreviewSelectStart: null,
+      visionZoom: 1,
+      visionPreviewZoom: 1,
+      visionShotDataUrl: null,
+      visionSelectedRegion: null,
+      visionTemplateBlob: null
+    };
+
+    // --- DOM Elements ---
+    const el = {
+      baseUrl: document.getElementById('base-url'),
+      healthPill: document.getElementById('health-pill'),
+      healthText: document.getElementById('health-text'),
+
+      recStatus: document.getElementById('rec-status'),
+      recTime: document.getElementById('rec-time'),
+      recEvents: document.getElementById('rec-events'),
+      btnRecStart: document.getElementById('rec-start'),
+      btnRecStop: document.getElementById('rec-stop'),
+
+      replaySelectedId: document.getElementById('replay-selected-id'),
+      replayStatus: document.getElementById('replay-status'),
+      replayAck: document.getElementById('replay-ack'),
+      btnReplayStart: document.getElementById('replay-start'),
+      btnReplayStop: document.getElementById('replay-stop'),
+      btnExportScript: document.getElementById('export-script'),
+
+      autoStatus: document.getElementById('auto-status'),
+      autoClicks: document.getElementById('auto-clicks'),
+      autoCps: document.getElementById('auto-cps'),
+      autoDuration: document.getElementById('auto-duration'),
+      autoMax: document.getElementById('auto-max'),
+      autoJitter: document.getElementById('auto-jitter'),
+      autoButton: document.getElementById('auto-button'),
+      btnAutoStart: document.getElementById('auto-start'),
+      btnAutoStop: document.getElementById('auto-stop'),
+
+      visionResult: document.getElementById('vision-result'),
+      visionCenter: document.getElementById('vision-center'),
+      visionTemplate: document.getElementById('vision-template'),
+      visionDisplay: document.getElementById('vision-display'),
+      visionZoom: document.getElementById('vision-zoom'),
+      visionZoomLabel: document.getElementById('vision-zoom-label'),
+      visionTemplatePreview: document.getElementById('vision-template-preview'),
+      visionShotPreview: document.getElementById('vision-shot-preview'),
+      visionShotWrap: document.getElementById('vision-shot-wrap'),
+      visionShotInner: document.getElementById('vision-shot-inner'),
+      visionShotOverlay: document.getElementById('vision-shot-overlay'),
+      visionShotRect: document.getElementById('vision-shot-rect'),
+      btnVisionOpenPreview: document.getElementById('vision-open-preview'),
+      visionPreviewModal: document.getElementById('vision-preview-modal'),
+      visionPreviewInner: document.getElementById('vision-preview-inner'),
+      visionPreviewImage: document.getElementById('vision-preview-image'),
+      visionPreviewOverlay: document.getElementById('vision-preview-overlay'),
+      visionPreviewRect: document.getElementById('vision-preview-rect'),
+      visionPreviewZoom: document.getElementById('vision-preview-zoom'),
+      visionPreviewZoomLabel: document.getElementById('vision-preview-zoom-label'),
+      visionPreviewSize: document.getElementById('vision-preview-size'),
+      btnVisionPreviewClose: document.getElementById('vision-preview-close'),
+      visionConfidence: document.getElementById('vision-confidence'),
+      visionRegion: document.getElementById('vision-region'),
+      visionShotUseRegion: document.getElementById('vision-shot-use-region'),
+      visionGrayscale: document.getElementById('vision-grayscale'),
+      visionWait: document.getElementById('vision-wait'),
+      visionAttempts: document.getElementById('vision-attempts'),
+      visionInterval: document.getElementById('vision-interval'),
+      visionButton: document.getElementById('vision-button'),
+      visionClicks: document.getElementById('vision-clicks'),
+      visionClickInterval: document.getElementById('vision-click-interval'),
+      visionOffsetX: document.getElementById('vision-offset-x'),
+      visionOffsetY: document.getElementById('vision-offset-y'),
+      visionOffsetJitter: document.getElementById('vision-offset-jitter'),
+      btnVisionLocate: document.getElementById('vision-locate'),
+      btnVisionClick: document.getElementById('vision-click'),
+      btnVisionScreenshot: document.getElementById('vision-screenshot'),
+      btnVisionUseTemplate: document.getElementById('vision-use-template'),
+      btnVisionRefreshDisplays: document.getElementById('vision-refresh-displays'),
+
+      btnExportHistory: document.getElementById('export-history'),
+      btnImportHistory: document.getElementById('import-history-btn'),
+      inputImportHistory: document.getElementById('import-history'),
+
+      schedStatus: document.getElementById('sched-status'),
+      schedSelected: document.getElementById('sched-selected'),
+      schedNext: document.getElementById('sched-next'),
+      schedMode: document.getElementById('sched-mode'),
+      schedDelayWrap: document.getElementById('sched-delay-wrap'),
+      schedTimeWrap: document.getElementById('sched-time-wrap'),
+      schedIntervalWrap: document.getElementById('sched-interval-wrap'),
+      schedDelay: document.getElementById('sched-delay'),
+      schedTime: document.getElementById('sched-time'),
+      schedInterval: document.getElementById('sched-interval'),
+      btnSchedStart: document.getElementById('sched-start'),
+      btnSchedCancel: document.getElementById('sched-cancel'),
+
+      historyContainer: document.getElementById('history-container'),
+      sysLog: document.getElementById('sys-log')
+    };
+
+    // --- Init ---
+    function init() {
+      // Load Base URL
+      const storedBase = localStorage.getItem(STORAGE_KEY_BASE);
+      if (storedBase) el.baseUrl.value = storedBase;
+      state.apiBase = el.baseUrl.value;
+
+      // Load History
+      try {
+        const storedHist = localStorage.getItem(STORAGE_KEY_HIST);
+        if (storedHist) state.history = JSON.parse(storedHist);
+      } catch (e) { console.error("History load error", e); }
+      renderHistory();
+
+      // Check Health
+      checkHealth();
+      startRecordingStatusPolling();
+      startAutoClickerStatusPolling();
+      loadVisionDisplays();
+
+      // Event Listeners
+      document.getElementById('save-base').onclick = () => {
+        state.apiBase = el.baseUrl.value.trim();
+        localStorage.setItem(STORAGE_KEY_BASE, state.apiBase);
+        log("API URL saved", true);
+        checkHealth();
+      };
+      document.getElementById('check-health').onclick = checkHealth;
+
+      document.getElementById('clear-history').onclick = () => {
+        if (confirm("Clear all recording history?")) {
+          state.history = [];
+          saveHistory();
+          renderHistory();
+          log("History cleared", true);
+        }
+      };
+
+      el.btnExportHistory.onclick = exportHistory;
+      el.btnImportHistory.onclick = () => el.inputImportHistory.click();
+      el.inputImportHistory.onchange = handleImportHistory;
+
+      el.btnRecStart.onclick = startRecording;
+      el.btnRecStop.onclick = stopRecording;
+
+      el.btnAutoStart.onclick = startAutoClicker;
+      el.btnAutoStop.onclick = stopAutoClicker;
+
+      el.btnReplayStart.onclick = startReplay;
+      el.btnReplayStop.onclick = stopReplay;
+      el.btnExportScript.onclick = exportPyAutoGuiScript;
+
+      el.visionTemplate.onchange = handleVisionTemplateChange;
+      el.btnVisionLocate.onclick = () => locateTemplate(false);
+      el.btnVisionClick.onclick = () => locateTemplate(true);
+      el.btnVisionScreenshot.onclick = takeScreenshot;
+      el.btnVisionUseTemplate.onclick = useSelectionAsTemplate;
+      el.btnVisionRefreshDisplays.onclick = loadVisionDisplays;
+      el.btnVisionOpenPreview.onclick = openVisionPreview;
+      el.btnVisionPreviewClose.onclick = closeVisionPreview;
+      el.visionPreviewModal.onclick = (event) => {
+        if (event.target === el.visionPreviewModal) closeVisionPreview();
+      };
+      el.visionPreviewZoom.oninput = () => setVisionPreviewZoom(Number(el.visionPreviewZoom.value));
+      el.visionPreviewOverlay.onpointerdown = startVisionPreviewSelection;
+      el.visionPreviewOverlay.onpointermove = updateVisionPreviewSelection;
+      el.visionPreviewOverlay.onpointerup = endVisionPreviewSelection;
+      el.visionPreviewOverlay.onpointerleave = endVisionPreviewSelection;
+      el.visionPreviewImage.onload = syncVisionPreviewLayout;
+      el.visionZoom.oninput = () => setVisionZoom(Number(el.visionZoom.value));
+      el.visionShotPreview.onload = syncVisionOverlay;
+      el.visionShotOverlay.onpointerdown = startVisionSelection;
+      el.visionShotOverlay.onpointermove = updateVisionSelection;
+      el.visionShotOverlay.onpointerup = endVisionSelection;
+      el.visionShotOverlay.onpointerleave = endVisionSelection;
+
+      el.schedMode.onchange = updateScheduleModeUI;
+      el.btnSchedStart.onclick = startSchedule;
+      el.btnSchedCancel.onclick = cancelSchedule;
+
+      updateScheduleModeUI();
+      setVisionZoom(state.visionZoom);
+      setVisionPreviewZoom(state.visionPreviewZoom);
+      el.btnVisionOpenPreview.disabled = !state.visionShotDataUrl;
+    }
+
+    // --- Core Functions ---
+
+    function getApiUrl(path) {
+      let base = state.apiBase.replace(/\/$/, "");
+      if (!base.endsWith("/api/v1")) base += "/api/v1";
+      return base + path;
+    }
+
+    async function request(method, path, body, options = {}) {
+      const url = getApiUrl(path);
+      try {
+        const opts = {
+          method,
+          headers: { "Content-Type": "application/json" }
+        };
+        if (body) opts.body = JSON.stringify(body);
+
+        const t0 = performance.now();
+        const res = await fetch(url, opts);
+        const t1 = performance.now();
+
+        let data = {};
+        try { data = await res.json(); } catch (e) { }
+
+        const ok = res.ok && (data.ok !== false);
+        const latency = Math.round(t1 - t0);
+
+        if (!options.silent) {
+          log(`${method} ${path} (${latency}ms) - ${ok ? 'OK' : 'ERR'}`, ok);
+        }
+        return { ok, data, status: res.status };
+      } catch (err) {
+        if (!options.silent) {
+          log(`${method} ${path} - Network Error: ${err.message}`, false);
+        }
+        return { ok: false, error: err };
+      }
+    }
+
+    async function requestForm(path, formData, options = {}) {
+      const url = getApiUrl(path);
+      try {
+        const t0 = performance.now();
+        const res = await fetch(url, { method: "POST", body: formData });
+        const t1 = performance.now();
+
+        let data = {};
+        try { data = await res.json(); } catch (e) { }
+
+        const ok = res.ok && (data.ok !== false);
+        const latency = Math.round(t1 - t0);
+        if (!options.silent) {
+          log(`POST ${path} (${latency}ms) - ${ok ? 'OK' : 'ERR'}`, ok);
+        }
+        return { ok, data, status: res.status };
+      } catch (err) {
+        if (!options.silent) {
+          log(`POST ${path} - Network Error: ${err.message}`, false);
+        }
+        return { ok: false, error: err };
+      }
+    }
+
+    async function checkHealth() {
+      el.healthText.textContent = "Checking...";
+      const { ok } = await request("GET", "/health");
+      if (ok) {
+        el.healthPill.className = "health-indicator ok";
+        el.healthText.textContent = "System Online";
+      } else {
+        el.healthPill.className = "health-indicator err";
+        el.healthText.textContent = "Disconnected";
+      }
+    }
+
+    function log(msg, success = true) {
+      const div = document.createElement("div");
+      div.className = `log-entry ${success ? 'ok' : 'fail'}`;
+
+      const time = new Date().toLocaleTimeString('en-US', { hour12: false });
+      div.innerHTML = `<span class="log-time">${time}</span> ${msg}`;
+
+      el.sysLog.prepend(div); // Add to top
+    }
+
+    function startRecTimer(startTime = Date.now()) {
+      state.recStartTime = startTime;
+      clearInterval(state.recTimerInterval);
+      state.recTimerInterval = setInterval(() => {
+        if (!state.recStartTime) return;
+        const s = Math.floor((Date.now() - state.recStartTime) / 1000);
+        const m = Math.floor(s / 60);
+        const rs = s % 60;
+        el.recTime.textContent = `${m.toString().padStart(2, '0')}:${rs.toString().padStart(2, '0')}`;
+      }, 500);
+    }
+
+    function stopRecTimer(reset = true) {
+      clearInterval(state.recTimerInterval);
+      state.recTimerInterval = null;
+      if (reset) el.recTime.textContent = "00:00";
+    }
+
+    async function syncRecordingStatus() {
+      if (state.isStopping) return;
+      const { ok, data } = await request("GET", "/recording/status", null, { silent: true });
+      if (!ok) return;
+
+      const status = data?.data?.status;
+      if (status === "running") {
+        if (!state.isRecording) {
+          state.isRecording = true;
+          el.recEvents.textContent = "-";
+          el.recStatus.innerHTML = '<span class="pulse-record"></span>Recording...';
+          el.btnRecStart.disabled = true;
+          el.btnRecStop.disabled = false;
+          startRecTimer(Date.now());
+          log("Recording detected on backend; UI synced", true);
+        }
+        return;
+      }
+
+      if (status === "idle") {
+        if (state.isRecording) {
+          state.isRecording = false;
+          stopRecTimer(true);
+          el.recStatus.textContent = "Idle";
+          el.btnRecStart.disabled = false;
+          el.btnRecStop.disabled = true;
+          log("Recording stopped on backend; UI synced", true);
+        }
+      }
+    }
+
+    function startRecordingStatusPolling() {
+      if (state.recStatusInterval) return;
+      syncRecordingStatus();
+      state.recStatusInterval = setInterval(syncRecordingStatus, 2000);
+    }
+
+    function exportHistory() {
+      if (state.history.length === 0) {
+        log("No history to export", false);
+        return;
+      }
+      const payload = {
+        version: 1,
+        exported_at: new Date().toISOString(),
+        history: state.history
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      const dateTag = new Date().toISOString().slice(0, 10);
+      a.href = url;
+      a.download = `autotool-history-${dateTag}.json`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      log("History exported", true);
+    }
+
+    function pyString(value) {
+      return JSON.stringify(String(value));
+    }
+
+    function buildMouseArgs(payload, includeButton = false) {
+      const args = [];
+      const x = Number(payload?.x);
+      const y = Number(payload?.y);
+      if (Number.isFinite(x)) args.push(`x=${x}`);
+      if (Number.isFinite(y)) args.push(`y=${y}`);
+      if (includeButton) {
+        const button = payload?.button || "left";
+        args.push(`button=${pyString(button)}`);
+      }
+      return args.join(", ");
+    }
+
+    function buildScrollArgs(payload) {
+      const args = [];
+      const x = Number(payload?.x);
+      const y = Number(payload?.y);
+      if (Number.isFinite(x)) args.push(`x=${x}`);
+      if (Number.isFinite(y)) args.push(`y=${y}`);
+      return args.join(", ");
+    }
+
+    function eventToPyLines(event) {
+      const lines = [];
+      if (!event || typeof event !== "object") return lines;
+
+      const delta = Number(event.delta || 0);
+      if (delta > 0) lines.push(`    time.sleep(${delta.toFixed(3)})`);
+
+      const type = event.type;
+      const action = event.action;
+      const payload = event.payload || {};
+
+      if (type === "mouse") {
+        if (action === "move") {
+          const x = Number(payload.x);
+          const y = Number(payload.y);
+          if (Number.isFinite(x) && Number.isFinite(y)) {
+            lines.push(`    pyautogui.moveTo(${x}, ${y})`);
+          }
+        } else if (action === "click") {
+          const args = buildMouseArgs(payload, true);
+          if (payload.pressed === true) {
+            lines.push(`    pyautogui.mouseDown(${args})`);
+          } else if (payload.pressed === false) {
+            lines.push(`    pyautogui.mouseUp(${args})`);
+          } else {
+            lines.push(`    pyautogui.click(${args})`);
+          }
+        } else if (action === "scroll") {
+          const dx = Number(payload.dx || 0);
+          const dy = Number(payload.dy || 0);
+          const xyArgs = buildScrollArgs(payload);
+          if (Number.isFinite(dy) && dy !== 0) {
+            lines.push(`    pyautogui.scroll(${dy}${xyArgs ? ", " + xyArgs : ""})`);
+          }
+          if (Number.isFinite(dx) && dx !== 0) {
+            lines.push(`    pyautogui.hscroll(${dx}${xyArgs ? ", " + xyArgs : ""})`);
+          }
+        }
+      } else if (type === "keyboard") {
+        const key = payload.key;
+        if (!key) return lines;
+        if (action === "press") {
+          lines.push(`    pyautogui.keyDown(${pyString(key)})`);
+        } else if (action === "release") {
+          lines.push(`    pyautogui.keyUp(${pyString(key)})`);
+        }
+      }
+
+      return lines;
+    }
+
+    function buildPyAutoGuiScript(record) {
+      const events = Array.isArray(record?.events) ? record.events : [];
+      const recordedAt = record?.timestamp ? new Date(record.timestamp).toISOString() : new Date().toISOString();
+      const lines = [];
+
+      lines.push("# AutoTool PyAutoGUI Export");
+      lines.push(`# Recording ID: ${record?.id || "unknown"}`);
+      lines.push(`# Recorded At: ${recordedAt}`);
+      lines.push(`# Events: ${events.length}`);
+      lines.push("# Note: Key names may need adjustment for your OS.");
+      lines.push("");
+      lines.push("import time");
+      lines.push("import pyautogui");
+      lines.push("");
+      lines.push("pyautogui.FAILSAFE = True");
+      lines.push("pyautogui.PAUSE = 0");
+      lines.push("");
+      lines.push("def main():");
+      lines.push("    time.sleep(2)");
+      lines.push("    # Switch to the target window now.");
+
+      events.forEach((event) => {
+        const eventLines = eventToPyLines(event);
+        lines.push(...eventLines);
+      });
+
+      lines.push("");
+      lines.push("if __name__ == \"__main__\":");
+      lines.push("    main()");
+
+      return lines.join("\n");
+    }
+
+    function exportPyAutoGuiScript() {
+      if (!state.selectedHistoryId) return log("Select a recording first", false);
+      const record = state.history.find(i => i.id === state.selectedHistoryId);
+      if (!record || !Array.isArray(record.events) || record.events.length === 0) {
+        return log("No events to export", false);
+      }
+
+      const script = buildPyAutoGuiScript(record);
+      const blob = new Blob([script], { type: "text/x-python" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `autotool-recording-${record.id}.py`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+      log("PyAutoGUI script exported", true);
+    }
+
+    function getSelectedDisplayId() {
+      const value = el.visionDisplay.value;
+      if (value === "" || value === null || value === undefined) return null;
+      const parsed = Number(value);
+      if (!Number.isFinite(parsed)) return null;
+      return parsed;
+    }
+
+    async function loadVisionDisplays() {
+      const previous = el.visionDisplay.value;
+      const { ok, data } = await request("GET", "/vision/displays", null, { silent: true });
+      el.visionDisplay.innerHTML = "";
+      if (!ok || !data?.data?.displays) {
+        const option = document.createElement("option");
+        option.value = "1";
+        option.textContent = "Primary";
+        el.visionDisplay.appendChild(option);
+        log("Display list unavailable; using primary", false);
+        return;
+      }
+      const displays = data.data.displays;
+      const provider = data.data.provider;
+      let selected = null;
+      displays.forEach((display) => {
+        const option = document.createElement("option");
+        option.value = String(display.id);
+        const tag = display.virtual ? "All" : `Display ${display.id}`;
+        const name = display.name || tag;
+        const size = `${display.width}x${display.height}`;
+        const primary = display.primary ? " (primary)" : "";
+        option.textContent = `${name} (${size})${primary}`;
+        el.visionDisplay.appendChild(option);
+        if (previous && previous === option.value) selected = option.value;
+        if (!selected && display.primary) selected = option.value;
+      });
+      if (selected) el.visionDisplay.value = selected;
+      else if (el.visionDisplay.options.length > 0) el.visionDisplay.selectedIndex = 0;
+      if (provider === "pyautogui" && displays.length === 1) {
+        log("Multi-monitor capture requires mss; showing primary only", false);
+      }
+    }
+
+    function setVisionZoom(value) {
+      const zoom = Number.isFinite(value) && value > 0 ? value : 1;
+      state.visionZoom = zoom;
+      el.visionZoom.value = String(zoom);
+      el.visionZoomLabel.textContent = `${zoom.toFixed(1)}x`;
+      el.visionShotInner.style.transformOrigin = "top left";
+      el.visionShotInner.style.transform = `scale(${zoom})`;
+    }
+
+    function syncVisionOverlay() {
+      if (!state.visionShotMeta) return;
+      el.visionShotInner.style.width = `${state.visionShotMeta.width}px`;
+      el.visionShotInner.style.height = `${state.visionShotMeta.height}px`;
+      setVisionZoom(state.visionZoom);
+      renderVisionSelectionRect();
+    }
+
+    function loadImage(src) {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(img);
+        img.onerror = () => reject(new Error("Failed to load image"));
+        img.src = src;
+      });
+    }
+
+    async function useSelectionAsTemplate() {
+      if (!state.visionShotDataUrl) return log("Take a screenshot first", false);
+      if (!state.visionSelectedRegion) return log("Select a region on the screenshot first", false);
+
+      const { x, y, width, height } = state.visionSelectedRegion;
+      try {
+        const img = await loadImage(state.visionShotDataUrl);
+        const canvas = document.createElement("canvas");
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return log("Canvas not available", false);
+        ctx.drawImage(img, x, y, width, height, 0, 0, width, height);
+        const dataUrl = canvas.toDataURL("image/png");
+        const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+        if (!blob) return log("Failed to create template", false);
+        state.visionTemplateBlob = blob;
+        el.visionTemplate.value = "";
+        el.visionTemplatePreview.src = dataUrl;
+        el.visionTemplatePreview.style.display = "block";
+        log("Template created from selection", true);
+      } catch (err) {
+        log(`Template creation failed: ${err.message}`, false);
+      }
+    }
+
+    function handleVisionTemplateChange() {
+      const file = el.visionTemplate.files && el.visionTemplate.files[0];
+      if (!file) return;
+      state.visionTemplateBlob = null;
+      const reader = new FileReader();
+      reader.onload = () => {
+        el.visionTemplatePreview.src = reader.result;
+        el.visionTemplatePreview.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function parseRegionInput(raw) {
+      const text = String(raw || "").trim();
+      if (!text) return null;
+      const parts = text.split(",").map(part => part.trim()).filter(Boolean);
+      if (parts.length !== 4) {
+        log("Region must be in x,y,w,h format", false);
+        return undefined;
+      }
+      const nums = parts.map(Number);
+      if (nums.some(num => !Number.isFinite(num))) {
+        log("Region values must be numbers", false);
+        return undefined;
+      }
+      return nums.join(",");
+    }
+
+    function updateVisionResult(data) {
+      if (!data) return;
+      if (!data.found) {
+        el.visionResult.textContent = "Not Found";
+        el.visionCenter.textContent = "-";
+        return;
+      }
+      el.visionResult.textContent = data.clicked ? "Clicked" : "Found";
+      if (data.center) {
+        el.visionCenter.textContent = `${data.center.x}, ${data.center.y}`;
+      }
+    }
+
+    async function locateTemplate(shouldClick) {
+      const file = el.visionTemplate.files && el.visionTemplate.files[0];
+      const templateBlob = state.visionTemplateBlob;
+      if (!file && !templateBlob) {
+        return log("Select a template image or use screenshot selection", false);
+      }
+
+      el.visionResult.textContent = shouldClick ? "Searching..." : "Searching...";
+      el.visionCenter.textContent = "-";
+
+      const confidence = Number(el.visionConfidence.value);
+      if (!Number.isFinite(confidence) || confidence <= 0 || confidence > 1) {
+        return log("Confidence must be between 0 and 1", false);
+      }
+
+      const region = parseRegionInput(el.visionRegion.value);
+      if (region === undefined) return;
+
+      const intervalMs = Number(el.visionInterval.value);
+      if (!Number.isFinite(intervalMs) || intervalMs < 0) {
+        return log("Interval must be a non-negative number", false);
+      }
+
+      let attempts = parsePositiveNumber(el.visionAttempts.value);
+      if (!attempts) return log("Attempts must be a positive number", false);
+
+      const waitSec = parseOptionalNumber(el.visionWait.value);
+      if (waitSec !== null) {
+        if (intervalMs <= 0) return log("Interval must be > 0 when wait is set", false);
+        attempts = Math.max(1, Math.ceil((waitSec * 1000) / intervalMs));
+      }
+
+      const formData = new FormData();
+      if (file) {
+        formData.append("image", file);
+      } else if (templateBlob) {
+        formData.append("image", templateBlob, "template.png");
+      }
+      formData.append("confidence", String(confidence));
+      if (region) formData.append("region", region);
+      const displayId = getSelectedDisplayId();
+      if (displayId !== null) formData.append("display", String(displayId));
+      if (el.visionGrayscale.checked) formData.append("grayscale", "true");
+      formData.append("attempts", String(Math.floor(attempts)));
+      formData.append("interval_ms", String(Math.floor(intervalMs)));
+
+      if (shouldClick) {
+        const clicks = parsePositiveNumber(el.visionClicks.value);
+        if (!clicks) return log("Clicks must be a positive number", false);
+
+        const clickIntervalMs = Number(el.visionClickInterval.value);
+        if (!Number.isFinite(clickIntervalMs) || clickIntervalMs < 0) {
+          return log("Click interval must be non-negative", false);
+        }
+
+        const offsetX = Number(el.visionOffsetX.value || 0);
+        const offsetY = Number(el.visionOffsetY.value || 0);
+        if (!Number.isFinite(offsetX) || !Number.isFinite(offsetY)) {
+          return log("Offsets must be numbers", false);
+        }
+
+        const offsetJitterRaw = String(el.visionOffsetJitter.value || "").trim();
+        let offsetJitter = null;
+        if (offsetJitterRaw) {
+          offsetJitter = Number(offsetJitterRaw);
+          if (!Number.isFinite(offsetJitter) || offsetJitter < 0) {
+            return log("Offset jitter must be a non-negative number", false);
+          }
+        }
+
+        formData.append("button", el.visionButton.value);
+        formData.append("clicks", String(Math.floor(clicks)));
+        formData.append("click_interval_ms", String(Math.floor(clickIntervalMs)));
+        formData.append("offset_x", String(Math.floor(offsetX)));
+        formData.append("offset_y", String(Math.floor(offsetY)));
+        if (offsetJitter !== null) {
+          formData.append("offset_jitter", String(offsetJitter));
+        }
+      }
+
+      const path = shouldClick ? "/vision/click" : "/vision/locate";
+      const { ok, data } = await requestForm(path, formData);
+      if (!ok) {
+        if (data?.error?.message) log(data.error.message, false);
+        return;
+      }
+      updateVisionResult(data?.data);
+      if (data?.data?.found) {
+        log(shouldClick ? "Locate and click complete" : "Locate complete", true);
+      } else {
+        log("Template not found", false);
+      }
+    }
+
+    async function takeScreenshot() {
+      const useRegion = el.visionShotUseRegion.checked;
+      let region = null;
+      if (useRegion) {
+        region = parseRegionInput(el.visionRegion.value);
+        if (region === undefined) return;
+        if (!region) log("Region empty; capturing full screen", false);
+      }
+      const payload = {};
+      if (useRegion && region) payload.region = region;
+      const displayId = getSelectedDisplayId();
+      if (displayId !== null) payload.display = displayId;
+      const { ok, data } = await request("POST", "/vision/screenshot", payload);
+      if (!ok) {
+        if (data?.error?.message) log(data.error.message, false);
+        return;
+      }
+      const image = data?.data?.image;
+      if (!image) return log("Screenshot failed", false);
+      state.visionShotDataUrl = image;
+      const size = data?.data?.size;
+      if (size && Number.isFinite(size.width) && Number.isFinite(size.height)) {
+        state.visionShotMeta = { width: size.width, height: size.height };
+        el.visionShotOverlay.style.display = "block";
+      } else {
+        state.visionShotMeta = null;
+        el.visionShotOverlay.style.display = "none";
+      }
+      state.visionSelectStart = null;
+      state.visionPreviewSelectStart = null;
+      state.visionSelectedRegion = null;
+      el.visionShotRect.style.display = "none";
+      el.visionPreviewRect.style.display = "none";
+      el.visionShotPreview.src = image;
+      el.visionShotPreview.style.display = "block";
+      el.visionShotWrap.scrollLeft = 0;
+      el.visionShotWrap.scrollTop = 0;
+      syncVisionOverlay();
+      el.btnVisionOpenPreview.disabled = false;
+      if (el.visionPreviewModal.style.display === "flex") {
+        syncVisionPreviewImage();
+      }
+      log("Screenshot captured", true);
+    }
+
+    function setVisionPreviewVisible(visible) {
+      el.visionPreviewModal.style.display = visible ? "flex" : "none";
+    }
+
+    function closeVisionPreview() {
+      setVisionPreviewVisible(false);
+      if (state.visionSelectedRegion) focusVisionShotOnRegion(state.visionSelectedRegion);
+    }
+
+    function setVisionPreviewZoom(value) {
+      const zoom = Number(value);
+      if (!Number.isFinite(zoom) || zoom <= 0) return;
+      state.visionPreviewZoom = zoom;
+      el.visionPreviewZoom.value = String(zoom);
+      el.visionPreviewZoomLabel.textContent = `${zoom.toFixed(1)}x`;
+      el.visionPreviewInner.style.transformOrigin = "top left";
+      el.visionPreviewInner.style.transform = `scale(${zoom})`;
+    }
+
+    function syncVisionPreviewLayout() {
+      if (!state.visionShotMeta) {
+        el.visionPreviewOverlay.style.display = "none";
+        return;
+      }
+      el.visionPreviewInner.style.width = `${state.visionShotMeta.width}px`;
+      el.visionPreviewInner.style.height = `${state.visionShotMeta.height}px`;
+      el.visionPreviewOverlay.style.display = "block";
+      setVisionPreviewZoom(state.visionPreviewZoom);
+      renderVisionPreviewSelectionRect();
+    }
+
+    function syncVisionPreviewImage() {
+      if (!state.visionShotDataUrl) return;
+      el.visionPreviewImage.src = state.visionShotDataUrl;
+      const meta = state.visionShotMeta;
+      el.visionPreviewSize.textContent = meta ? `${meta.width} x ${meta.height}px` : "";
+      syncVisionPreviewLayout();
+    }
+
+    function openVisionPreview() {
+      if (!state.visionShotDataUrl) return log("Capture a screenshot first", false);
+      syncVisionPreviewImage();
+      setVisionPreviewVisible(true);
+      setVisionPreviewZoom(state.visionPreviewZoom);
+      renderVisionPreviewSelectionRect();
+    }
+
+    function focusVisionShotOnRegion(region) {
+      if (!region || !state.visionShotMeta) return;
+      const zoom = Number.isFinite(state.visionZoom) ? state.visionZoom : 1;
+      const wrap = el.visionShotWrap;
+      if (!wrap) return;
+      const x = region.x * zoom;
+      const y = region.y * zoom;
+      const w = region.width * zoom;
+      const h = region.height * zoom;
+      const left = Math.max(0, x + w / 2 - wrap.clientWidth / 2);
+      const top = Math.max(0, y + h / 2 - wrap.clientHeight / 2);
+      wrap.scrollLeft = left;
+      wrap.scrollTop = top;
+    }
+
+    function getOverlayPoint(event) {
+      const rect = el.visionShotOverlay.getBoundingClientRect();
+      const x = Math.min(Math.max(0, event.clientX - rect.left), rect.width);
+      const y = Math.min(Math.max(0, event.clientY - rect.top), rect.height);
+      return { x, y, width: rect.width, height: rect.height };
+    }
+
+    function getPreviewOverlayPoint(event) {
+      const rect = el.visionPreviewOverlay.getBoundingClientRect();
+      const x = Math.min(Math.max(0, event.clientX - rect.left), rect.width);
+      const y = Math.min(Math.max(0, event.clientY - rect.top), rect.height);
+      return { x, y, width: rect.width, height: rect.height };
+    }
+
+    function startVisionSelection(event) {
+      if (!state.visionShotMeta) return;
+      const meta = state.visionShotMeta;
+      const pos = getOverlayPoint(event);
+      state.visionSelectStart = pos;
+      const scaleX = meta.width / pos.width;
+      const scaleY = meta.height / pos.height;
+      const realX = pos.x * scaleX;
+      const realY = pos.y * scaleY;
+      el.visionShotRect.style.display = "block";
+      el.visionShotRect.style.left = `${realX}px`;
+      el.visionShotRect.style.top = `${realY}px`;
+      el.visionShotRect.style.width = "0px";
+      el.visionShotRect.style.height = "0px";
+      el.visionShotOverlay.setPointerCapture(event.pointerId);
+      event.preventDefault();
+    }
+
+    function updateVisionSelection(event) {
+      if (!state.visionSelectStart) return;
+      const meta = state.visionShotMeta;
+      if (!meta) return;
+      const start = state.visionSelectStart;
+      const pos = getOverlayPoint(event);
+      const scaleX = meta.width / start.width;
+      const scaleY = meta.height / start.height;
+      const x = Math.min(start.x, pos.x) * scaleX;
+      const y = Math.min(start.y, pos.y) * scaleY;
+      const w = Math.abs(pos.x - start.x) * scaleX;
+      const h = Math.abs(pos.y - start.y) * scaleY;
+      el.visionShotRect.style.left = `${x}px`;
+      el.visionShotRect.style.top = `${y}px`;
+      el.visionShotRect.style.width = `${w}px`;
+      el.visionShotRect.style.height = `${h}px`;
+      event.preventDefault();
+    }
+
+    function endVisionSelection(event) {
+      if (!state.visionSelectStart) return;
+      const start = state.visionSelectStart;
+      const pos = getOverlayPoint(event);
+      state.visionSelectStart = null;
+      if (el.visionShotOverlay.hasPointerCapture?.(event.pointerId)) {
+        el.visionShotOverlay.releasePointerCapture(event.pointerId);
+      }
+
+      const x = Math.min(start.x, pos.x);
+      const y = Math.min(start.y, pos.y);
+      const w = Math.abs(pos.x - start.x);
+      const h = Math.abs(pos.y - start.y);
+      if (w < 2 || h < 2) {
+        el.visionShotRect.style.display = "none";
+        return;
+      }
+
+      const meta = state.visionShotMeta;
+      if (!meta) return;
+      const scaleX = meta.width / start.width;
+      const scaleY = meta.height / start.height;
+      const realX = Math.round(x * scaleX);
+      const realY = Math.round(y * scaleY);
+      const realW = Math.max(1, Math.round(w * scaleX));
+      const realH = Math.max(1, Math.round(h * scaleY));
+      applyVisionSelection({ x: realX, y: realY, width: realW, height: realH });
+      log(`Region set: ${el.visionRegion.value}`, true);
+      event.preventDefault();
+    }
+
+    function startVisionPreviewSelection(event) {
+      if (!state.visionShotMeta) return;
+      const meta = state.visionShotMeta;
+      const pos = getPreviewOverlayPoint(event);
+      state.visionPreviewSelectStart = pos;
+      const scaleX = meta.width / pos.width;
+      const scaleY = meta.height / pos.height;
+      const realX = pos.x * scaleX;
+      const realY = pos.y * scaleY;
+      el.visionPreviewRect.style.display = "block";
+      el.visionPreviewRect.style.left = `${realX}px`;
+      el.visionPreviewRect.style.top = `${realY}px`;
+      el.visionPreviewRect.style.width = "0px";
+      el.visionPreviewRect.style.height = "0px";
+      el.visionPreviewOverlay.setPointerCapture(event.pointerId);
+      event.preventDefault();
+    }
+
+    function updateVisionPreviewSelection(event) {
+      if (!state.visionPreviewSelectStart) return;
+      const meta = state.visionShotMeta;
+      if (!meta) return;
+      const start = state.visionPreviewSelectStart;
+      const pos = getPreviewOverlayPoint(event);
+      const scaleX = meta.width / start.width;
+      const scaleY = meta.height / start.height;
+      const x = Math.min(start.x, pos.x) * scaleX;
+      const y = Math.min(start.y, pos.y) * scaleY;
+      const w = Math.abs(pos.x - start.x) * scaleX;
+      const h = Math.abs(pos.y - start.y) * scaleY;
+      el.visionPreviewRect.style.left = `${x}px`;
+      el.visionPreviewRect.style.top = `${y}px`;
+      el.visionPreviewRect.style.width = `${w}px`;
+      el.visionPreviewRect.style.height = `${h}px`;
+      event.preventDefault();
+    }
+
+    function endVisionPreviewSelection(event) {
+      if (!state.visionPreviewSelectStart) return;
+      const start = state.visionPreviewSelectStart;
+      const pos = getPreviewOverlayPoint(event);
+      state.visionPreviewSelectStart = null;
+      if (el.visionPreviewOverlay.hasPointerCapture?.(event.pointerId)) {
+        el.visionPreviewOverlay.releasePointerCapture(event.pointerId);
+      }
+
+      const x = Math.min(start.x, pos.x);
+      const y = Math.min(start.y, pos.y);
+      const w = Math.abs(pos.x - start.x);
+      const h = Math.abs(pos.y - start.y);
+      if (w < 2 || h < 2) {
+        el.visionPreviewRect.style.display = "none";
+        return;
+      }
+
+      const meta = state.visionShotMeta;
+      if (!meta) return;
+      const scaleX = meta.width / start.width;
+      const scaleY = meta.height / start.height;
+      const realX = Math.round(x * scaleX);
+      const realY = Math.round(y * scaleY);
+      const realW = Math.max(1, Math.round(w * scaleX));
+      const realH = Math.max(1, Math.round(h * scaleY));
+      applyVisionSelection({ x: realX, y: realY, width: realW, height: realH });
+      focusVisionShotOnRegion(state.visionSelectedRegion);
+      log(`Region set: ${el.visionRegion.value}`, true);
+      event.preventDefault();
+    }
+
+    function applyVisionSelection(region) {
+      if (!region) return;
+      state.visionSelectedRegion = region;
+      el.visionRegion.value = `${region.x},${region.y},${region.width},${region.height}`;
+      renderVisionSelectionRect();
+      renderVisionPreviewSelectionRect();
+    }
+
+    function renderVisionSelectionRect() {
+      const region = state.visionSelectedRegion;
+      const meta = state.visionShotMeta;
+      if (!region || !meta) {
+        el.visionShotRect.style.display = "none";
+        return;
+      }
+      el.visionShotRect.style.display = "block";
+      el.visionShotRect.style.left = `${region.x}px`;
+      el.visionShotRect.style.top = `${region.y}px`;
+      el.visionShotRect.style.width = `${region.width}px`;
+      el.visionShotRect.style.height = `${region.height}px`;
+    }
+
+    function renderVisionPreviewSelectionRect() {
+      const region = state.visionSelectedRegion;
+      const meta = state.visionShotMeta;
+      if (!region || !meta) {
+        el.visionPreviewRect.style.display = "none";
+        return;
+      }
+      el.visionPreviewRect.style.display = "block";
+      el.visionPreviewRect.style.left = `${region.x}px`;
+      el.visionPreviewRect.style.top = `${region.y}px`;
+      el.visionPreviewRect.style.width = `${region.width}px`;
+      el.visionPreviewRect.style.height = `${region.height}px`;
+    }
+
+    function normalizeHistoryItem(item) {
+      if (!item || typeof item !== "object") return null;
+      const id = String(item.id || "").trim();
+      const events = Array.isArray(item.events) ? item.events : null;
+      if (!id || !events) return null;
+      return {
+        id,
+        timestamp: Number(item.timestamp || Date.now()),
+        duration: Number(item.duration || 0),
+        eventCount: Number(item.eventCount || events.length),
+        events
+      };
+    }
+
+    async function handleImportHistory(event) {
+      const file = event.target.files && event.target.files[0];
+      event.target.value = "";
+      if (!file) return;
+
+      try {
+        const text = await file.text();
+        const data = JSON.parse(text);
+        const rawItems = Array.isArray(data)
+          ? data
+          : Array.isArray(data?.history)
+            ? data.history
+            : null;
+        if (!rawItems) {
+          log("Invalid history file", false);
+          return;
+        }
+
+        const normalized = rawItems.map(normalizeHistoryItem).filter(Boolean);
+        if (normalized.length === 0) {
+          log("No valid history entries found", false);
+          return;
+        }
+
+        const replace = confirm("Replace existing history? Click Cancel to merge.");
+        if (replace) state.history = [];
+
+        const existing = new Map(state.history.map(item => [item.id, item]));
+        let added = 0;
+        normalized.forEach(item => {
+          if (!existing.has(item.id)) {
+            state.history.push(item);
+            existing.set(item.id, item);
+            added += 1;
+          }
+        });
+
+        state.history.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
+        saveHistory();
+        renderHistory();
+
+        if (!state.history.find(i => i.id === state.selectedHistoryId)) {
+          state.selectedHistoryId = null;
+          el.replaySelectedId.textContent = "-";
+        }
+        if (state.scheduledHistoryId && !state.history.find(i => i.id === state.scheduledHistoryId)) {
+          cancelSchedule(false);
+          log("Scheduled recording missing after import; schedule canceled", false);
+        }
+
+        log(`Imported ${added} recording(s)`, true);
+      } catch (err) {
+        log(`Import failed: ${err.message}`, false);
+      }
+    }
+
+    function formatDateTime(value) {
+      return value.toLocaleString('en-US', { hour12: false });
+    }
+
+    function updateScheduleModeUI() {
+      const mode = el.schedMode.value;
+      el.schedDelayWrap.style.display = mode === "delay" ? "block" : "none";
+      el.schedTimeWrap.style.display = mode === "time" ? "block" : "none";
+      el.schedIntervalWrap.style.display = mode === "interval" ? "block" : "none";
+    }
+
+    function clearScheduleTimers() {
+      if (state.scheduleTimerId) {
+        clearTimeout(state.scheduleTimerId);
+        state.scheduleTimerId = null;
+      }
+      if (state.scheduleIntervalId) {
+        clearInterval(state.scheduleIntervalId);
+        state.scheduleIntervalId = null;
+      }
+    }
+
+    function setScheduleIdle() {
+      state.scheduleNextAt = null;
+      state.scheduledHistoryId = null;
+      el.schedStatus.textContent = "Idle";
+      el.schedNext.textContent = "-";
+      el.schedSelected.textContent = "-";
+      el.btnSchedCancel.disabled = true;
+      el.btnSchedStart.disabled = false;
+    }
+
+    function cancelSchedule(showLog = true) {
+      const hadSchedule = state.scheduleTimerId || state.scheduleIntervalId;
+      clearScheduleTimers();
+      setScheduleIdle();
+      if (showLog && hadSchedule) log("Schedule canceled", true);
+    }
+
+    function parsePositiveNumber(value) {
+      const num = Number(value);
+      if (!Number.isFinite(num) || num <= 0) return null;
+      return num;
+    }
+
+    function parseOptionalNumber(value) {
+      if (value === null || value === undefined) return null;
+      const trimmed = String(value).trim();
+      if (!trimmed) return null;
+      return parsePositiveNumber(trimmed);
+    }
+
+    function getNextTimeFromNow(timeStr) {
+      if (!timeStr) return null;
+      const [hour, minute] = timeStr.split(":").map(Number);
+      if (!Number.isFinite(hour) || !Number.isFinite(minute)) return null;
+
+      const now = new Date();
+      const target = new Date(now);
+      target.setHours(hour, minute, 0, 0);
+      if (isNaN(target.getTime())) return null;
+      if (target <= now) target.setDate(target.getDate() + 1);
+      return target;
+    }
+
+    async function runReplay(record, label) {
+      if (!record) return false;
+      if (!el.replayAck.checked) {
+        log("Please confirm device control first", false);
+        return false;
+      }
+
+      const prefix = label ? `${label} ` : "";
+      log(`${prefix}replay #${record.id}...`, true);
+      el.replayStatus.textContent = "Running";
+
+      const { ok } = await request("POST", "/replay/start", {
+        items: record.events,
+        speed: 1.0,
+        stop_on_error: false
+      });
+
+      el.replayStatus.textContent = ok ? "Active" : "Error";
+      return ok;
+    }
+
+    function armOneShotSchedule(record, nextAt, delayMs) {
+      el.schedSelected.textContent = "#" + record.id;
+      state.scheduledHistoryId = record.id;
+      state.scheduleNextAt = nextAt;
+      el.schedStatus.textContent = "Armed";
+      el.schedNext.textContent = formatDateTime(nextAt);
+      el.btnSchedCancel.disabled = false;
+      el.btnSchedStart.disabled = true;
+
+      state.scheduleTimerId = setTimeout(async () => {
+        const latest = state.history.find(i => i.id === record.id);
+        if (!latest) {
+          log("Scheduled recording was deleted", false);
+          return setScheduleIdle();
+        }
+        await runReplay(latest, "Scheduled");
+        setScheduleIdle();
+      }, delayMs);
+    }
+
+    function armIntervalSchedule(record, intervalMs) {
+      el.schedSelected.textContent = "#" + record.id;
+      state.scheduledHistoryId = record.id;
+      el.schedStatus.textContent = "Repeating";
+      state.scheduleNextAt = new Date(Date.now() + intervalMs);
+      el.schedNext.textContent = formatDateTime(state.scheduleNextAt);
+      el.btnSchedCancel.disabled = false;
+      el.btnSchedStart.disabled = true;
+
+      state.scheduleIntervalId = setInterval(async () => {
+        const latest = state.history.find(i => i.id === record.id);
+        if (!latest) {
+          log("Scheduled recording was deleted", false);
+          return cancelSchedule(false);
+        }
+        await runReplay(latest, "Scheduled");
+        state.scheduleNextAt = new Date(Date.now() + intervalMs);
+        el.schedNext.textContent = formatDateTime(state.scheduleNextAt);
+      }, intervalMs);
+    }
+
+    async function startSchedule() {
+      if (!state.selectedHistoryId) return log("Select a recording first", false);
+      if (!el.replayAck.checked) return log("Please confirm device control first", false);
+
+      const record = state.history.find(i => i.id === state.selectedHistoryId);
+      if (!record) return log("Selected recording not found", false);
+
+      if (state.scheduleTimerId || state.scheduleIntervalId) cancelSchedule(false);
+
+      const mode = el.schedMode.value;
+      if (mode === "delay") {
+        const minutes = parsePositiveNumber(el.schedDelay.value);
+        if (!minutes) return log("Delay must be a positive number", false);
+        const delayMs = minutes * 60 * 1000;
+        const nextAt = new Date(Date.now() + delayMs);
+        armOneShotSchedule(record, nextAt, delayMs);
+        return log(`Schedule set for ${minutes} minute(s)`, true);
+      }
+
+      if (mode === "time") {
+        const target = getNextTimeFromNow(el.schedTime.value);
+        if (!target) return log("Invalid time value", false);
+        const delayMs = Math.max(0, target.getTime() - Date.now());
+        armOneShotSchedule(record, target, delayMs);
+        return log(`Schedule set for ${formatDateTime(target)}`, true);
+      }
+
+      if (mode === "interval") {
+        const minutes = parsePositiveNumber(el.schedInterval.value);
+        if (!minutes) return log("Interval must be a positive number", false);
+        const intervalMs = minutes * 60 * 1000;
+        armIntervalSchedule(record, intervalMs);
+        return log(`Repeating every ${minutes} minute(s)`, true);
+      }
+    }
+
+    function applyAutoClickerStatus(info) {
+      if (!info) return;
+      const status = info.status || "idle";
+      const clicks = Number.isFinite(info.clicks) ? info.clicks : 0;
+      el.autoClicks.textContent = clicks;
+
+      let label = "Idle";
+      if (status === "running") label = "Running";
+      if (status === "stopping") label = "Stopping...";
+      if (status === "error") label = "Error";
+      el.autoStatus.textContent = label;
+
+      const running = status === "running" || status === "stopping";
+      state.isAutoClicking = running;
+      el.btnAutoStart.disabled = running;
+      el.btnAutoStop.disabled = !running;
+    }
+
+    async function syncAutoClickerStatus() {
+      const { ok, data } = await request("GET", "/autoclicker/status", null, { silent: true });
+      if (ok) applyAutoClickerStatus(data?.data);
+    }
+
+    function startAutoClickerStatusPolling() {
+      if (state.autoStatusInterval) return;
+      syncAutoClickerStatus();
+      state.autoStatusInterval = setInterval(syncAutoClickerStatus, 2000);
+    }
+
+    async function startAutoClicker() {
+      if (state.isAutoClicking) return;
+
+      const cps = parsePositiveNumber(el.autoCps.value);
+      if (!cps) return log("CPS must be a positive number", false);
+      const duration = parseOptionalNumber(el.autoDuration.value);
+      const maxClicks = parseOptionalNumber(el.autoMax.value);
+      const jitterRaw = el.autoJitter.value;
+      const jitterMs = String(jitterRaw).trim() === "" ? null : Number(jitterRaw);
+      if (jitterMs !== null && (!Number.isFinite(jitterMs) || jitterMs < 0)) {
+        return log("Jitter must be a non-negative number", false);
+      }
+      const button = el.autoButton.value;
+
+      const { ok, data, status } = await request("POST", "/autoclicker/start", {
+        cps,
+        button,
+        duration,
+        max_clicks: maxClicks,
+        jitter_ms: jitterMs
+      });
+
+      if (ok) {
+        applyAutoClickerStatus(data?.data);
+        log("Autoclicker started", true);
+        return;
+      }
+
+      if (status === 409 || data?.error?.code === "CONFLICT") {
+        await syncAutoClickerStatus();
+        log("Autoclicker already running; UI synced", true);
+      }
+    }
+
+    async function stopAutoClicker() {
+      if (!state.isAutoClicking) return;
+      el.autoStatus.textContent = "Stopping...";
+      el.btnAutoStop.disabled = true;
+
+      const { ok, data } = await request("POST", "/autoclicker/stop");
+      if (ok) {
+        applyAutoClickerStatus(data?.data);
+        log("Autoclicker stopped", true);
+        return;
+      }
+
+      log("Autoclicker stop failed", false);
+      el.btnAutoStop.disabled = false;
+    }
+
+    // --- Recording ---
+
+    async function startRecording() {
+      if (state.isRecording) return;
+
+      const { ok, data, status } = await request("POST", "/recording/start", {
+        record_moves: true,
+        min_move_interval: 0.1
+      });
+
+      if (ok) {
+        state.isRecording = true;
+        el.recEvents.textContent = "0";
+
+        el.recStatus.innerHTML = '<span class="pulse-record"></span>Recording...';
+        el.btnRecStart.disabled = true;
+        el.btnRecStop.disabled = false;
+
+        startRecTimer(Date.now());
+        return;
+      }
+
+      if (status === 409 || data?.error?.code === "CONFLICT") {
+        state.isRecording = true;
+        el.recEvents.textContent = "-";
+        clearInterval(state.recTimerInterval);
+        el.recStatus.innerHTML = '<span class="pulse-record"></span>Recording...';
+        startRecTimer(Date.now());
+        el.btnRecStart.disabled = true;
+        el.btnRecStop.disabled = false;
+        log("Recording already running; UI synced", true);
+      }
+    }
+
+    async function stopRecording() {
+      if (!state.isRecording || state.isStopping) return;
+
+      state.isStopping = true;
+      stopRecTimer(false);
+      el.recStatus.textContent = "Stopping...";
+      el.btnRecStop.disabled = true;
+      el.btnRecStart.disabled = true;
+
+      const { ok, data, status } = await request("POST", "/recording/stop");
+
+      state.isStopping = false;
+
+      if (ok && data && data.data && data.data.events) {
+        const events = data.data.events;
+        el.recEvents.textContent = events.length;
+
+        // Save to History
+        const duration = Math.round((Date.now() - state.recStartTime) / 1000);
+        const newRecord = {
+          id: crypto.randomUUID().slice(0, 8),
+          timestamp: Date.now(),
+          duration: duration,
+          eventCount: events.length,
+          events: events
+        };
+
+        state.isRecording = false;
+        stopRecTimer(true);
+        el.recStatus.textContent = "Idle";
+        el.btnRecStart.disabled = false;
+        el.btnRecStop.disabled = true;
+
+        state.history.unshift(newRecord);
+        saveHistory();
+        renderHistory();
+        selectHistoryItem(newRecord.id);
+        log(`Recording saved: ${events.length} events`, true);
+        return;
+      }
+
+      if (status === 400 || data?.error?.code === "BAD_REQUEST") {
+        state.isRecording = false;
+        stopRecTimer(true);
+        el.recStatus.textContent = "Idle";
+        el.btnRecStart.disabled = false;
+        el.btnRecStop.disabled = true;
+        log("No active recording; UI synced", true);
+        return;
+      }
+
+      state.isRecording = true;
+      el.recStatus.innerHTML = '<span class="pulse-record"></span>Recording...';
+      el.btnRecStart.disabled = true;
+      el.btnRecStop.disabled = false;
+      startRecTimer(Date.now());
+      log("Stop failed; recording may still be active", false);
+    }
+
+    // --- History & Replay ---
+
+    function saveHistory() {
+      localStorage.setItem(STORAGE_KEY_HIST, JSON.stringify(state.history));
+    }
+
+    function renderHistory() {
+      el.historyContainer.innerHTML = "";
+
+      if (state.history.length === 0) {
+        el.historyContainer.innerHTML = `<div class="empty-state">No recordings yet</div>`;
+        return;
+      }
+
+      state.history.forEach(item => {
+        const date = new Date(item.timestamp);
+        const dateStr = date.toLocaleDateString() + " " + date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+        const div = document.createElement("div");
+        div.className = `history-item ${state.selectedHistoryId === item.id ? 'active' : ''}`;
+        div.onclick = (e) => {
+          if (!e.target.classList.contains('delete-btn')) selectHistoryItem(item.id);
+        };
+
+        div.innerHTML = `
+                <div class="h-header">
+                    <span>RECORD #${item.id}</span>
+                    <button class="delete-btn" onclick="deleteHistoryItem('${item.id}')">×</button>
+                </div>
+                <div class="h-meta">
+                    <span>📅 ${dateStr}</span>
+                    <span>⏱ ${item.duration}s</span>
+                    <span>⚡ ${item.eventCount}</span>
+                </div>
+            `;
+        el.historyContainer.appendChild(div);
+      });
+    }
+
+    // Allow global access for inline onclick
+    window.deleteHistoryItem = (id) => {
+      if (confirm("Delete this recording?")) {
+        state.history = state.history.filter(i => i.id !== id);
+        if (state.selectedHistoryId === id) {
+          state.selectedHistoryId = null;
+          el.replaySelectedId.textContent = "-";
+        }
+        if (state.scheduledHistoryId === id) {
+          cancelSchedule(false);
+          log("Scheduled recording deleted; schedule canceled", false);
+        }
+        saveHistory();
+        renderHistory();
+      }
+    };
+
+    function selectHistoryItem(id) {
+      state.selectedHistoryId = id;
+      el.replaySelectedId.textContent = "#" + id;
+      renderHistory(); // update active class
+    }
+
+    async function startReplay() {
+      if (!state.selectedHistoryId) return log("Select a recording first", false);
+      const record = state.history.find(i => i.id === state.selectedHistoryId);
+      if (!record) return log("Selected recording not found", false);
+      await runReplay(record, "Manual");
+    }
+
+    async function stopReplay() {
+      await request("POST", "/replay/stop");
+      el.replayStatus.textContent = "Stopped";
+    }
+
+    // Start
+    init();
+
+  </script>
+</body>
+
+</html>

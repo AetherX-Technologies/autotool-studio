@@ -1,0 +1,45 @@
+{
+  "id": "wf_demo_flowgram",
+  "name": "FlowGram Demo",
+  "graph": {
+    "nodes": [
+      {
+        "id": "start_0",
+        "type": "start",
+        "data": {
+          "title": "Start"
+        }
+      },
+      {
+        "id": "action_wait",
+        "type": "action",
+        "data": {
+          "title": "Wait",
+          "action": {
+            "type": "wait",
+            "params": {
+              "seconds": 1
+            }
+          }
+        }
+      },
+      {
+        "id": "end_0",
+        "type": "end",
+        "data": {
+          "title": "End"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "sourceNodeID": "start_0",
+        "targetNodeID": "action_wait"
+      },
+      {
+        "sourceNodeID": "action_wait",
+        "targetNodeID": "end_0"
+      }
+    ]
+  }
+}

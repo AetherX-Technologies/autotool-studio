@@ -1,0 +1,7 @@
+{
+  "id": "example-plugin",
+  "name": "Example Plugin",
+  "version": "0.1.0",
+  "entry": "plugin.py",
+  "description": "Sample plugin that registers a demo action"
+}

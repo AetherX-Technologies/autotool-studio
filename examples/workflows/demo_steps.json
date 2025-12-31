@@ -1,0 +1,12 @@
+{
+  "id": "wf_demo_steps",
+  "name": "Steps Demo",
+  "steps": [
+    {
+      "type": "wait",
+      "params": {
+        "seconds": 1
+      }
+    }
+  ]
+}

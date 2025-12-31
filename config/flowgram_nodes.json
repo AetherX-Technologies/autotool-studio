@@ -1,0 +1,860 @@
+{
+  "nodes": [
+    {
+      "type": "trigger.manual",
+      "title": "手动触发",
+      "category": "触发器",
+      "icon": "fa-solid fa-hand-pointer",
+      "ports": [
+        "out"
+      ],
+      "defaultData": {
+        "title": "手动触发"
+      },
+      "actionTemplate": null,
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          }
+        ]
+      },
+      "status": "experimental"
+    },
+    {
+      "type": "trigger.hotkey",
+      "title": "热键触发",
+      "category": "触发器",
+      "icon": "fa-solid fa-keyboard",
+      "ports": [
+        "out"
+      ],
+      "defaultData": {
+        "title": "热键触发",
+        "hotkey": "ctrl+shift+esc"
+      },
+      "actionTemplate": null,
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "hotkey",
+            "label": "热键",
+            "type": "text",
+            "path": "data.hotkey"
+          }
+        ]
+      },
+      "status": "experimental"
+    },
+    {
+      "type": "trigger.schedule",
+      "title": "定时触发",
+      "category": "触发器",
+      "icon": "fa-solid fa-clock",
+      "ports": [
+        "out"
+      ],
+      "defaultData": {
+        "title": "定时触发",
+        "cron": "0 9 * * *"
+      },
+      "actionTemplate": null,
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "cron",
+            "label": "Cron 表达式",
+            "type": "text",
+            "path": "data.cron"
+          }
+        ]
+      },
+      "status": "experimental"
+    },
+    {
+      "type": "action.click",
+      "title": "点击",
+      "category": "动作节点",
+      "icon": "fa-solid fa-mouse-pointer",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "点击",
+        "action": {
+          "type": "click",
+          "params": {
+            "x": 0,
+            "y": 0,
+            "button": "left",
+            "clicks": 1,
+            "interval": 0
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "click",
+        "params": {
+          "x": 0,
+          "y": 0,
+          "button": "left",
+          "clicks": 1,
+          "interval": 0
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "x",
+            "label": "X 坐标",
+            "type": "number",
+            "path": "data.action.params.x"
+          },
+          {
+            "name": "y",
+            "label": "Y 坐标",
+            "type": "number",
+            "path": "data.action.params.y"
+          },
+          {
+            "name": "button",
+            "label": "鼠标按钮",
+            "type": "select",
+            "path": "data.action.params.button",
+            "options": [
+              {
+                "label": "左键",
+                "value": "left"
+              },
+              {
+                "label": "右键",
+                "value": "right"
+              },
+              {
+                "label": "中键",
+                "value": "middle"
+              }
+            ]
+          },
+          {
+            "name": "clicks",
+            "label": "点击次数",
+            "type": "number",
+            "path": "data.action.params.clicks"
+          },
+          {
+            "name": "interval",
+            "label": "间隔(秒)",
+            "type": "number",
+            "path": "data.action.params.interval"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.move",
+      "title": "移动",
+      "category": "动作节点",
+      "icon": "fa-solid fa-arrows-up-down-left-right",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "移动",
+        "action": {
+          "type": "move",
+          "params": {
+            "x": 0,
+            "y": 0,
+            "duration": 0.2
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "move",
+        "params": {
+          "x": 0,
+          "y": 0,
+          "duration": 0.2
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "x",
+            "label": "X 坐标",
+            "type": "number",
+            "path": "data.action.params.x"
+          },
+          {
+            "name": "y",
+            "label": "Y 坐标",
+            "type": "number",
+            "path": "data.action.params.y"
+          },
+          {
+            "name": "duration",
+            "label": "持续时间(秒)",
+            "type": "number",
+            "path": "data.action.params.duration"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.type",
+      "title": "输入文本",
+      "category": "动作节点",
+      "icon": "fa-solid fa-keyboard",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "输入文本",
+        "action": {
+          "type": "type",
+          "params": {
+            "text": "",
+            "interval": 0
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "type",
+        "params": {
+          "text": "",
+          "interval": 0
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "text",
+            "label": "文本内容",
+            "type": "text",
+            "path": "data.action.params.text"
+          },
+          {
+            "name": "interval",
+            "label": "间隔(秒)",
+            "type": "number",
+            "path": "data.action.params.interval"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.hotkey",
+      "title": "组合热键",
+      "category": "动作节点",
+      "icon": "fa-solid fa-key",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "组合热键",
+        "action": {
+          "type": "hotkey",
+          "params": {
+            "combo": "ctrl+s"
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "hotkey",
+        "params": {
+          "combo": "ctrl+s"
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "combo",
+            "label": "组合键",
+            "type": "text",
+            "path": "data.action.params.combo"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.wait",
+      "title": "等待",
+      "category": "动作节点",
+      "icon": "fa-solid fa-hourglass-half",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "等待",
+        "action": {
+          "type": "wait",
+          "params": {
+            "seconds": 1
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "wait",
+        "params": {
+          "seconds": 1
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "seconds",
+            "label": "等待秒数",
+            "type": "number",
+            "path": "data.action.params.seconds"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.screenshot",
+      "title": "截图",
+      "category": "动作节点",
+      "icon": "fa-solid fa-camera",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "截图",
+        "action": {
+          "type": "screenshot",
+          "params": {
+            "path": ""
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "screenshot",
+        "params": {
+          "path": ""
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "path",
+            "label": "保存路径",
+            "type": "text",
+            "path": "data.action.params.path"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.key_down",
+      "title": "按下按键",
+      "category": "动作节点",
+      "icon": "fa-solid fa-arrow-down",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "按下按键",
+        "action": {
+          "type": "key_down",
+          "params": {
+            "key": "enter"
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "key_down",
+        "params": {
+          "key": "enter"
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "key",
+            "label": "按键",
+            "type": "text",
+            "path": "data.action.params.key"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.key_up",
+      "title": "释放按键",
+      "category": "动作节点",
+      "icon": "fa-solid fa-arrow-up",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "释放按键",
+        "action": {
+          "type": "key_up",
+          "params": {
+            "key": "enter"
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "key_up",
+        "params": {
+          "key": "enter"
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "key",
+            "label": "按键",
+            "type": "text",
+            "path": "data.action.params.key"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.mouse_down",
+      "title": "鼠标按下",
+      "category": "动作节点",
+      "icon": "fa-solid fa-computer-mouse",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "鼠标按下",
+        "action": {
+          "type": "mouse_down",
+          "params": {
+            "x": 0,
+            "y": 0,
+            "button": "left"
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "mouse_down",
+        "params": {
+          "x": 0,
+          "y": 0,
+          "button": "left"
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "x",
+            "label": "X 坐标",
+            "type": "number",
+            "path": "data.action.params.x"
+          },
+          {
+            "name": "y",
+            "label": "Y 坐标",
+            "type": "number",
+            "path": "data.action.params.y"
+          },
+          {
+            "name": "button",
+            "label": "鼠标按钮",
+            "type": "select",
+            "path": "data.action.params.button",
+            "options": [
+              {
+                "label": "左键",
+                "value": "left"
+              },
+              {
+                "label": "右键",
+                "value": "right"
+              },
+              {
+                "label": "中键",
+                "value": "middle"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.mouse_up",
+      "title": "鼠标释放",
+      "category": "动作节点",
+      "icon": "fa-solid fa-computer-mouse",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "鼠标释放",
+        "action": {
+          "type": "mouse_up",
+          "params": {
+            "x": 0,
+            "y": 0,
+            "button": "left"
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "mouse_up",
+        "params": {
+          "x": 0,
+          "y": 0,
+          "button": "left"
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "x",
+            "label": "X 坐标",
+            "type": "number",
+            "path": "data.action.params.x"
+          },
+          {
+            "name": "y",
+            "label": "Y 坐标",
+            "type": "number",
+            "path": "data.action.params.y"
+          },
+          {
+            "name": "button",
+            "label": "鼠标按钮",
+            "type": "select",
+            "path": "data.action.params.button",
+            "options": [
+              {
+                "label": "左键",
+                "value": "left"
+              },
+              {
+                "label": "右键",
+                "value": "right"
+              },
+              {
+                "label": "中键",
+                "value": "middle"
+              }
+            ]
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "action.scroll",
+      "title": "滚动",
+      "category": "动作节点",
+      "icon": "fa-solid fa-scroll",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "滚动",
+        "action": {
+          "type": "scroll",
+          "params": {
+            "x": 0,
+            "y": 0,
+            "dx": 0,
+            "dy": 120
+          }
+        }
+      },
+      "actionTemplate": {
+        "type": "scroll",
+        "params": {
+          "x": 0,
+          "y": 0,
+          "dx": 0,
+          "dy": 120
+        }
+      },
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "x",
+            "label": "X 坐标",
+            "type": "number",
+            "path": "data.action.params.x"
+          },
+          {
+            "name": "y",
+            "label": "Y 坐标",
+            "type": "number",
+            "path": "data.action.params.y"
+          },
+          {
+            "name": "dx",
+            "label": "水平滚动",
+            "type": "number",
+            "path": "data.action.params.dx"
+          },
+          {
+            "name": "dy",
+            "label": "垂直滚动",
+            "type": "number",
+            "path": "data.action.params.dy"
+          }
+        ]
+      },
+      "status": "stable"
+    },
+    {
+      "type": "control.condition",
+      "title": "条件判断",
+      "category": "条件分支",
+      "icon": "fa-solid fa-code-branch",
+      "ports": [
+        "in",
+        "true",
+        "false"
+      ],
+      "defaultData": {
+        "title": "条件判断",
+        "expression": ""
+      },
+      "actionTemplate": null,
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "expression",
+            "label": "条件表达式",
+            "type": "text",
+            "path": "data.expression"
+          }
+        ]
+      },
+      "status": "experimental"
+    },
+    {
+      "type": "control.loop",
+      "title": "循环",
+      "category": "循环/重试",
+      "icon": "fa-solid fa-repeat",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "循环",
+        "times": 1
+      },
+      "actionTemplate": null,
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "times",
+            "label": "循环次数",
+            "type": "number",
+            "path": "data.times"
+          }
+        ]
+      },
+      "status": "experimental"
+    },
+    {
+      "type": "control.retry",
+      "title": "重试",
+      "category": "循环/重试",
+      "icon": "fa-solid fa-rotate-right",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "重试",
+        "times": 3
+      },
+      "actionTemplate": null,
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "times",
+            "label": "重试次数",
+            "type": "number",
+            "path": "data.times"
+          }
+        ]
+      },
+      "status": "experimental"
+    },
+    {
+      "type": "ai.tool",
+      "title": "AI 工具",
+      "category": "AI 工具",
+      "icon": "fa-solid fa-wand-magic-sparkles",
+      "ports": [
+        "in",
+        "out"
+      ],
+      "defaultData": {
+        "title": "AI 工具",
+        "model": "gpt",
+        "prompt": ""
+      },
+      "actionTemplate": null,
+      "form": {
+        "fields": [
+          {
+            "name": "title",
+            "label": "标题",
+            "type": "text",
+            "path": "data.title",
+            "required": true
+          },
+          {
+            "name": "model",
+            "label": "模型",
+            "type": "text",
+            "path": "data.model"
+          },
+          {
+            "name": "prompt",
+            "label": "提示词",
+            "type": "text",
+            "path": "data.prompt"
+          }
+        ]
+      },
+      "status": "experimental"
+    }
+  ]
+}
